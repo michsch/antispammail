@@ -6,7 +6,6 @@
  * @copyright          Michael Schulze, 31 December, 2011
  * @license            GNU General Public License, version 3 (GPL-3.0)
  * @package            coffeescript
- * @requirements       jquery-1.7.1.min.js
  *
  * @lastmodified       $Date: 2011-12-31 20:29:35  +0100 (Sat, 31 Dec 2011) $
  *
@@ -35,7 +34,7 @@
     if radioObj.length > 0
       i = 0
       while i < radioObj.length
-        radioValue = parseInt(radioObj[i].value if radioObj[i].checked)
+        radioValue = parseInt(radioObj[i].value if radioObj[i].checked, 0)
         i++
     else
       radioValue = 0
