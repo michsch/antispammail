@@ -1,1 +1,232 @@
-My GitHub Page
+<!DOCTYPE HTML>
+<html class="no-js" lang="de">
+<head>
+  <meta charset="UTF-8">
+	<!--[if IE]>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<![endif]-->
+
+  <title>michsch github profile</title>
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="apple-mobile-web-app-capable" content="no">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+	
+	<link rel="shortcut icon" href="../images/favicon.ico">
+	<link rel="apple-touch-icon" href="../images/apple-touch-icon.png">
+	
+	<!-- <link rel="apple-touch-icon-precomposed" href="styles/images/apple-touch-icon-precomposed.png"> -->
+	
+	<meta name="description" content="michsch (Michael Schulze) profile page at github.com">
+	<meta name="author" content="Michael Schulze">
+	<meta name="robots" content="index,follow">
+
+	<!--[if ! lte IE 6]><!-->
+	<link rel="stylesheet" href="assets/css/style.css">
+  <!--<![endif]-->
+	
+	<!--[if lte IE 8]>
+	<link href="assets/css/patches/patch_lte_ie8.css" rel="stylesheet" type="text/css" />
+	<![endif]-->
+  <!--[if lte IE 7]>
+  <link href="assets/css/patches/patch_ie.css" rel="stylesheet" type="text/css" />
+  <![endif]-->
+  <!--[if lte IE 6]>
+  <link rel="stylesheet" href="http://universal-ie6-css.googlecode.com/files/ie6.1.1b.css" media="screen, projection">
+  <![endif]-->
+  <!--[if IEMobile]>
+  <link href="assets/css/patches/patch_mobile_ie.css" rel="stylesheet" type="text/css" />
+  <![endif]-->
+  
+  <script type="text/javascript">
+    WebFontConfig = {
+      google: { families: [ 'Salsa' ] }
+    };
+    (function() {
+      var wf = document.createElement('script');
+      wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
+        '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+      wf.type = 'text/javascript';
+      wf.async = 'true';
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(wf, s);
+    })();
+  </script>
+  
+  <script type="text/javascript" src="assets/js/libs/modernizr.js"></script>
+	
+	<!-- just for development -->
+  <script type="text/javascript" src="assets/js/libs/live.js"></script>
+</head>
+<body onload="prettyPrint()">
+  <div class="page_margins">
+    <div class="page">
+      <header id="header" role="banner">
+        <ul id="skiplinks" role="navigation">
+          <li><a class="skip" href="#navigation">Skip to navigation (Press Enter).</a></li>
+          <li><a class="skip" href="#content">Skip to main content (Press Enter).</a></li>
+          <li><a class="skip" href="#contentinfo">Skip to footer (Press Enter).</a></li>
+        </ul>
+        <div id="logo">
+          <!-- <img src="../images/logo.png" alt="Logo" /> -->
+        </div>
+        <h1>cryptmail.js</h1>
+      </header>
+      <div id="main">
+        <a id="content"></a>
+        <section id="col1" role="main">
+          <div id="col1_content" class="clearfix">
+            <h2>Encrypt it baby ...</h2>
+            <form id="cryptmail" name="cryptmail" action="post" class="yform full" onsubmit="return false;">
+              <fieldset class="columnar">
+                <legend>Give me some input!</legend>
+                <div class="type-text">
+                  <label for="cryptmail_email">email address:</label>
+                  <input id="cryptmail_email" type="email" name="cryptmail_email" required />
+                </div>
+                <div class="type-mcheck">
+                  <span>email display option:</span>
+                  <div class="type-check">
+                    <input id="cryptmail_radio_1" type="radio" value="0" name="cryptmail_radio" checked />
+                    <label for="cryptmail_radio_1">Use [at] instead of @ and [dot] instead of .</label>
+                  </div>
+                  <div class="type-check">
+                    <input id="cryptmail_radio_2" type="radio" value="1" name="cryptmail_radio" />
+                    <label for="cryptmail_radio_2">Use span Tags with the class <em>crypt</em> and invisible dot as wrap for @ and .</label>
+                  </div>
+                </div>
+                
+              </fieldset>
+              <div class="type-button">
+                <button class="button save" onclick="CryptMailto()" />encrypt email</button>
+              </div>
+              <fieldset>
+                <legend>Result</legend>
+                <div class="columnar">
+                  <div class="type-text">
+                    <label for="cryptmail_cryptedmail">encrypted email:</label>
+                    <input id="cryptmail_cryptedmail" type="text" name="cryptmail_cryptedmail" />
+                  </div>
+                </div>
+                <div class="type-text">
+                  <label for="cryptmail_html">full HTML:</label>
+                  <textarea name="cryptmail_html" id="cryptmail_html" cols="30" rows="10"></textarea>
+                </div>
+              </fieldset>
+
+            </form>
+            
+            <h2>How it works</h2>
+            <p>Just include the <strong>cryptmail.js</strong> file in your documents header or just before the closing body tag. If you use the span Tags with classname <em>crypt</em> than you should load the stylesheet too.</p>
+            <div class="prettify">
+              <pre class="prettyprint linenums"><code>(function(window) {
+  /**
+   * Crypt given mail
+   *
+   * @param string email address
+   * @param boolean true
+  */
+  var UnCryptMailto;
+  window.CryptMailto = function() {
+    var cryptform, e, formname, i, n, r, radioObj, radioValue, s;
+    formname = 'cryptmail';
+    cryptform = document.forms[formname];
+    n = 0;
+    r = "";
+    s = "mailto:" + cryptform.cryptmail_email.value;
+    e = cryptform.cryptmail_email.value;
+    radioObj = cryptform.cryptmail_radio;
+    if (radioObj.length > 0) {
+      i = 0;
+      while (i < radioObj.length) {
+        radioValue = parseInt(radioObj[i].checked ? radioObj[i].value : void 0);
+        i++;
+      }
+    } else {
+      radioValue = 0;
+    }
+    if (radioValue === 1) {
+      e = e.replace(/@/, '&lt;span class="crypt"&gt;.&lt;/span&gt;@&lt;/span class="crypt"&gt;.&lt;/span&gt;');
+      e = e.replace(/\./g, '&lt;span class="crypt"&gt;.&lt;/span&gt;.&lt;/span class="crypt"&gt;.&lt;/span&gt;');
+    } else {
+      e = e.replace(/@/, ' [at] ');
+      e = e.replace(/\./g, ' [dot] ');
+    }
+    i = 0;
+    while (i < s.length) {
+      n = s.charCodeAt(i);
+      if (n >= 8364) n = 128;
+      r += String.fromCharCode(n + 1);
+      i++;
+    }
+    cryptform.cryptmail_cryptedmail.value = r;
+    cryptform.cryptmail_html.value = '&lt;a href="javascript:linkTo_UnCryptMailto(\'' + r + '\');"&gt;' + "\n\t" + e + "\n" + '&lt;/a&gt;';
+    return true;
+  };
+  /**
+   * Uncrypt the email address and returns the valid href
+   *
+   * @param string the crypted string
+   * @return string valid href
+  */
+  UnCryptMailto = function(s) {
+    var i, n, r;
+    n = 0;
+    r = "";
+    i = 0;
+    while (i < s.length) {
+      n = s.charCodeAt(i);
+      if (n >= 8364) n = 128;
+      r += String.fromCharCode(n - 1);
+      i++;
+    }
+    return r;
+  };
+  /**
+   * Public function for A tags
+   *
+   * @param string the crypted string
+   * @return boolean true
+  */
+  window.linkTo_UnCryptMailto = function(s) {
+    location.href = UnCryptMailto(s);
+    return true;
+  };
+  return true;
+})(window);</code></pre>
+            </div>
+          </div>
+        </section>
+        <aside id="col3" role="complementary">
+          <div id="col3_content" class="clearfix">
+            <h2>Download</h2>
+            <div class="floatbox download">
+              <a href="http://github.com/michsch/cryptmail/zipball/master">
+                <img src="assets/images/icon_zip.png" alt="Download cryptmail.js as ZIP archive." />
+              </a>
+              <a href="http://github.com/michsch/cryptmail/tarball/master">
+                <img src="assets/images/icon_tar.png" alt="Download cryptmail.js as TAR archive." />
+              </a>
+            </div>
+            <p><a href="https://github.com/michsch/cryptmail">github.com/michsch/cryptmail</a></p>
+            
+          </div>
+          <div id="ie_clearing"> &#160; </div>
+        </aside>
+      </div>
+      <footer id="footer" role="contentinfo">
+        <a id="contentinfo"></a>
+        <p class="copy">&copy; 2011 Michael Schulze</p>
+      </footer>
+    </div>
+  </div>
+  
+  <a href="http://michsch.github.com/cryptmail"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://a248.e.akamai.net/assets.github.com/img/e6bef7a091f5f3138b8cd40bc3e114258dd68ddf/687474703a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f7265645f6161303030302e706e67" alt="Fork me on GitHub"></a>
+
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+	<script type="text/javascript">!window.jQuery && document.write(unescape('%3Cscript type="text/javascript" src="assets/js/libs/jquery-1.7.1.min.js"%3E%3C/script%3E'))</script>
+	<script type="text/javascript" src="assets/js/libs/prettify.js"></script>
+	<script type="text/javascript" src="assets/js/plugins.js"></script>
+	<script type="text/javascript" src="assets/js/script.js"></script>
+</body>
+</html>

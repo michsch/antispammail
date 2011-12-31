@@ -1,0 +1,24 @@
+/**
+ * Font including
+ *
+ * @author             Michael Schulze
+ * @version            $1.0$
+ * @copyright          Michael Schulze <elsigno.de>, 29 December, 2011
+ * @license            All rights reserved. No usage without written permission.
+ *
+ * @package            yaml,compass,sass
+ * @-yaml-minver       3.3.1
+ * @-sass-minver       2.0
+ * @-compass-minver    0.11.6
+ *
+ * @lastmodified       $Date: 2011-12-31 19:37:45  +0100 (Sat, 31 Dec 2011) $
+ */
+
+/* Google Webfonts - PT Sans */
+
+@font-face {
+  font-family: 'Salsa';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Salsa-Regular'), url('http://themes.googleusercontent.com/static/fonts/salsa/v2/eK4_lJSug9bPTBAtqaZ4GKCWcynf_cDxXwCLxiixG1c.woff') format('woff');
+}

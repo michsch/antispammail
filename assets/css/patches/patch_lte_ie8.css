@@ -1,0 +1,19 @@
+/**
+ * patch file for IE <= 8
+ *
+ * @author             Michael Schulze
+ * @version            $1.0$
+ * @copyright          Michael Schulze <elsigno.de>, 29 December, 2011
+ * @license            All rights reserved. No usage without written permission.
+ *
+ * @package            yaml,compass,sass
+ * @-yaml-minver       3.3.1
+ * @-sass-minver       2.0
+ * @-compass-minver    0.11.6
+ *
+ * @lastmodified       $Date: 2011-12-29 21:39:33  +0100 (Thu, 29 Dec 2011) $
+ */
+
+@media screen, projection {
+  
+}
