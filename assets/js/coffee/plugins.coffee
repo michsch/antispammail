@@ -207,11 +207,11 @@ make it safe to use console.log always
       radioValue = 0
     
     if radioValue is 1
-      e = e.replace(/@/, '<span class="crypt">.</span>@</span class="crypt">.</span>')
-      e = e.replace(/\./g, '<span class="crypt">.</span>.</span class="crypt">.</span>')
+      e = e.replace(/\./g, '<span class="crypt">.</span>.<span class="crypt">.</span>')
+      e = e.replace(/@/, '<span class="crypt">.</span>@<span class="crypt">.</span>')
     else
-      e = e.replace(/@/, ' [at] ')
       e = e.replace(/\./g, ' [dot] ')
+      e = e.replace(/@/, ' [at] ')
     
     i = 0
     while i < s.length
