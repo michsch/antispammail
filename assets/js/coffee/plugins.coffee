@@ -202,7 +202,7 @@ make it safe to use console.log always
     if radioObj.length > 0
       i = 0
       while i < radioObj.length
-        radioValue = parseInt(radioObj[i].value if radioObj[i].checked)
+        radioValue = parseInt(radioObj[i].value if radioObj[i].checked,0)
         i++
     else
       radioValue = 0

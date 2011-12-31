@@ -231,7 +231,7 @@
       if (radioObj.length > 0) {
         i = 0;
         while (i < radioObj.length) {
-          radioValue = parseInt(radioObj[i].checked ? radioObj[i].value : void 0);
+          radioValue = parseInt(radioObj[i].checked ? radioObj[i].value : void 0, 0);
           i++;
         }
       } else {
