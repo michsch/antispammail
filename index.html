@@ -54,9 +54,7 @@
   </script>
   
   <script type="text/javascript" src="assets/js/libs/modernizr.js"></script>
-	
-	<!-- just for development -->
-  <script type="text/javascript" src="assets/js/libs/live.js"></script>
+  <!-- <script type="text/javascript" src="assets/js/libs/live.js"></script> -->
 </head>
 <body onload="prettyPrint()">
   <div class="page_margins">
@@ -87,7 +85,7 @@
                 <div class="type-mcheck">
                   <span>email display option:</span>
                   <div class="type-check">
-                    <input id="cryptmail_radio_1" type="radio" value="0" name="cryptmail_radio" checked />
+                    <input id="cryptmail_radio_1" type="radio" value="0" name="cryptmail_radio" maxlength="100" checked />
                     <label for="cryptmail_radio_1">Use [at] instead of @ and [dot] instead of .</label>
                   </div>
                   <div class="type-check">
@@ -105,12 +103,12 @@
                 <div class="columnar">
                   <div class="type-text">
                     <label for="cryptmail_cryptedmail">encrypted email:</label>
-                    <input id="cryptmail_cryptedmail" type="text" name="cryptmail_cryptedmail" />
+                    <input id="cryptmail_cryptedmail" type="text" name="cryptmail_cryptedmail" readonly />
                   </div>
                 </div>
                 <div class="type-text">
                   <label for="cryptmail_html">full HTML:</label>
-                  <textarea name="cryptmail_html" id="cryptmail_html" cols="30" rows="10"></textarea>
+                  <textarea name="cryptmail_html" id="cryptmail_html" cols="30" rows="10" readonly></textarea>
                 </div>
               </fieldset>
 
