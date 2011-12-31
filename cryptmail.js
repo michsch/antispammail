@@ -12,14 +12,13 @@
 */
 
 (function(window) {
-	var UnCryptMailto;
-
   /**
    * Crypt given mail
    *
    * @param string email address
    * @param boolean true
   */
+  var UnCryptMailto;
   window.CryptMailto = function() {
     var cryptform, e, formname, i, n, r, radioObj, radioValue, s;
     formname = 'cryptmail';
@@ -40,11 +39,11 @@
       radioValue = 0;
     }
     if (radioValue === 1) {
-      e = e.replace(/@/, '<span class="crypt">.</span>@</span class="crypt">.</span>');
       e = e.replace(/\./g, '<span class="crypt">.</span>.</span class="crypt">.</span>');
+      e = e.replace(/@/, '<span class="crypt">.</span>@</span class="crypt">.</span>');
     } else {
-      e = e.replace(/@/, ' [at] ');
       e = e.replace(/\./g, ' [dot] ');
+      e = e.replace(/@/, ' [at] ');
     }
     i = 0;
     while (i < s.length) {
@@ -57,7 +56,6 @@
     cryptform.cryptmail_html.value = '<a href="javascript:linkTo_UnCryptMailto(\'' + r + '\');">' + "\n\t" + e + "\n" + '</a>';
     return true;
   };
-
   /**
    * Uncrypt the email address and returns the valid href
    *
@@ -77,7 +75,6 @@
     }
     return r;
   };
-
   /**
    * Public function for A tags
    *
