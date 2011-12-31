@@ -171,9 +171,8 @@ make it safe to use console.log always
  * @author             Michael Schulze
  * @version            $1.0$
  * @copyright          Michael Schulze, 31 December, 2011
- * @license            All rights reserved. No usage without written permission.
+ * @license            GNU General Public License, version 3 (GPL-3.0)
  * @package            coffeescript
- * @requirements       jquery-1.7.1.min.js
  *
  * @lastmodified       $Date: 2011-12-31 20:29:35  +0100 (Sat, 31 Dec 2011) $
  *
