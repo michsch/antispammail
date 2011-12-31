@@ -1,0 +1,21 @@
+/**
+ * cryptmail.js stylesheet for invisible dots
+ *
+ * @author             Michael Schulze
+ * @version            $1.0$
+ * @copyright          Michael Schulze, 31 December, 2011
+ * @license            GNU General Public License, version 3 (GPL-3.0)
+ *
+ * @lastmodified       $Date: 2011-12-31 23:35:35  +0100 (Sat, 31 Dec 2011) $
+ */
+
+@media screen, projection {
+  span.crypt {
+    color: #fff; /* add your background color here so the dot is invisible */
+    font-size: 1px;
+  }
+}
+
+@media print {
+  span.crypt { display: none; }
+}

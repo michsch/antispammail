@@ -5,7 +5,7 @@
    * @author             Michael Schulze
    * @version            $1.0$
    * @copyright          Michael Schulze, 31 December, 2011
-   * @license            All rights reserved. No usage without written permission.
+   * @license            GNU General Public License, version 3 (GPL-3.0)
    * @package            coffeescript
    * @requirements       jquery-1.7.1.min.js
    *
@@ -20,15 +20,33 @@
      * @param string email address
      * @param boolean true
     */
-    var CryptMailto, UnCryptMailto;
-    CryptMailto = function() {
-      var e, i, n, r, s;
+    var UnCryptMailto;
+    window.CryptMailto = function() {
+      var cryptform, e, formname, i, n, r, radioObj, radioValue, s;
+      formname = 'cryptmail';
+      cryptform = document.forms[formname];
       n = 0;
       r = "";
-      s = "mailto:" + document.forms[0].emailField.value;
-      e = document.forms[0].emailField.value;
-      e = e.replace(/@/, " [at] ");
-      e = e.replace(/\./g, " [dot] ");
+      s = "mailto:" + cryptform.cryptmail_email.value;
+      e = cryptform.cryptmail_email.value;
+      if (cryptform.cryptmail_email.value.length < 4) return false;
+      radioObj = cryptform.cryptmail_radio;
+      if (radioObj.length > 0) {
+        i = 0;
+        while (i < radioObj.length) {
+          radioValue = parseInt(radioObj[i].checked ? radioObj[i].value : void 0);
+          i++;
+        }
+      } else {
+        radioValue = 0;
+      }
+      if (radioValue === 1) {
+        e = e.replace(/@/, '<span class="crypt">.</span>@</span class="crypt">.</span>');
+        e = e.replace(/\./g, '<span class="crypt">.</span>.</span class="crypt">.</span>');
+      } else {
+        e = e.replace(/@/, ' [at] ');
+        e = e.replace(/\./g, ' [dot] ');
+      }
       i = 0;
       while (i < s.length) {
         n = s.charCodeAt(i);
@@ -36,8 +54,8 @@
         r += String.fromCharCode(n + 1);
         i++;
       }
-      document.forms[0].cyptedEmailField.value = r;
-      document.forms[0].HTMLCyptedEmailField.value = "<a href=\"javascript:linkTo_UnCryptMailto('" + r + "');\">" + e + "</a>";
+      cryptform.cryptmail_cryptedmail.value = r;
+      cryptform.cryptmail_html.value = '<a href="javascript:linkTo_UnCryptMailto(\'' + r + '\');">' + "\n\t" + e + "\n" + '</a>';
       return true;
     };
     /**
@@ -60,7 +78,7 @@
       return r;
     };
     /**
-     * Public function for a tags
+     * Public function for A tags
      *
      * @param string the crypted string
      * @return boolean true
