@@ -2,12 +2,13 @@
  * JavaScript email encrypter
  *
  * @author             Michael Schulze
- * @version            $1.0$
+ * @version            $1.1$
  * @copyright          Michael Schulze, 31 December, 2011
  * @license            GNU General Public License, version 3 (GPL-3.0)
  * @package            coffeescript
+ * @url                http://michsch.github.com/cryptmail/
  *
- * @lastmodified       $Date: 2011-12-31 20:29:35  +0100 (Sat, 31 Dec 2011) $
+ * @lastmodified       $Date: 2012-01-05 01:46:42 +0100 (Thu, 05 Jan 2012) $
  *
 ###
 
@@ -53,7 +54,7 @@
       r += String.fromCharCode(n + 1)
       i++
     cryptform.cryptmail_cryptedmail.value = r
-    cryptform.cryptmail_html.value = '<a href="javascript:linkTo_UnCryptMailto(\'' + r + '\');">' + "\n\t" + e + "\n" + '</a>'
+    cryptform.cryptmail_html.value = '<a href="javascript:linkTo_UnCryptMailto(\'' + r + '\');">' + e + '</a>'
     true
 
   ###*
