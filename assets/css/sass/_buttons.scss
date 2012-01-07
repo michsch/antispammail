@@ -1,78 +1,104 @@
-.button {
-  display: inline-block;
-  white-space: nowrap;
-  background-color: #ccc;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#eee), to(#ccc));
-  background-image: -webkit-linear-gradient(top, #eee, #ccc);
-  background-image: -moz-linear-gradient(top, #eee, #ccc);
-  background-image: -ms-linear-gradient(top, #eee, #ccc);
-  background-image: -o-linear-gradient(top, #eee, #ccc);
-  background-image: linear-gradient(top, #eee, #ccc);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#eeeeee', EndColorStr='#cccccc');
-  border: 1px solid #777;
-  padding: 0 1.5em;
-  margin: 0.5em;
-  font: bold 1em/2em Arial, Helvetica;
-  text-decoration: none;
-  color: #333;
-  text-shadow: 0 1px 0 rgba(255,255,255,.8);
-  @include border-radius(.2em);
-  @include box-shadow(0 0 1px 1px rgba(255,255,255,.8) inset, 0 1px 0 rgba(0,0,0,.3));
-  @include transition(all .3s ease-in-out);
-  cursor:pointer;
+/**
+ * Different button layouts
+ *
+ * @author             Michael Schulze
+ * @version            $1.0$
+ * @copyright          Michael Schulze, 7 January, 2012
+ * @license            All rights reserved. No usage without written permission.
+ *
+ * @package            yaml,compass,sass
+ * @-yaml-minver       3.3.1
+ * @-sass-minver       2.0
+ * @-compass-minver    0.11.6
+ *
+ * @lastmodified       $Date: 2012-01-07 19:57:33 +0100 (Sat, 07 Jan 2012) $
+ */
+
+@media screen, projection {
+
+  /**
+   * Red-Team Designblog - Just some other awesome CSS3 buttons
+   * http://www.red-team-design.com/just-another-awesome-css3-buttons
+   *
+   */
+  .button {
+    display: inline-block;
+    white-space: nowrap;
+    background-color: #ccc;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#eee), to(#ccc));
+    background-image: -webkit-linear-gradient(top, #eee, #ccc);
+    background-image: -moz-linear-gradient(top, #eee, #ccc);
+    background-image: -ms-linear-gradient(top, #eee, #ccc);
+    background-image: -o-linear-gradient(top, #eee, #ccc);
+    background-image: linear-gradient(top, #eee, #ccc);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#eeeeee', EndColorStr='#cccccc');
+    border: 1px solid #777;
+    padding: 0 1.5em;
+    margin: 0.5em;
+    font: bold 1em/2em Arial, Helvetica;
+    text-decoration: none;
+    color: #333;
+    text-shadow: 0 1px 0 rgba(255,255,255,.8);
+    @include border-radius(.2em);
+    @include box-shadow(0 0 1px 1px rgba(255,255,255,.8) inset, 0 1px 0 rgba(0,0,0,.3));
+    @include transition(all .3s ease-in-out);
+    cursor:pointer;
   
   
-  &:hover {
-    background-color: #ddd;
-    background-image: -webkit-gradient(linear, left top, left bottom, from(#fafafa), to(#ddd));
-    background-image: -webkit-linear-gradient(top, #fafafa, #ddd);
-    background-image: -moz-linear-gradient(top, #fafafa, #ddd);
-    background-image: -ms-linear-gradient(top, #fafafa, #ddd);
-    background-image: -o-linear-gradient(top, #fafafa, #ddd);
-    background-image: linear-gradient(top, #fafafa, #ddd);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#fafafa', EndColorStr='#dddddd');
+    &:hover {
+      background-color: #ddd;
+      background-image: -webkit-gradient(linear, left top, left bottom, from(#fafafa), to(#ddd));
+      background-image: -webkit-linear-gradient(top, #fafafa, #ddd);
+      background-image: -moz-linear-gradient(top, #fafafa, #ddd);
+      background-image: -ms-linear-gradient(top, #fafafa, #ddd);
+      background-image: -o-linear-gradient(top, #fafafa, #ddd);
+      background-image: linear-gradient(top, #fafafa, #ddd);
+      filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#fafafa', EndColorStr='#dddddd');
+    }
+  
+    &:active {
+      -moz-box-shadow: 0 0 4px 2px rgba(0,0,0,.3) inset;
+      -webkit-box-shadow: 0 0 4px 2px rgba(0,0,0,.3) inset;
+      box-shadow: 0 0 4px 2px rgba(0,0,0,.3) inset;
+      position: relative;
+      top: 1px;
+    }
+  
+    &:focus {
+      outline: 0;
+      background: #fafafa;
+    }
+  
+    &:before {
+      background: #ccc;
+      background: rgba(0,0,0,.1);
+      float: left;
+      width: 1em;
+      text-align: center;
+      font-size: 1.5em;
+      margin: 0 1em 0 -1em;
+      padding: 0 .2em;
+      -moz-box-shadow: 1px 0 0 rgba(0,0,0,.5), 2px 0 0 rgba(255,255,255,.5);
+      -webkit-box-shadow: 1px 0 0 rgba(0,0,0,.5), 2px 0 0 rgba(255,255,255,.5);
+      box-shadow: 1px 0 0 rgba(0,0,0,.5), 2px 0 0 rgba(255,255,255,.5);
+      -moz-border-radius: .15em 0 0 .15em;
+      -webkit-border-radius: .15em 0 0 .15em;
+      border-radius: .15em 0 0 .15em;
+      pointer-events: none;
+    }
   }
-  
-  &:active {
-    -moz-box-shadow: 0 0 4px 2px rgba(0,0,0,.3) inset;
-    -webkit-box-shadow: 0 0 4px 2px rgba(0,0,0,.3) inset;
-    box-shadow: 0 0 4px 2px rgba(0,0,0,.3) inset;
-    position: relative;
-    top: 1px;
-  }
-  
-  &:focus {
-    outline: 0;
-    background: #fafafa;
-  }
-  
-  &:before {
-    background: #ccc;
-    background: rgba(0,0,0,.1);
-    float: left;
-    width: 1em;
-    text-align: center;
-    font-size: 1.5em;
-    margin: 0 1em 0 -1em;
-    padding: 0 .2em;
-    -moz-box-shadow: 1px 0 0 rgba(0,0,0,.5), 2px 0 0 rgba(255,255,255,.5);
-    -webkit-box-shadow: 1px 0 0 rgba(0,0,0,.5), 2px 0 0 rgba(255,255,255,.5);
-    box-shadow: 1px 0 0 rgba(0,0,0,.5), 2px 0 0 rgba(255,255,255,.5);
-    -moz-border-radius: .15em 0 0 .15em;
-    -webkit-border-radius: .15em 0 0 .15em;
-    border-radius: .15em 0 0 .15em;
-    pointer-events: none;
+
+  /* Hexadecimal entities for the icons */
+  a, button, input {
+    &.add:before { content: "\271A"; }
+    &.edit:before { content: "\270E"; }
+    &.delete:before { content: "\2718"; }
+    &.save:before { content: "\2714"; }
+    &.email:before { content: "\2709"; }
+    &.like:before { content: "\2764"; }
+    &.next:before { content: "\279C"; }
+    &.star:before { content: "\2605"; }
+    &.spark:before { content: "\2737"; }
+    &.play:before { content: "\25B6"; }
   }
 }
-
-/* Hexadecimal entities for the icons */
-.add:before { content: "\271A"; }
-.edit:before { content: "\270E"; }
-.delete:before { content: "\2718"; }
-.save:before { content: "\2714"; }
-.email:before { content: "\2709"; }
-.like:before { content: "\2764"; }
-.next:before { content: "\279C"; }
-.star:before { content: "\2605"; }
-.spark:before { content: "\2737"; }
-.play:before { content: "\25B6"; }
