@@ -12,6 +12,35 @@ module.exports = function(grunt) {
         '* Copyright (c) <%= grunt.template.today("yyyy") %> <%= pkg.author.name %>;' +
         ' Licensed <%= _.pluck(pkg.licenses, "type").join(", ") %> */\n'
     },
+    banner: {
+      compact: '/*! <%= pkg.name %> - v<%= pkg.version %> - <%= grunt.template.today("yyyy-mm-dd") %> |' +
+        ' Copyright (c) <%= grunt.template.today("yyyy") %> <%= pkg.author.name %> | <%= _.pluck(pkg.licenses, "type").join(", ") %> */\n',
+      full: '/*!\n' +
+        ' * <%= pkg.name %> - v<%= pkg.version %> - <%= grunt.template.today("yyyy-mm-dd") %>\n' +
+        '<%= pkg.homepage ? " * " + pkg.homepage + "\\n" : "" %>' +
+        ' * Copyright (c) <%= grunt.template.today("yyyy") %> <%= pkg.author.name %>\n' +
+        ' * <%= _.pluck(pkg.licenses, "type").join(", ") %>*/\n' +
+        ' \n' +
+        '/*\n' +
+        ' * Permission is hereby granted, free of charge, to any person obtaining a\n' +
+        ' * copy of this software and associated documentation files (the "Software"),\n' +
+        ' * to deal in the Software without restriction, including without limitation\n' +
+        ' * the rights to use, copy, modify, merge, publish, distribute, sublicense,\n' +
+        ' * and/or sell copies of the Software, and to permit persons to whom the\n' +
+        ' * Software is furnished to do so, subject to the following conditions:\n' +
+        ' *\n' +
+        ' * The above copyright notice and this permission notice shall be included\n' +
+        ' * in all copies or substantial portions of the Software.\n' +
+        ' *\n' +
+        ' * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\n' +
+        ' * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\n' +
+        ' * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL\n' +
+        ' * THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER.\n' +
+        ' * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\n' +
+        ' * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN\n' +
+        ' * THE SOFTWARE.\n' +
+        ' */'
+    },
     clean: {
       build: [
         'build'
@@ -116,7 +145,7 @@ module.exports = function(grunt) {
           modules : config.modules,
           fileExclusionRegExp: /^(.git|.gitignore|node_modules|coffee|media|test|old|.*\.map|.*\.sublime-.*)$/,
           wrap: {
-            start: '<%= meta.banner %>' + "\n;(function(window, document, undefined){\n  'use strict';",
+            start: '<%= banner.full %>' + "\n;(function(window, document, undefined){\n  'use strict';",
             end: "  if (typeof define === 'function' && define.amd) {\n" +
               "    define('antiSpamMail', [], function() { return antiSpamMail; });\n" +
               "  }\n" +
@@ -157,7 +186,14 @@ module.exports = function(grunt) {
     uglify: {
       prod: {
         options : {
-          banner: '<%= meta.banner %>'
+          stripbanners: true,
+          banner: '<%= banner.compact %>',
+          mangle: {
+            except: [ 'antiSpamMail' ]
+          },
+          beautify: {
+            ascii_only: true
+          }
         },
         files: [
           {

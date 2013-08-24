@@ -1,7 +1,7 @@
 {
   "name": "antiSpamMail",
-  "description": "Responsive ebay auction",
-  "version": "0.1.0",
+  "description": "antiSpamMail JS",
+  "version": "0.0.1",
   "homepage": "",
   "author": {
     "name": "Michael Schulze",
@@ -9,11 +9,11 @@
   },
   "licenses": [{
     "type": "MIT license",
-    "url": "https://github.com/michsch/antispam-mail/blob/master/MIT.txt"
+    "url": "https://github.com/michsch/antispammail/blob/master/MIT.txt"
   }],
   "repository": {
     "type": "git",
-    "url": "ssh://git@bitbucket.org/michsch/antispam-mail.git"
+    "url": "ssh://git@bitbucket.org/michsch/antispammail.git"
   },
   "bugs": {
     "url": ""
