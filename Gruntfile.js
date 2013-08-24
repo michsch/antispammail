@@ -19,7 +19,7 @@ module.exports = function(grunt) {
         ' * <%= pkg.name %> - v<%= pkg.version %> - <%= grunt.template.today("yyyy-mm-dd") %>\n' +
         '<%= pkg.homepage ? " * " + pkg.homepage + "\\n" : "" %>' +
         ' * Copyright (c) <%= grunt.template.today("yyyy") %> <%= pkg.author.name %>\n' +
-        ' * <%= _.pluck(pkg.licenses, "type").join(", ") %>*/\n' +
+        ' * <%= _.pluck(pkg.licenses, "type").join(", ") %> */\n' +
         ' \n' +
         '/*\n' +
         ' * Permission is hereby granted, free of charge, to any person obtaining a\n' +
@@ -84,27 +84,17 @@ module.exports = function(grunt) {
       }
     },
     'string-replace': {
-      comments: {
+      version: {
         files: {
           './': [
-            'dev/sass/*.scss',
-            'dev/coffee/**/*.coffee'
+            'coffee/**/*.coffee'
           ]
         },
         options: {
           replacements: [
             {
-              pattern : /@version( *)(?:\$.*)/ig,
-              replacement : '@version$1$$<%= pkg.version %>$'
-            },
-            {
-              pattern : /@author( *)(?:.*)/ig,
-              replacement : '@author$1<%= pkg.author.name %>'
-            },
-            {
-              pattern: /\/\*\! (?:[\w\d \.\-\_\$\+]+)(?: \- )(?:[\w\d\s\S])*\*\/(?:.*\s *\s)/i,
-              replacement: '<%= meta.banner %>'
-              //replacement: '/*! <%= pkg.name %> - v<%= pkg.version %> - ' + date.fullDate
+              pattern : /_version\:( *)\'(?:[\d]+\.[\d]+\.[\d]+)\'/ig,
+              replacement : '_version:$1\'<%= pkg.version %>\''
             }
           ]
         }
@@ -265,13 +255,6 @@ module.exports = function(grunt) {
           'coffee/**/*.coffee'
         ],
         tasks: [ 'build' ]
-      },
-      min: {
-        files: [
-          'Gruntfile.js',
-          'coffee/**/*.coffee'
-        ],
-        tasks: [ 'min' ]
       }
     }
   });
@@ -302,10 +285,7 @@ module.exports = function(grunt) {
     });
   });
 
-  grunt.registerTask( 'build', [ 'clean:coffee', 'coffee', 'jshint', 'requirejs', 'copy', 'stripdefine', 'clean:build' ] );
-  grunt.registerTask( 'min', [ 'build', 'uglify' ] );
-
-  grunt.registerTask( 'comments', [ 'string-replace:comments' ] );
-
+  grunt.registerTask( 'build', [ 'clean:coffee', 'coffee', 'jshint', 'requirejs', 'copy', 'stripdefine', 'clean:build', 'uglify' ] );
+  grunt.registerTask( 'version', [ 'string-replace:version' ] );
   grunt.registerTask( 'default', [ 'watch:build' ]);
 };
