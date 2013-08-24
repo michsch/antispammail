@@ -1,0 +1,22 @@
+# system files
+*Thumbs.db
+*.DS_Store
+
+# editor settings
+*.sublime-project
+*.sublime-workspace
+
+# eclipse
+.buildpath
+.project
+.settings/
+
+# sass cache and node modules folders
+*.sass-cache
+*node_modules
+
+# bower directory
+libs/
+
+# ignore js sourceMaps
+*.map

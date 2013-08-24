@@ -1,0 +1,22 @@
+; http://editorconfig.org/
+root = true
+
+[*]
+end_of_line = LF
+charset = utf-8
+trim_trailing_whitespace = true
+insert_final_newline = true
+ensure_newline_at_eof_on_save = true
+
+[*.html]
+indent_style = space
+indent_size = 2
+#tab_width = 2
+
+[*.js]
+indent_style = space
+indent_size = 2
+
+[*.coffee]
+indent_style = space
+indent_size = 2

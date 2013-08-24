@@ -1,0 +1,53 @@
+{
+  "name": "antiSpamMail",
+  "description": "Responsive ebay auction",
+  "version": "0.1.0",
+  "homepage": "",
+  "author": {
+    "name": "Michael Schulze",
+    "email": "ms+coding@michsch.de"
+  },
+  "licenses": [{
+    "type": "MIT license",
+    "url": "https://github.com/michsch/antispam-mail/blob/master/MIT.txt"
+  }],
+  "repository": {
+    "type": "git",
+    "url": "ssh://git@bitbucket.org/michsch/antispam-mail.git"
+  },
+  "bugs": {
+    "url": ""
+  },
+  "scripts": {
+    "test": "grunt qunit --verbose"
+  },
+  "yamlPrefix": "ym-",
+  "main": "Gruntfile.js",
+  "dependencies": {
+    "grunt": "~0.4.0",
+    "grunt-contrib-clean": "~0.4.0",
+    "grunt-contrib-coffee": "~0.7.0",
+    "grunt-contrib-concat": "latest",
+    "grunt-contrib-connect": "latest",
+    "grunt-contrib-compass": "~0.1.3",
+    "grunt-contrib-compress": "~0.4.5",
+    "grunt-contrib-copy": "latest",
+    "grunt-contrib-cssmin"  : "~0.5.0",
+    "grunt-contrib-imagemin": "latest",
+    "grunt-contrib-jshint": "latest",
+    "grunt-contrib-requirejs": "latest",
+    "grunt-contrib-uglify": "~0.2.0",
+    "grunt-contrib-watch": "~0.1.4",
+    "grunt-string-replace": "~0.2.3",
+    "requirejs": "~2.1.8",
+    "underscore": "~1.5.1",
+    "connect": "latest",
+    "jQuery": ">=1.7.4"
+  },
+  "devDependencies": {
+  },
+  "keywords": ["website"],
+  "engines": {
+    "node": ">=0.8.0"
+  }
+}

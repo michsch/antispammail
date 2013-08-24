@@ -1,0 +1,19 @@
+{
+  "modules": [
+    {
+      "name" : "antispammail",
+      "include" : [ "antispammail", "encryption", "decryption" ],
+      "create" : true
+    },
+    {
+      "name" : "antispammail-encrypt",
+      "include" : [ "antispammail", "encryption" ],
+      "create" : true
+    },
+    {
+      "name" : "antispammail-decrypt",
+      "include" : [ "antispammail", "decryption" ],
+      "create" : true
+    }
+  ]
+}
