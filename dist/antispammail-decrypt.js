@@ -29,7 +29,7 @@
   AntiSpamMail = function() {};
   AntiSpamMailProto = {
     _version: '0.0.1',
-    encryptFn: 'antiSpamMail.decrypt'
+    encryptFn: 'antiSpamMail.linkDecrypt'
   };
   AntiSpamMail.prototype = AntiSpamMailProto;
   window.antiSpamMail = antiSpamMail = new AntiSpamMail();

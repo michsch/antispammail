@@ -5,7 +5,7 @@ define [], () ->
   AntiSpamMailProto =
     # Don't change the version here! Use Grunt task "version" instead!
     _version: '0.0.1'
-    encryptFn: 'antiSpamMail.decrypt'
+    encryptFn: 'antiSpamMail.linkDecrypt'
 
   AntiSpamMail.prototype = AntiSpamMailProto
 
