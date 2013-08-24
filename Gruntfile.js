@@ -24,6 +24,11 @@ module.exports = function(grunt) {
         'src/**/*.js',
         'src/**/*.map',
         'dist/**/*.js'
+      ],
+      gz: [
+        'dist/**/*.gz',
+        'dist/**/*.gz.css',
+        'dist/**/*.gz.js'
       ]
     },
     coffee: {
@@ -179,6 +184,44 @@ module.exports = function(grunt) {
         }
       }
     },
+    compress: {
+      css: {
+        options: {
+          mode: 'gzip'
+        },
+        files: [
+          {
+            expand: true,
+            cwd: 'dist',
+            src: [ '*min.js' ],
+            dest: 'dist/',
+            rename: function( destPath, srcPath ) {
+              var dest;
+              dest = destPath + srcPath.replace(/\.css$/,".css.gz");
+              return dest;
+            }
+          }
+        ]
+      },
+      js: {
+        options: {
+          mode: 'gzip'
+        },
+        files: [
+          {
+            expand: true,
+            cwd: 'dist',
+            src: [ '*.min.css' ],
+            dest: 'dist/',
+            rename: function( destPath, srcPath ) {
+              var dest;
+              dest = destPath + srcPath.replace(/\.js$/,".js.gz");
+              return dest;
+            }
+          }
+        ]
+      },
+    },
     watch: {
       build: {
         files: [
@@ -200,6 +243,7 @@ module.exports = function(grunt) {
     // Load grunt-compass plugin
   grunt.loadNpmTasks('grunt-contrib-clean');
   grunt.loadNpmTasks('grunt-contrib-coffee');
+  grunt.loadNpmTasks('grunt-contrib-compress');
   grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-contrib-cssmin');
   grunt.loadNpmTasks('grunt-contrib-jshint');
