@@ -1,1 +1,25 @@
-assets/.sass-cache/*
+# system files
+*Thumbs.db
+*.DS_Store
+*Desktop.ini
+
+# editor settings
+#*.sublime-project
+*.sublime-workspace
+
+# eclipse
+.buildpath
+.project
+.settings/
+
+# sass cache and node modules folders
+*.sass-cache
+*node_modules
+
+# ignore old files and folders
+*.old
+
+*.map
+
+dev/libs
+dev/workfiles/works-assets
