@@ -1,5 +1,5 @@
 /*!
- * antiSpamMail - v0.0.1 - 2013-08-24
+ * antiSpamMail - v0.0.1 - 2013-09-18
  * Copyright (c) 2013 Michael Schulze
  * MIT license */
  
