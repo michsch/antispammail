@@ -74,18 +74,28 @@ and (min-width: 0px)
   *
   */
   .ym-form {
-    background: #f4f4f4;
-    border: 2px #fff solid;
-    margin: 1.5em 0 0 0;
+    //background: #efefef;
+    //border: 2px #fff solid;
+    margin: $std-margin 0 0 0;
     padding: 0;
-    @include box-shadow(0 0 4px #ddd);
+    //@include box-shadow(0 0 4px #ddd);
   }
 
   .ym-form fieldset {
     position: static;
     background: transparent;
     margin: 0.75em 0 0.75em 0;
-    padding: 0 0.5em;
+    padding: 0 em(10);
+
+    background: #efefef;
+    border: 1px solid #ddd;
+    @include border-radius(.2em);
+
+    &.transparent {
+      margin: 0;
+      background: transparent;
+      border: none 0;
+    }
   }
 
   .ym-form legend {
@@ -94,8 +104,8 @@ and (min-width: 0px)
     font-size: 1.2em;
     line-height: 1.25em;
     font-weight: bold;
-    //padding: 0 0.5em;
-    margin: 0.5em 0;
+    padding: 0 em(5);
+    margin: 0.5em 0 0.5em em(-5);
   }
 
   .ym-form label,
@@ -105,11 +115,17 @@ and (min-width: 0px)
   }
 
   .ym-form label {
+    //line-height: 1.5em;
+    @include line-height(30);
+  }
+
+  .ym-form .ym-fbox-wrap label {
     line-height: 1.5em;
   }
 
   .ym-label {
     padding-top: 0.25em;
+    //padding-top: em(8);
   }
 
   .ym-fbox-check {
@@ -133,14 +149,18 @@ and (min-width: 0px)
   }
 
   .ym-form div.ym-fbox-button {
-    background: #ececec;
-    border-top: 1px #e0e0e0 solid;
+    //background: #ececec;
+    //border-top: 1px #e0e0e0 solid;
     padding: 0 1em 1.5em 1em;
     margin: 0;
   }
 
   .ym-columnar div.ym-fbox-button {
     padding-left: 30%;
+  }
+
+  .ym-columnar .ym-fbox-wrap input {
+    //top: 8px;
   }
 
   .ym-form .ym-gbox {
@@ -165,7 +185,7 @@ and (min-width: 0px)
   .ym-form .ym-fbox-text input,
   .ym-form .ym-fbox-text textarea {
     line-height: 1em;
-    padding: 0.25em 0.3em;
+    padding: em(6) em(12);
     margin-top: -2px;
 
     @include placeholder {
@@ -196,8 +216,17 @@ and (min-width: 0px)
   .ym-form .ym-fbox-text input,
   .ym-form .ym-fbox-text textarea,
   .ym-form .ym-fbox-select select {
-    border: 1px solid #ddd;
+    border: 1px solid #ccc;
     @include border-radius(.2em);
+    @include box-shadow(inset 0 1px 1px rgba(0,0,0,0.075));
+  }
+
+  .ym-form .ym-fbox-text input[disabled],
+  .ym-form .ym-fbox-text input[readonly],
+  .ym-form .ym-fbox-text textarea[disabled],
+  .ym-form .ym-fbox-text textarea[readonly] {
+    background: #FDFDFD;
+    cursor: default;
   }
 
   /* General form styling  | Allgemeine Formatierung des Formulars */
@@ -265,6 +294,21 @@ and (min-width: 0px)
     border: 1px #888 solid;
     background: #fff;
     outline: 0;
+  }
+
+  .ym-form .ym-fbox-text input[disabled],
+  .ym-form .ym-fbox-text input[readonly],
+  .ym-form .ym-fbox-text textarea[disabled],
+  .ym-form .ym-fbox-text textarea[readonly] {
+    &:focus,
+    &:hover {
+      border-color: #ddd;
+      background: #FDFDFD;
+    }
+
+    &:focus {
+      border-color: #888;
+    }
   }
 
 }

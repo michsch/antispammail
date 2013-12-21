@@ -11,6 +11,10 @@
   @include font-size( $ym-text-big-font-size );
 }
 
+.small {
+  @include font-size( $ym-text-small-font-size );
+}
+
 .indent {
   margin-left: 2em;
 }

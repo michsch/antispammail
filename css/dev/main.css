@@ -1360,11 +1360,16 @@
   }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/_generic\.scss}line{font-family:\0000314}}
+  .small {
+    font-size: 80%;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/_generic\.scss}line{font-family:\0000318}}
   .indent {
     margin-left: 2em;
   }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/_generic\.scss}line{font-family:\0000318}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/_generic\.scss}line{font-family:\0000322}}
   .box {
     border-radius: 0.3em;
     border-width: 1px;
@@ -1378,12 +1383,12 @@
     margin: 1.5em 0 0 0;
   }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/_generic\.scss}line{font-family:\0000331}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/_generic\.scss}line{font-family:\0000335}}
   .box > *:first-child {
     margin-top: 0;
   }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/_generic\.scss}line{font-family:\0000335}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/_generic\.scss}line{font-family:\0000339}}
   .label {
     font-family: Verdana, Geneva, sans-serif;
     padding: 1px 6px 2px;
@@ -1398,60 +1403,60 @@
     line-height: 12px;
   }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/_generic\.scss}line{font-family:\0000349}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/_generic\.scss}line{font-family:\0000353}}
   .info {
     background: #f4f4f4;
   }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/_generic\.scss}line{font-family:\0000352}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/_generic\.scss}line{font-family:\0000356}}
   .success {
     background: #8c8;
   }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/_generic\.scss}line{font-family:\0000355}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/_generic\.scss}line{font-family:\0000359}}
   .warning {
     background: #cc8;
   }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/_generic\.scss}line{font-family:\0000358}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/_generic\.scss}line{font-family:\0000362}}
   .error {
     background: #c88;
   }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/_generic\.scss}line{font-family:\0000362}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/_generic\.scss}line{font-family:\0000366}}
   .highlight {
     color: #c30;
   }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/_generic\.scss}line{font-family:\0000365}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/_generic\.scss}line{font-family:\0000369}}
   .dimmed {
     color: #888;
   }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/_generic\.scss}line{font-family:\0000369}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/_generic\.scss}line{font-family:\0000373}}
   .cartogothic {
     font-family: 'CartoGothicStd', Arial, Helvetica, sans-serif;
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/_generic\.scss}line{font-family:\0000371}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/_generic\.scss}line{font-family:\0000375}}
   .cartogothic p, .cartogothic h1, .cartogothic h2, .cartogothic h3, .cartogothic h4, .cartogothic h5, .cartogothic h6 {
     font-family: 'CartoGothicStd', Arial, Helvetica, sans-serif;
   }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/_generic\.scss}line{font-family:\0000376}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/_generic\.scss}line{font-family:\0000380}}
   .float-left {
     float: left;
     display: inline;
     margin: 1.5em 1em 0 0;
   }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/_generic\.scss}line{font-family:\0000382}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/_generic\.scss}line{font-family:\0000386}}
   .float-right {
     float: right;
     display: inline;
     margin: 1.5em 0 0 1em;
   }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/_generic\.scss}line{font-family:\0000388}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/_generic\.scss}line{font-family:\0000392}}
   .center {
     display: block;
     text-align: center;
@@ -1459,7 +1464,7 @@
   }
 
   /* Class for additional email dots */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/_generic\.scss}line{font-family:\0000395}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/_generic\.scss}line{font-family:\0000399}}
   .crypt {
     color: white;
     font-size: 1px;
@@ -1999,11 +2004,8 @@
   */
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/_forms\.scss}line{font-family:\0000376}}
   .ym-form {
-    background: #f4f4f4;
-    border: 2px #fff solid;
-    margin: 1.5em 0 0 0;
+    margin: 1.33333em 0 0 0;
     padding: 0;
-    box-shadow: 0 0 4px #dddddd;
   }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/_forms\.scss}line{font-family:\0000384}}
@@ -2011,49 +2013,64 @@
     position: static;
     background: transparent;
     margin: 0.75em 0 0.75em 0;
-    padding: 0 0.5em;
+    padding: 0 0.66667em;
+    background: #efefef;
+    border: 1px solid #ddd;
+    border-radius: 0.2em;
+  }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/_forms\.scss}line{font-family:\0000394}}
+  .ym-form fieldset.transparent {
+    margin: 0;
+    background: transparent;
+    border: none 0;
   }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/_forms\.scss}line{font-family:\0000391}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/_forms\.scss}line{font-family:\00003101}}
   .ym-form legend {
     background: transparent;
     color: #000;
     font-size: 1.2em;
     line-height: 1.25em;
     font-weight: bold;
-    margin: 0.5em 0;
+    padding: 0 0.33333em;
+    margin: 0.5em 0 0.5em -0.33333em;
   }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/_forms\.scss}line{font-family:\00003102}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/_forms\.scss}line{font-family:\00003112}}
   .ym-form label,
   .ym-label {
     color: #333;
     font-weight: bold;
   }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/_forms\.scss}line{font-family:\00003107}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/_forms\.scss}line{font-family:\00003117}}
   .ym-form label {
+    line-height: 2;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/_forms\.scss}line{font-family:\00003122}}
+  .ym-form .ym-fbox-wrap label {
     line-height: 1.5em;
   }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/_forms\.scss}line{font-family:\00003111}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/_forms\.scss}line{font-family:\00003126}}
   .ym-label {
     padding-top: 0.25em;
   }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/_forms\.scss}line{font-family:\00003117}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/_forms\.scss}line{font-family:\00003133}}
   .ym-fbox-check label,
   .ym-fbox-check .ym-label {
     font-weight: normal;
   }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/_forms\.scss}line{font-family:\00003122}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/_forms\.scss}line{font-family:\00003138}}
   .ym-form .ym-form div.ym-fbox-check:focus + label {
     color: #000;
   }
 
   /* styling containing DIV elements | Gestaltung der kapselnden DIV-Elemente */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/_forms\.scss}line{font-family:\00003130}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/_forms\.scss}line{font-family:\00003146}}
   .ym-form div.ym-fbox-text,
   .ym-form div.ym-fbox-select,
   .ym-form div.ym-fbox-check,
@@ -2062,26 +2079,24 @@
     margin-bottom: 0.5em;
   }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/_forms\.scss}line{font-family:\00003135}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/_forms\.scss}line{font-family:\00003151}}
   .ym-form div.ym-fbox-button {
-    background: #ececec;
-    border-top: 1px #e0e0e0 solid;
     padding: 0 1em 1.5em 1em;
     margin: 0;
   }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/_forms\.scss}line{font-family:\00003142}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/_forms\.scss}line{font-family:\00003158}}
   .ym-columnar div.ym-fbox-button {
     padding-left: 30%;
   }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/_forms\.scss}line{font-family:\00003146}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/_forms\.scss}line{font-family:\00003166}}
   .ym-form .ym-gbox {
     padding: 0 0.5em;
     margin-right: 0;
   }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/_forms\.scss}line{font-family:\00003151}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/_forms\.scss}line{font-family:\00003171}}
   .ym-form h6 {
     color: #000;
     margin: 1em 0 0 1em;
@@ -2095,11 +2110,11 @@
   */
   /* styling standard form elements with 'almost' equal flexible width */
   /* Gestaltung der einzelnen Formularelemente mit annähend gleicher Breite */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/_forms\.scss}line{font-family:\00003166}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/_forms\.scss}line{font-family:\00003186}}
   .ym-form .ym-fbox-text input,
   .ym-form .ym-fbox-text textarea {
     line-height: 1em;
-    padding: 0.25em 0.3em;
+    padding: 0.4em 0.8em;
     margin-top: -2px;
     /* fallback */
   }
@@ -2134,7 +2149,7 @@
     padding: 0.25em 0;
   }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/_forms\.scss}line{font-family:\00003177}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/_forms\.scss}line{font-family:\00003197}}
   .ym-form .ym-fbox-select select {
     line-height: 1em;
     padding: 0.25em 2px 0.25em 1px;
@@ -2142,7 +2157,7 @@
   }
 
   /* proportional fonts for all form elements */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/_forms\.scss}line{font-family:\00003187}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/_forms\.scss}line{font-family:\00003207}}
   .ym-form input,
   .ym-form textarea,
   .ym-form select,
@@ -2150,29 +2165,39 @@
     font-family: "Open Sans", "Helvetica Neue", "Lucida Grande", Calibri, Helvetica, Arial, sans-serif;
   }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/_forms\.scss}line{font-family:\00003191}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/_forms\.scss}line{font-family:\00003211}}
   .ym-form optgroup {
     font-style: normal;
     font-weight: bold;
   }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/_forms\.scss}line{font-family:\00003198}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/_forms\.scss}line{font-family:\00003218}}
   .ym-form .ym-fbox-text input,
   .ym-form .ym-fbox-text textarea,
   .ym-form .ym-fbox-select select {
-    border: 1px solid #ddd;
+    border: 1px solid #ccc;
     border-radius: 0.2em;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/_forms\.scss}line{font-family:\00003227}}
+  .ym-form .ym-fbox-text input[disabled],
+  .ym-form .ym-fbox-text input[readonly],
+  .ym-form .ym-fbox-text textarea[disabled],
+  .ym-form .ym-fbox-text textarea[readonly] {
+    background: #FDFDFD;
+    cursor: default;
   }
 
   /* General form styling  | Allgemeine Formatierung des Formulars */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/_forms\.scss}line{font-family:\00003204}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/_forms\.scss}line{font-family:\00003233}}
   .ym-form .ym-message {
     color: #666;
     margin-bottom: 0.5em;
   }
 
   /* Highlight mandatory fields | Pflichtfeldkennzeichnung hervorheben */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/_forms\.scss}line{font-family:\00003210}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/_forms\.scss}line{font-family:\00003239}}
   .ym-form sup {
     color: #800;
     font-weight: bold;
@@ -2183,20 +2208,20 @@
   * @section error messages
   *
   */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/_forms\.scss}line{font-family:\00003231}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/_forms\.scss}line{font-family:\00003260}}
   .ym-form .ym-error label {
     color: #800;
     font-weight: normal;
   }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/_forms\.scss}line{font-family:\00003238}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/_forms\.scss}line{font-family:\00003267}}
   .ym-form .ym-error input,
   .ym-form .ym-error select,
   .ym-form .ym-error textarea {
     border: 1px #800 solid;
   }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/_forms\.scss}line{font-family:\00003247}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/_forms\.scss}line{font-family:\00003276}}
   .ym-form .ym-error input:hover,
   .ym-form .ym-error input:focus,
   .ym-form .ym-error select:hover,
@@ -2206,13 +2231,13 @@
     border: 1px #800 solid !important;
   }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/_forms\.scss}line{font-family:\00003251}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/_forms\.scss}line{font-family:\00003280}}
   .ym-form .ym-error .ym-message {
     color: #800;
   }
 
   /* :hover and :focus status on form fields | Effekt zur Hervorhebung von Formularfeldern bei :hover oder :focus */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/_forms\.scss}line{font-family:\00003264}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/_forms\.scss}line{font-family:\00003293}}
   .ym-form div.ym-fbox-text input:focus,
   .ym-form div select:focus,
   .ym-form div textarea:focus,
@@ -2225,6 +2250,25 @@
     border: 1px #888 solid;
     background: #fff;
     outline: 0;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/_forms\.scss}line{font-family:\00003304}}
+  .ym-form .ym-fbox-text input[disabled]:focus, .ym-form .ym-fbox-text input[disabled]:hover,
+  .ym-form .ym-fbox-text input[readonly]:focus,
+  .ym-form .ym-fbox-text input[readonly]:hover,
+  .ym-form .ym-fbox-text textarea[disabled]:focus,
+  .ym-form .ym-fbox-text textarea[disabled]:hover,
+  .ym-form .ym-fbox-text textarea[readonly]:focus,
+  .ym-form .ym-fbox-text textarea[readonly]:hover {
+    border-color: #ddd;
+    background: #FDFDFD;
+  }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/_forms\.scss}line{font-family:\00003309}}
+  .ym-form .ym-fbox-text input[disabled]:focus,
+  .ym-form .ym-fbox-text input[readonly]:focus,
+  .ym-form .ym-fbox-text textarea[disabled]:focus,
+  .ym-form .ym-fbox-text textarea[readonly]:focus {
+    border-color: #888;
   }
 }
 /* Font Awesome uses the Unicode Private Use Area (PUA) to ensure screen
