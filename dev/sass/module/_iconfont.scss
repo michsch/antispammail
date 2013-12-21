@@ -50,6 +50,25 @@ $icon-css-prefix    : 'en' !default;
 [class^="#{$icon-css-prefix}-"]:before,
 [class*=" #{$icon-css-prefix}-"]:before {
   @include icon();
+
+  @include font-size($ym-text-big-font-size);
+  width: .6em;
+  margin-left: .1em;
+  margin-right: .1em;
+}
+
+h2[class^="#{$icon-css-prefix}-"]:before,
+h2[class*=" #{$icon-css-prefix}-"]:before {
+  @include icon();
+
+  @include font-size($ym-h2-font-size * 1.8, $ym-h2-font-size);
+  @include line-height(40, $ym-h2-font-size * 1.8);
+  width: .6em;
+  margin-left: .1em;
+  margin-right: .1em;
+  margin-top: -3px;
+
+  //vertical-align: middle;
 }
 
 [data-#{$icon-data}]:before {

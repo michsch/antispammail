@@ -50,54 +50,87 @@
 
       <div id="main">
         <a id="content"></a>
-        <section class="ym-col1" role="main">
-          <div class="ym-cbox-right ym-clearfix">
-            <h2>Fight SPAM!</h2>
 
-            <form id="cryptmail" name="cryptmail" action="post" class="ym-form" onsubmit="return false;">
-              <fieldset class="ym-columnar">
-                <legend>Convert an email address in a SPAM free link.</legend>
-                <div class="ym-fbox-text ym-fbox">
-                  <label for="cryptmail_email">Email</label>
-                  <input id="cryptmail_email" type="email" name="cryptmail_email" required placeholder="Email"/>
-                </div>
-                <div class="ym-fbox">
-                  <span class="ym-label">Display option</span>
-                  <div class="ym-fbox-wrap">
-                    <div class="ym-fbox-check">
-                      <input id="cryptmail_radio_1" type="radio" value="0" name="cryptmail_radio" maxlength="100" checked />
-                      <label for="cryptmail_radio_1">Use [at] instead of @ and [dot] instead of .</label>
-                    </div>
-                    <div class="ym-fbox-check">
-                      <input id="cryptmail_radio_2" type="radio" value="1" name="cryptmail_radio" />
-                      <label for="cryptmail_radio_2">Use span Tags with the class <em>crypt</em> and invisible dot as wrap for @ and .</label>
-                    </div>
-                  </div>
-                </div>
-                <div class="ym-fbox-button ym-fbox">
-                  <button class="button en-lock" onclick="antiSpamMail.encryptForm()" />encrypt email</button>
-                </div>
-              </fieldset>
-              <fieldset>
-                <legend>Result</legend>
-                <div class="ym-columnar">
+        <p class="large">Vanilla JS, so no framework/library (jQuery etc.) needed!<br />
+          <strong>Only 1.4kb for full version</strong> including encrypting (like on this page) and <strong>less than 1kb</strong> for decryption only.
+        </p>
+
+
+        <div class="ym-columns">
+          <section class="ym-col1" role="main">
+            <div class="ym-cbox-right ym-clearfix">
+              <h2 class="en-light-bulb">Fight SPAM!</h2>
+
+              <form id="cryptmail" name="cryptmail" action="post" class="ym-form" onsubmit="return false;">
+                <fieldset class="ym-columnar">
+                  <legend>Convert an email address in a SPAM free link.</legend>
                   <div class="ym-fbox-text ym-fbox">
-                    <label for="cryptmail_cryptedmail">encrypted email:</label>
-                    <input id="cryptmail_cryptedmail" type="text" name="cryptmail_cryptedmail" readonly />
+                    <label for="cryptmail_email">Email</label>
+                    <input id="cryptmail_email" type="email" name="email" required placeholder="Email"/>
                   </div>
-                </div>
-                <div class="ym-fbox-check ym-fbox">
-                  <label for="cryptmail_html">full HTML:</label>
-                  <textarea name="cryptmail_html" id="cryptmail_html" cols="30" rows="10" readonly></textarea>
-                </div>
-              </fieldset>
+                  <div class="ym-fbox">
+                    <span class="ym-label">Display option</span>
+                    <div class="ym-fbox-wrap">
+                      <div class="ym-fbox-check">
+                        <input id="cryptmail_radio_1" type="radio" value="0" name="cryptmail_radio" maxlength="100" checked />
+                        <label for="cryptmail_radio_1">Use [at] instead of @ and [dot] instead of .</label>
+                      </div>
+                      <div class="ym-fbox-check">
+                        <input id="cryptmail_radio_2" type="radio" value="1" name="cryptmail_radio" />
+                        <label for="cryptmail_radio_2">Use span Tags with the class <em>crypt</em> and invisible dot as wrap for @ and .</label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="ym-fbox-button ym-fbox">
+                    <button class="button en-lock" onclick="antiSpamMail.encryptForm()" />encrypt email</button>
+                  </div>
+                </fieldset>
+                <fieldset>
+                  <legend>Result</legend>
+                  <div class="ym-columnar">
+                    <div class="ym-fbox-text ym-fbox">
+                      <label for="cryptmail_cryptedmail">Encrypted Email</label>
+                      <input id="cryptmail_cryptedmail" type="text" name="cryptmail_cryptedmail" readonly />
+                    </div>
+                  </div>
+                  <div class="ym-fbox-text ym-fbox">
+                    <label for="cryptmail_html">Full HTML</label>
+                    <textarea name="cryptmail_html" id="cryptmail_html" cols="30" rows="5" readonly></textarea>
+                  </div>
+                </fieldset>
 
-            </form>
+              </form>
+            </div>
+          </section>
+          <aside class="ym-col3" role="complementary">
+            <div class="ym-cbox-left ym-clearfix">
+              <h2>Download</h2>
+              <section class="download">
+                <a class="button zip en-download" href="http://github.com/michsch/antispammail/zipball/master">
+                  ZIP Download
+                </a>
+                <a class="button tar en-download" href="http://github.com/michsch/antispammail/tarball/master">
+                  TAR Download
+                </a>
+                <a class="button tar en-s-github" href="http://github.com/michsch/antispammail/" title="github.com/michsch/antispammail">
+                  Github
+                </a>
+              </section>
+              <h3>Or use Bower</h3>
+              <pre class="bash"><code>$ bower install antispammail</code></pre>
 
-            <h2>How it works</h2>
-            <p>Just include the <strong>antispammail.js</strong> file in your documents header or just before the closing body tag. If you use the span Tags with classname <em>crypt</em> than you should load the stylesheet too.</p>
-            <div class="prettify">
-              <pre class="prettyprint linenums"><code>;(function(window, document, undefined){
+            </div>
+            <div id="ie_clearing"> &#160; </div>
+          </aside>
+        </div>
+
+        <hr>
+
+        <h2>How to use</h2>
+        <p>Just include the <strong>antispammail.js</strong> file in your documents header or just before the closing body tag. If you use the span Tags with classname <code>crypt</code> than you should load the CSS file too or copy the styles inside your stylesheet.</p>
+        <p>If you only want to use the script for decrypting you don't have to load the complete version. Just use <strong>antispammail-decrypt.js</strong> instead.</p>
+        <div class="prettify">
+          <pre class="prettyprint linenums"><code>;(function(window, document, undefined){
   'use strict';
 
   var AntiSpamMail, AntiSpamMailProto, antiSpamMail;
@@ -207,31 +240,9 @@
     define('antiSpamMail', [], function() { return antiSpamMail; });
   }
 })(this, document);</code></pre>
-            </div>
-          </div>
-        </section>
-        <aside class="ym-col3" role="complementary">
-          <div class="ym-cbox-left ym-clearfix">
-            <h2>Download</h2>
-            <section class="download">
-              <a class="button zip en-download" href="http://github.com/michsch/antispammail/zipball/master">
-                ZIP Download
-              </a>
-              <a class="button tar en-download" href="http://github.com/michsch/antispammail/tarball/master">
-                TAR Download
-              </a>
-              <a class="button tar en-s-github" href="http://github.com/michsch/antispammail/" title="github.com/michsch/antispammail">
-                Github
-              </a>
-            </section>
-            <h3>Or use Bower</h3>
-            <code class="prettyprint bash">
-              bower install antispammail
-            </code>
+        </div>
 
-          </div>
-          <div id="ie_clearing"> &#160; </div>
-        </aside>
+
       </div>
 
       <footer id="footer" role="contentinfo">

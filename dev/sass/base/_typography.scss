@@ -148,8 +148,22 @@ pre {
   white-space: pre;
   white-space: pre-wrap;
   word-wrap: break-word;
+
+  background: #f8f8f8;
+  border: 1px #ddd solid;
+  @include border-radius(3px);
+
+  @include font-size(13);
+  @include line-height(19, 13);
+
+  margin: em($base-margin, 13) 0 0 0;
+  padding: em(6, 13) em(10, 13);
 }
-pre, code { color: $ym-pre-text-color; }
+
+pre,
+code {
+  color: $ym-pre-text-color;
+}
 
 kbd, samp, var, tt {
   color: $ym-kbd-text-color;

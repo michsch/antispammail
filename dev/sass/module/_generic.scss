@@ -1,42 +1,12 @@
 // Generic Content Classes
 
-.hello {
-  h3, p {
-    font-family: $ym-font-serif;
-  }
-  h3 {
-    margin-left: em( -22, 58 );
-    text-shadow: 1px 1px 0 rgba( 255,255,255,1);
-    font-weight: 700;
-    letter-spacing: -.08em;
-    @include font-size( 58 );
-    @include line-height( 60, 58 );
-  }
-
-  p.subheader {
-    @include font-size( 20 );
-    @include line-height( 28, 20 );
-    margin-top: em( $base-margin, 20 );
-  }
-
-  .name {
-    //font-style: italic;
-    font-weight: 700;
-    letter-spacing: -.03em;
-    font-family: $ym-font-serif;
-  }
-}
-
-.what {
-  //@include font-size( 20 );
-  //@include line-height( 28, 20 );
-}
-
 .clearfix,
 .group {
   @include clearfix();
 }
 
+.big,
+.large,
 .subheader {
   @include font-size( $ym-text-big-font-size );
 }
