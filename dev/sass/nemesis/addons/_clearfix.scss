@@ -1,0 +1,64 @@
+// Micro clearfix provides an easy way to contain floats without adding additional markup
+//
+// Example usage:
+//
+//    // Contain all floats within .wrapper
+//    .wrapper {
+//      @include clearfix;
+//      .content,
+//      .sidebar {
+//        float : left;
+//      }
+//    }
+
+// Acknowledgements
+// Micro clearfix: [Nicolas Gallagher](http://nicolasgallagher.com/micro-clearfix-hack/)
+@mixin micro-clearfix() {
+  &:before,
+  &:after {
+    content: "";
+    display: table;
+  } 
+  &:after {
+    clear: both;
+  }
+
+  *zoom: 1; /* For IE 6/7 (trigger hasLayout) */
+}
+
+// standard clearfix
+// http://css-tricks.com/snippets/css/clear-fix/
+@mixin standard-clearfix() {
+  &:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+  }
+  * html &             { zoom: 1; } /* IE6 */
+  *:first-child+html & { zoom: 1; } /* IE7 */
+}
+
+// YAML clearfix method
+// https://github.com/djesse/yaml4-sass/blob/master/sass/yaml/core/base-modules/_float-handling.scss
+@mixin ym-clearfix() {
+  &:before {
+    content: "";
+    display: table;
+  }
+  &:after {
+    clear: both;
+    content: ".";
+    display: block;
+    font-size: 0;
+    height: 0;
+    visibility: hidden;
+  }
+}
+
+// use the 
+@mixin clearfix {
+  @include micro-clearfix;
+}

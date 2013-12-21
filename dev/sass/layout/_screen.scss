@@ -1,0 +1,46 @@
+// screen stylesheet with box layout
+
+body {
+  background: transparent image-url("body_bg.png") repeat left top;
+}
+
+.ym-wrapper {
+  width: 960px;
+  margin: 0 auto;
+
+  .ym-wbox {
+    padding: 20px 0;
+  }
+}
+
+#header {
+  margin: 0 0 3em;
+}
+
+#topnav {  }
+
+#main {  }
+
+#footer {  }
+
+.ym-col1 {
+  float: right;
+  width: 70%;
+}
+
+.ym-col2 {
+  display:none;
+}
+
+.ym-col3 {
+  width: auto;
+  margin: 0 70% 0 0;
+}
+
+.ym-cbox-right {
+  padding: 0 0 0 20px;
+}
+
+.ym-cbox-left {
+  padding: 0 20px 0 0;
+}

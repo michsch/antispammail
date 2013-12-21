@@ -1,0 +1,3937 @@
+@charset "UTF-8";
+/* YAML CSS Framework */
+@media all {
+  /**
+   *  @section Normalisation Module
+   */
+  /* (en) Global reset of paddings and margins for all HTML elements */
+  /* (de) Globales Zurücksetzen der Innen- und Außenabstände für alle HTML-Elemente */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/framework\/yaml4\/core\/base-modules\/_normalization\.scss}line{font-family:\000038}}
+  * {
+    margin: 0;
+    padding: 0;
+  }
+
+  /* (en) Correction: margin/padding reset caused too small select boxes. */
+  /* (de) Korrektur: Das Zurücksetzen der Abstände verursacht zu kleine Selectboxen. */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/framework\/yaml4\/core\/base-modules\/_normalization\.scss}line{font-family:\0000312}}
+  option {
+    padding-left: 0.4em;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/framework\/yaml4\/core\/base-modules\/_normalization\.scss}line{font-family:\0000313}}
+  select {
+    padding: 1px;
+  }
+
+  /*
+  * (en) Global fix of the Italics bugs in IE 5.x and IE 6
+  * (de) Globale Korrektur des Italics Bugs des IE 5.x und IE 6
+  *
+  * @bugfix
+  * @affected   IE 5.x/Win, IE6
+  * @css-for    IE 5.x/Win, IE6
+  * @valid      yes
+  */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/framework\/yaml4\/core\/base-modules\/_normalization\.scss}line{font-family:\0000325}}
+  * html body * {
+    overflow: visible;
+  }
+
+  /*
+  * (en) Fix for rounding errors when scaling font sizes in older versions of Opera browser
+  *      Standard values for colors and text alignment
+  *
+  * (de) Beseitigung von Rundungsfehler beim Skalieren von Schriftgrößen in älteren Opera Versionen
+  *      Vorgabe der Standardfarben und Textausrichtung
+  */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/framework\/yaml4\/core\/base-modules\/_normalization\.scss}line{font-family:\0000334}}
+  body {
+    font-size: 100%;
+    background: #fff;
+    color: #000;
+    text-align: left;
+  }
+
+  /* (en) avoid visible outlines on DIV and h[x] elements in Webkit browsers */
+  /* (de) Vermeidung sichtbarer Outline-Rahmen in Webkit-Browsern */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/framework\/yaml4\/core\/base-modules\/_normalization\.scss}line{font-family:\0000350}}
+  div:target,
+  h1:target,
+  h2:target,
+  h3:target,
+  h4:target,
+  h5:target,
+  h6:target {
+    outline: 0 none;
+  }
+
+  /* (en) HTML5 - adjusting visual formatting model to block level */
+  /* (de) HTML5 - Elements werden als Blockelemente definiert */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/framework\/yaml4\/core\/base-modules\/_normalization\.scss}line{font-family:\0000366}}
+  article,
+  aside,
+  details,
+  figcaption,
+  figure,
+  footer,
+  header,
+  main,
+  nav,
+  section,
+  summary {
+    display: block;
+  }
+
+  /* (en) HTML5 - default media element styles */
+  /* (de) HTML5 - Standard Eigenschaften für Media-Elemente */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/framework\/yaml4\/core\/base-modules\/_normalization\.scss}line{font-family:\0000374}}
+  audio,
+  canvas,
+  video {
+    display: inline-block;
+  }
+
+  /* (en) HTML5 - don't show <audio> element if there aren't controls */
+  /* (de) HTML5 - <audio> ohne Kontrollelemente sollten nicht angezeigt werden */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/framework\/yaml4\/core\/base-modules\/_normalization\.scss}line{font-family:\0000380}}
+  audio:not([controls]) {
+    display: none;
+  }
+
+  /* (en) HTML5 - add missing styling in IE & old FF for hidden attribute */
+  /* (de) HTML5 - Eigenschaften für das hidden-Attribut in älteren IEs und FF nachrüsten */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/framework\/yaml4\/core\/base-modules\/_normalization\.scss}line{font-family:\0000386}}
+  [hidden] {
+    display: none;
+  }
+
+  /* (en) Prevent iOS text size adjust after orientation change, without disabling user zoom. */
+  /* (de) Verdindert die automatische Textanpassung bei Orientierungswechsel, ohne Zoom zu blockieren */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/framework\/yaml4\/core\/base-modules\/_normalization\.scss}line{font-family:\0000392}}
+  html {
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  /* (en) set correct box-modell in IE8/9 plus remove padding */
+  /* (de) Setze das richtige Box-Modell im IE8/9 und entferne unnötiges Padding */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/framework\/yaml4\/core\/base-modules\/_normalization\.scss}line{font-family:\00003100}}
+  input[type="checkbox"],
+  input[type="radio"] {
+    box-sizing: border-box;
+    padding: 0;
+  }
+
+  /* (en) force consistant appearance of input[type="search"] elements in all browser */
+  /* (de) Einheitliches Erscheinungsbild für input[type="search"] Elemente erzwingen */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/framework\/yaml4\/core\/base-modules\/_normalization\.scss}line{font-family:\00003107}}
+  input[type="search"] {
+    -webkit-appearance: textfield;
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/framework\/yaml4\/core\/base-modules\/_normalization\.scss}line{font-family:\00003115}}
+  input[type="search"]::-webkit-search-cancel-button,
+  input[type="search"]::-webkit-search-decoration {
+    -webkit-appearance: none;
+  }
+
+  /* (en) Correct overflow displayed oddly in IE 9 */
+  /* (de) Korrigiert fehlerhafte overflow Voreinstellung des IE 9 */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/framework\/yaml4\/core\/base-modules\/_normalization\.scss}line{font-family:\00003121}}
+  svg:not(:root) {
+    overflow: hidden;
+  }
+
+  /* (en) Address margin not present in IE 8/9 and Safari 5 */
+  /* (en) Ergänzt fehlenden Margin in IE 8/9 und Safari 5 */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/framework\/yaml4\/core\/base-modules\/_normalization\.scss}line{font-family:\00003127}}
+  figure {
+    margin: 0;
+  }
+
+  /* (en) Clear borders for <fieldset> and <img> elements */
+  /* (de) Rahmen für <fieldset> und <img> Elemente löschen */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/framework\/yaml4\/core\/base-modules\/_normalization\.scss}line{font-family:\00003134}}
+  fieldset,
+  img {
+    border: 0 solid;
+  }
+
+  /* (en) new standard values for lists, blockquote, cite and tables */
+  /* (de) Neue Standardwerte für Listen, Zitate und Tabellen */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/framework\/yaml4\/core\/base-modules\/_normalization\.scss}line{font-family:\00003140}}
+  ul,
+  ol,
+  dl {
+    margin: 0 0 1em 1em;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/framework\/yaml4\/core\/base-modules\/_normalization\.scss}line{font-family:\00003142}}
+  li {
+    line-height: 1.5em;
+    margin-left: 0.8em;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/framework\/yaml4\/core\/base-modules\/_normalization\.scss}line{font-family:\00003147}}
+  dt {
+    font-weight: bold;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/framework\/yaml4\/core\/base-modules\/_normalization\.scss}line{font-family:\00003148}}
+  dd {
+    margin: 0 0 1em 0.8em;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/framework\/yaml4\/core\/base-modules\/_normalization\.scss}line{font-family:\00003150}}
+  blockquote {
+    margin: 0 0 1em 0.8em;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/framework\/yaml4\/core\/base-modules\/_normalization\.scss}line{font-family:\00003151}}
+  q {
+    quotes: none;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/framework\/yaml4\/core\/base-modules\/_normalization\.scss}line{font-family:\00003156}}
+  blockquote:before,
+  blockquote:after,
+  q:before,
+  q:after {
+    content: '';
+    content: none;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/framework\/yaml4\/core\/base-modules\/_normalization\.scss}line{font-family:\00003161}}
+  table {
+    border-collapse: collapse;
+    border-spacing: 0;
+  }
+
+  /**
+  * @section Float Handling Module
+  */
+  /* (en) clearfix method for clearing floats */
+  /* (de) Clearfix-Methode zum Clearen der Float-Umgebungen */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/framework\/yaml4\/core\/base-modules\/_float-handling\.scss}line{font-family:\000038}}
+  .ym-clearfix:before {
+    content: "";
+    display: table;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/framework\/yaml4\/core\/base-modules\/_float-handling\.scss}line{font-family:\0000312}}
+  .ym-clearfix:after {
+    clear: both;
+    content: ".";
+    display: block;
+    font-size: 0;
+    height: 0;
+    visibility: hidden;
+  }
+
+  /* (en) alternative solutions to contain floats */
+  /* (de) Alternative Methoden zum Einschließen von Float-Umgebungen */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/framework\/yaml4\/core\/base-modules\/_float-handling\.scss}line{font-family:\0000323}}
+  .ym-contain-dt {
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/framework\/yaml4\/core\/base-modules\/_float-handling\.scss}line{font-family:\0000326}}
+  .ym-contain-oh {
+    display: block;
+    overflow: hidden;
+    width: 100%;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/framework\/yaml4\/core\/base-modules\/_float-handling\.scss}line{font-family:\0000329}}
+  .ym-contain-fl {
+    float: left;
+    width: 100%;
+  }
+
+  /**
+  * @section Column Module
+  *
+  * default column config:
+  * |-------------------------------|
+  * | col1    | col3      | col2    |
+  * | 20%     | flexible  | 20%     |
+  * |-------------------------------|
+  */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/framework\/yaml4\/core\/base-modules\/_columns\.scss}line{font-family:\0000312}}
+  .ym-column {
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/framework\/yaml4\/core\/base-modules\/_columns\.scss}line{font-family:\0000316}}
+  .ym-col1 {
+    float: left;
+    width: 20%;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/framework\/yaml4\/core\/base-modules\/_columns\.scss}line{font-family:\0000317}}
+  .ym-col2 {
+    float: right;
+    width: 20%;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/framework\/yaml4\/core\/base-modules\/_columns\.scss}line{font-family:\0000318}}
+  .ym-col3 {
+    width: auto;
+    margin: 0 20%;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/framework\/yaml4\/core\/base-modules\/_columns\.scss}line{font-family:\0000320}}
+  .ym-cbox {
+    padding: 0 10px;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/framework\/yaml4\/core\/base-modules\/_columns\.scss}line{font-family:\0000321}}
+  .ym-cbox-left {
+    padding: 0 10px 0 0;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/framework\/yaml4\/core\/base-modules\/_columns\.scss}line{font-family:\0000322}}
+  .ym-cbox-right {
+    padding: 0 0 0 10px;
+  }
+
+  /* (en) IE-Clearing: Only used in Internet Explorer, switched on in iehacks.css */
+  /* (de) IE-Clearing: Benötigt nur der Internet Explorer und über iehacks.css zugeschaltet */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/framework\/yaml4\/core\/base-modules\/_columns\.scss}line{font-family:\0000326}}
+  .ym-ie-clearing {
+    display: none;
+  }
+
+  /**
+  * @section Grid Module
+  */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/framework\/yaml4\/core\/base-modules\/_grids-core\.scss}line{font-family:\000037}}
+  .ym-grid {
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+    list-style-type: none;
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/framework\/yaml4\/core\/base-modules\/_grids-core\.scss}line{font-family:\0000316}}
+  .ym-gl {
+    float: left;
+    margin: 0;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/framework\/yaml4\/core\/base-modules\/_grids-core\.scss}line{font-family:\0000321}}
+  .ym-gr {
+    float: right;
+    margin: 0 0 0 -5px;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/framework\/yaml4\/core\/base-modules\/_grids-core\.scss}line{font-family:\0000326}}
+  .ym-g20 {
+    width: 20%;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/framework\/yaml4\/core\/base-modules\/_grids-core\.scss}line{font-family:\0000327}}
+  .ym-g40 {
+    width: 40%;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/framework\/yaml4\/core\/base-modules\/_grids-core\.scss}line{font-family:\0000328}}
+  .ym-g60 {
+    width: 60%;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/framework\/yaml4\/core\/base-modules\/_grids-core\.scss}line{font-family:\0000329}}
+  .ym-g80 {
+    width: 80%;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/framework\/yaml4\/core\/base-modules\/_grids-core\.scss}line{font-family:\0000330}}
+  .ym-g25 {
+    width: 25%;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/framework\/yaml4\/core\/base-modules\/_grids-core\.scss}line{font-family:\0000331}}
+  .ym-g33 {
+    width: 33.333%;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/framework\/yaml4\/core\/base-modules\/_grids-core\.scss}line{font-family:\0000332}}
+  .ym-g50 {
+    width: 50%;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/framework\/yaml4\/core\/base-modules\/_grids-core\.scss}line{font-family:\0000333}}
+  .ym-g66 {
+    width: 66.666%;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/framework\/yaml4\/core\/base-modules\/_grids-core\.scss}line{font-family:\0000334}}
+  .ym-g75 {
+    width: 75%;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/framework\/yaml4\/core\/base-modules\/_grids-core\.scss}line{font-family:\0000335}}
+  .ym-g38 {
+    width: 38.2%;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/framework\/yaml4\/core\/base-modules\/_grids-core\.scss}line{font-family:\0000336}}
+  .ym-g62 {
+    width: 61.8%;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/framework\/yaml4\/core\/base-modules\/_grids-core\.scss}line{font-family:\0000338}}
+  .ym-gbox {
+    padding: 0 10px;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/framework\/yaml4\/core\/base-modules\/_grids-core\.scss}line{font-family:\0000339}}
+  .ym-gbox-left {
+    padding: 0 10px 0 0;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/framework\/yaml4\/core\/base-modules\/_grids-core\.scss}line{font-family:\0000340}}
+  .ym-gbox-right {
+    padding: 0 0 0 10px;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/framework\/yaml4\/core\/base-modules\/_grids-core\.scss}line{font-family:\0000342}}
+  .ym-equalize {
+    overflow: hidden;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/framework\/yaml4\/core\/base-modules\/_grids-core\.scss}line{font-family:\0000344}}
+  .ym-equalize > [class*="ym-g"] {
+    display: table-cell;
+    float: none;
+    margin: 0;
+    vertical-align: top;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/framework\/yaml4\/core\/base-modules\/_grids-core\.scss}line{font-family:\0000351}}
+  .ym-equalize > [class*="ym-g"] > [class*="ym-gbox"] {
+    padding-bottom: 10000px;
+    margin-bottom: -10000px;
+  }
+
+  /**
+  * @section Form Module
+  */
+  /** Vertical-Forms - technical base (standard)
+  *
+  * |-------------------------------|
+  * | form                          |
+  * |-------------------------------|
+  * |   label                       |
+  * |   input / select / textarea   |
+  * |-------------------------------|
+  * | /form                         |
+  * |-------------------------------|
+  *
+  * (en) Styling of forms where both label and input/select/textarea are styled with display:block;
+  * (de) Formulargestaltung, bei der sowohl label als auch input/select/textarea mit display:block; gestaltet werden
+  */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/framework\/yaml4\/core\/base-modules\/_forms-core\.scss}line{font-family:\0000322}}
+  .ym-form,
+  .ym-form fieldset {
+    overflow: hidden;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/framework\/yaml4\/core\/base-modules\/_forms-core\.scss}line{font-family:\0000325}}
+  .ym-form div {
+    position: relative;
+  }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/framework\/yaml4\/core\/base-modules\/_forms-core\.scss}line{font-family:\0000329}}
+  .ym-form label,
+  .ym-form .ym-label,
+  .ym-form .ym-message {
+    position: relative;
+    line-height: 1.5;
+    display: block;
+  }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/framework\/yaml4\/core\/base-modules\/_forms-core\.scss}line{font-family:\0000335}}
+  .ym-form .ym-message {
+    clear: both;
+  }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/framework\/yaml4\/core\/base-modules\/_forms-core\.scss}line{font-family:\0000339}}
+  .ym-form .ym-fbox-check label {
+    display: inline;
+  }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/framework\/yaml4\/core\/base-modules\/_forms-core\.scss}line{font-family:\0000344}}
+  .ym-form input,
+  .ym-form textarea {
+    cursor: text;
+  }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/framework\/yaml4\/core\/base-modules\/_forms-core\.scss}line{font-family:\0000351}}
+  .ym-form .ym-fbox-check input,
+  .ym-form input[type="image"],
+  .ym-form input[type="radio"],
+  .ym-form input[type="checkbox"],
+  .ym-form select,
+  .ym-form label {
+    cursor: pointer;
+  }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/framework\/yaml4\/core\/base-modules\/_forms-core\.scss}line{font-family:\0000356}}
+  .ym-form textarea {
+    overflow: auto;
+  }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/framework\/yaml4\/core\/base-modules\/_forms-core\.scss}line{font-family:\0000363}}
+  .ym-form input.hidden,
+  .ym-form input[type=hidden] {
+    display: none !important;
+  }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/framework\/yaml4\/core\/base-modules\/_forms-core\.scss}line{font-family:\0000373}}
+  .ym-form .ym-fbox:before,
+  .ym-form .ym-fbox-text:before,
+  .ym-form .ym-fbox-select:before,
+  .ym-form .ym-fbox-check:before,
+  .ym-form .ym-fbox-button:before {
+    content: "";
+    display: table;
+  }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/framework\/yaml4\/core\/base-modules\/_forms-core\.scss}line{font-family:\0000382}}
+  .ym-form .ym-fbox:after,
+  .ym-form .ym-fbox-text:after,
+  .ym-form .ym-fbox-select:after,
+  .ym-form .ym-fbox-check:after,
+  .ym-form .ym-fbox-button:after {
+    clear: both;
+    content: ".";
+    display: block;
+    font-size: 0;
+    height: 0;
+    visibility: hidden;
+  }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/framework\/yaml4\/core\/base-modules\/_forms-core\.scss}line{font-family:\00003100}}
+  .ym-form .ym-fbox-check input:focus,
+  .ym-form .ym-fbox-check input:hover,
+  .ym-form .ym-fbox-check input:active,
+  .ym-form input[type="radio"]:focus,
+  .ym-form input[type="radio"]:hover,
+  .ym-form input[type="radio"]:active,
+  .ym-form input[type="checkbox"]:focus,
+  .ym-form input[type="checkbox"]:hover,
+  .ym-form input[type="checkbox"]:active {
+    border: 0 none;
+  }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/framework\/yaml4\/core\/base-modules\/_forms-core\.scss}line{font-family:\00003110}}
+  .ym-form input,
+  .ym-form textarea,
+  .ym-form select {
+    display: block;
+    position: relative;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 70%;
+  }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/framework\/yaml4\/core\/base-modules\/_forms-core\.scss}line{font-family:\00003120}}
+  .ym-form .ym-fbox-check input,
+  .ym-form input[type="radio"],
+  .ym-form input[type="checkbox"] {
+    display: inline;
+    margin-left: 0;
+    margin-right: 0.5ex;
+    width: auto;
+    height: auto;
+  }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/framework\/yaml4\/core\/base-modules\/_forms-core\.scss}line{font-family:\00003128}}
+  .ym-form input[type="image"] {
+    border: 0;
+    display: inline;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    width: auto;
+  }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/framework\/yaml4\/core\/base-modules\/_forms-core\.scss}line{font-family:\00003138}}
+  .ym-form label,
+  .ym-form .ym-label {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/framework\/yaml4\/core\/base-modules\/_forms-core\.scss}line{font-family:\00003144}}
+  .ym-form .ym-fbox-button input {
+    display: inline;
+    overflow: visible;
+    width: auto;
+  }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/framework\/yaml4\/core\/base-modules\/_forms-core\.scss}line{font-family:\00003151}}
+  .ym-form .ym-inline {
+    display: inline-block;
+    float: none;
+    margin-right: 0;
+    width: auto;
+    vertical-align: baseline;
+  }
+
+  /* default form wrapper width */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/framework\/yaml4\/core\/base-modules\/_forms-core\.scss}line{font-family:\00003161}}
+  .ym-fbox-wrap {
+    display: table;
+    table-layout: fixed;
+    width: 70%;
+  }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/framework\/yaml4\/core\/base-modules\/_forms-core\.scss}line{font-family:\00003168}}
+  .ym-fbox-wrap input,
+  .ym-fbox-wrap textarea,
+  .ym-fbox-wrap select {
+    width: 100%;
+  }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/framework\/yaml4\/core\/base-modules\/_forms-core\.scss}line{font-family:\00003172}}
+  .ym-fbox-wrap input[type="image"] {
+    width: auto;
+  }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/framework\/yaml4\/core\/base-modules\/_forms-core\.scss}line{font-family:\00003177}}
+  .ym-fbox-wrap input[type="radio"],
+  .ym-fbox-wrap input[type="checkbox"] {
+    display: inline;
+    width: auto;
+    margin-left: 0;
+    margin-right: 0.5ex;
+  }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/framework\/yaml4\/core\/base-modules\/_forms-core\.scss}line{font-family:\00003185}}
+  .ym-fbox-wrap label,
+  .ym-fbox-wrap .ym-label {
+    display: inline;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/framework\/yaml4\/core\/base-modules\/_forms-core\.scss}line{font-family:\00003193}}
+  .ym-full input,
+  .ym-full textarea,
+  .ym-full select {
+    width: 100%;
+  }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/framework\/yaml4\/core\/base-modules\/_forms-core\.scss}line{font-family:\00003196}}
+  .ym-full .ym-fbox-wrap {
+    width: 100%;
+  }
+
+  /**
+  *  Columnar forms display - technical base (optional)
+  *
+  *  |-------------------------------------------|
+  *  | form                                      |
+  *  |-------------------------------------------|
+  *  |                                           |
+  *  |   label   |   input / select / textarea   |
+  *  |                                           |
+  *  |-------------------------------------------|
+  *  | /form                                     |
+  *  |-------------------------------------------|
+  *
+  *  (en) Styling of forms where label floats left of form-elements
+  *  (de) Formulargestaltung, bei der die label-Elemente nach links fließen
+  */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/framework\/yaml4\/core\/base-modules\/_forms-core\.scss}line{font-family:\00003224}}
+  .ym-columnar input,
+  .ym-columnar textarea,
+  .ym-columnar select {
+    float: left;
+    margin-right: -3px;
+  }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/framework\/yaml4\/core\/base-modules\/_forms-core\.scss}line{font-family:\00003230}}
+  .ym-columnar label,
+  .ym-columnar .ym-label {
+    display: inline;
+    float: left;
+    width: 30%;
+    z-index: 1;
+  }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/framework\/yaml4\/core\/base-modules\/_forms-core\.scss}line{font-family:\00003240}}
+  .ym-columnar .ym-fbox-check input,
+  .ym-columnar .ym-message {
+    margin-left: 30%;
+  }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/framework\/yaml4\/core\/base-modules\/_forms-core\.scss}line{font-family:\00003245}}
+  .ym-columnar .ym-fbox-wrap {
+    margin-left: 30%;
+    margin-right: -3px;
+  }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/framework\/yaml4\/core\/base-modules\/_forms-core\.scss}line{font-family:\00003249}}
+  .ym-columnar .ym-fbox-wrap .ym-message {
+    margin-left: 0%;
+  }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/framework\/yaml4\/core\/base-modules\/_forms-core\.scss}line{font-family:\00003253}}
+  .ym-columnar .ym-fbox-wrap label {
+    float: none;
+    width: auto;
+    z-index: 1;
+    margin-left: 0;
+  }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/framework\/yaml4\/core\/base-modules\/_forms-core\.scss}line{font-family:\00003260}}
+  .ym-columnar .ym-fbox-wrap input {
+    margin-left: 0;
+    position: relative;
+  }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/framework\/yaml4\/core\/base-modules\/_forms-core\.scss}line{font-family:\00003266}}
+  .ym-columnar .ym-fbox-check {
+    position: relative;
+  }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/framework\/yaml4\/core\/base-modules\/_forms-core\.scss}line{font-family:\00003270}}
+  .ym-columnar .ym-fbox-check label,
+  .ym-columnar .ym-fbox-check .ym-label {
+    padding-top: 0;
+  }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/framework\/yaml4\/core\/base-modules\/_forms-core\.scss}line{font-family:\00003274}}
+  .ym-columnar .ym-fbox-check input {
+    top: 3px;
+  }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/framework\/yaml4\/core\/base-modules\/_forms-core\.scss}line{font-family:\00003280}}
+  .ym-columnar .ym-fbox-button input {
+    float: none;
+    margin-right: 1em;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/framework\/yaml4\/core\/base-modules\/_forms-core\.scss}line{font-family:\00003287}}
+  .ym-fbox-wrap + .ym-fbox-wrap {
+    margin-top: 0.5em;
+  }
+
+  /* global and local columnar settings for button alignment */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/framework\/yaml4\/core\/base-modules\/_forms-core\.scss}line{font-family:\00003293}}
+  .ym-columnar fieldset .ym-fbox-button,
+  fieldset.ym-columnar .ym-fbox-button {
+    padding-left: 30%;
+  }
+
+  /**
+  * @section Accessibility Module
+  *
+  * (en) skip links and hidden content
+  * (de) Skip-Links und versteckte Inhalte
+  */
+  /* (en) classes for invisible elements in the base layout */
+  /* (de) Klassen für unsichtbare Elemente im Basislayout */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/framework\/yaml4\/core\/base-modules\/_accessibility\.scss}line{font-family:\0000314}}
+  .ym-skip,
+  .ym-hideme,
+  .ym-print {
+    position: absolute;
+    top: -32768px;
+    left: -32768px;
+  }
+
+  /* (en) make skip links visible when using tab navigation */
+  /* (de) Skip-Links für Tab-Navigation sichtbar schalten */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/framework\/yaml4\/core\/base-modules\/_accessibility\.scss}line{font-family:\0000323}}
+  .ym-skip:focus,
+  .ym-skip:active {
+    position: static;
+    top: 0;
+    left: 0;
+  }
+
+  /* skiplinks:technical setup */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/framework\/yaml4\/core\/base-modules\/_accessibility\.scss}line{font-family:\0000330}}
+  .ym-skiplinks {
+    position: absolute;
+    top: 0px;
+    left: -32768px;
+    z-index: 1000;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+  }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/framework\/yaml4\/core\/base-modules\/_accessibility\.scss}line{font-family:\0000341}}
+  .ym-skiplinks .ym-skip:focus,
+  .ym-skiplinks .ym-skip:active {
+    left: 32768px;
+    outline: 0 none;
+    position: absolute;
+    width: 100%;
+  }
+}
+@media all {
+  /*
+  * @section global typography settings
+  *
+  * vertical rhythm settings (based on em-unit)
+  * -------------------------------------------
+  * basefont-size: 14px (87.5%)
+  * line-height  : 21px (factor: 1.5)
+  */
+  /* (en) reset font size for all elements to standard (16 Pixel) */
+  /* (de) Alle Schriftgrößen auf Standardgröße (16 Pixel) zurücksetzen */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/base\/_main\.scss}line{font-family:\0000314}}
+  html * {
+    font-size: 100%;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/base\/_main\.scss}line{font-family:\0000318}}
+  html,
+  body {
+    min-height: 100%;
+    position: relative;
+  }
+
+  /* (en) base layout gets standard font size 14px */
+  /* (de) Basis-Layout erhält Standardschriftgröße von 14 Pixeln */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/base\/_main\.scss}line{font-family:\0000325}}
+  body {
+    font-family: "Open Sans", "Helvetica Neue", "Lucida Grande", Calibri, Helvetica, Arial, sans-serif;
+    font-size: 93.75%;
+    color: #111111;
+    /* (en) Prevent auto-scaling of text in mobile webkit browsers */
+    /* (en) Automatische Schriftvergrößerung in mobilen Webkit-Browsern vermeiden */
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+  }
+
+  /**
+  * (en) reset monospaced elements to font size 16px in all browsers
+  * (de) Schriftgröße von monospaced Elemente in allen Browsern auf 16 Pixel setzen
+  *
+  * @see: http://webkit.org/blog/67/strange-medium/
+  */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/base\/_typography\.scss}line{font-family:\0000316}}
+  textarea,
+  pre,
+  code,
+  kbd,
+  samp,
+  var,
+  tt {
+    font-family: Consolas, "Lucida Console", "Andale Mono", "Bitstream Vera Sans Mono", "Courier New", Courier;
+  }
+
+  /*--- Headings | Überschriften ------------------------------------------------------------------------*/
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/base\/_typography\.scss}line{font-family:\0000327}}
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: "PT Serif", Georgia, "Times New Roman", Times, serif;
+    font-weight: 400;
+    color: #161e21;
+    margin: 0;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/base\/_typography\.scss}line{font-family:\0000336}}
+  h1,
+  h2,
+  h3 {
+    font-family: "Salsa", "PT Serif", Georgia, "Times New Roman", Times, serif;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/base\/_typography\.scss}line{font-family:\0000340}}
+  h1 {
+    font-size: 320%;
+    line-height: 0.83333;
+    margin: 0.41667em 0 0;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/base\/_typography\.scss}line{font-family:\0000344}}
+  h2 {
+    font-size: 213.33333%;
+    line-height: 1.25;
+    margin: 0.625em 0 0;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/base\/_typography\.scss}line{font-family:\0000347}}
+  h3 {
+    font-size: 160%;
+    line-height: 1.66667;
+    margin: 0.83333em 0 0;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/base\/_typography\.scss}line{font-family:\0000350}}
+  h4 {
+    font-size: 140%;
+    line-height: 1.90476;
+    margin: 0.95238em 0 0;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/base\/_typography\.scss}line{font-family:\0000353}}
+  h5 {
+    font-size: 120%;
+    line-height: 2.22222;
+    margin: 1.11111em 0 0;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/base\/_typography\.scss}line{font-family:\0000356}}
+  h6 {
+    font-size: 93.33333%;
+    line-height: 2.85714;
+    margin: 1.42857em 0 0;
+    font-weight: 700;
+  }
+
+  /* --- Lists | Listen  -------------------------------------------------------------------------------- */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/base\/_typography\.scss}line{font-family:\0000365}}
+  ul,
+  ol,
+  dl {
+    font-size: 100%;
+    line-height: 1.33333;
+    margin: 1.33333em 0 0 1em;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/base\/_typography\.scss}line{font-family:\0000371}}
+  ul {
+    list-style-type: disc;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/base\/_typography\.scss}line{font-family:\0000375}}
+  ol {
+    list-style-type: decimal;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/base\/_typography\.scss}line{font-family:\0000379}}
+  ul ul {
+    list-style-type: circle;
+    margin-top: 0;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/base\/_typography\.scss}line{font-family:\0000384}}
+  ol ol {
+    list-style-type: lower-latin;
+    margin-top: 0;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/base\/_typography\.scss}line{font-family:\0000389}}
+  ol ul {
+    list-style-type: circle;
+    margin-top: 0;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/base\/_typography\.scss}line{font-family:\0000394}}
+  li {
+    font-size: 100%;
+    line-height: 1.33333;
+    margin: 1.33333em 0 0 0.8em;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/base\/_typography\.scss}line{font-family:\00003100}}
+  dt {
+    font-weight: bold;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/base\/_typography\.scss}line{font-family:\00003102}}
+  dd {
+    margin: 0 0 1.33333em 0.8em;
+  }
+
+  /* --- general text formatting | Allgemeine Textauszeichnung ------------------------------------------ */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/base\/_typography\.scss}line{font-family:\00003106}}
+  p {
+    font-size: 100%;
+    line-height: 1.33333;
+    margin: 1.33333em 0 0 0;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/base\/_typography\.scss}line{font-family:\00003112}}
+  blockquote, cite, q {
+    font-family: Georgia, "Times New Roman", Times, serif;
+    font-style: italic;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/base\/_typography\.scss}line{font-family:\00003117}}
+  blockquote {
+    margin: 1.33333em 0 0 1.33333em;
+    color: #666666;
+    background: transparent;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/base\/_typography\.scss}line{font-family:\00003123}}
+  strong, b {
+    font-weight: bold;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/base\/_typography\.scss}line{font-family:\00003125}}
+  em, i {
+    font-style: italic;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/base\/_typography\.scss}line{font-family:\00003127}}
+  big {
+    font-size: 106.66667%;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/base\/_typography\.scss}line{font-family:\00003131}}
+  small {
+    font-size: 80%;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/base\/_typography\.scss}line{font-family:\00003140}}
+  pre,
+  code,
+  kbd,
+  tt,
+  samp,
+  var {
+    font-size: 100%;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/base\/_typography\.scss}line{font-family:\00003144}}
+  pre {
+    font-size: 100%;
+    line-height: 1.33333;
+    margin: 1.33333em 0 0 0;
+    white-space: pre;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/base\/_typography\.scss}line{font-family:\00003152}}
+  pre, code {
+    color: #880000;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/base\/_typography\.scss}line{font-family:\00003154}}
+  kbd, samp, var, tt {
+    color: #666666;
+    font-weight: bold;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/base\/_typography\.scss}line{font-family:\00003159}}
+  var, dfn {
+    font-style: italic;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/base\/_typography\.scss}line{font-family:\00003161}}
+  acronym, abbr {
+    border-bottom: 1px #aaa dotted;
+    font-variant: small-caps;
+    letter-spacing: .07em;
+    cursor: help;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/base\/_typography\.scss}line{font-family:\00003169}}
+  sub,
+  sup {
+    font-size: 73.33333%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/base\/_typography\.scss}line{font-family:\00003176}}
+  sup {
+    top: -0.5em;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/base\/_typography\.scss}line{font-family:\00003177}}
+  sub {
+    bottom: -0.25em;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/base\/_typography\.scss}line{font-family:\00003179}}
+  mark {
+    background: yellow;
+    color: black;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/base\/_typography\.scss}line{font-family:\00003184}}
+  hr {
+    color: #fff;
+    background: transparent;
+    margin: 0 0 0.66667em 0;
+    padding: 0 0 0.66667em 0;
+    border: 0;
+    border-bottom: 1px #eee solid;
+  }
+
+  /*--- Links ----------------------------------------------------------------------------------------- */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/base\/_typography\.scss}line{font-family:\00003195}}
+  a {
+    color: #5099cc;
+    background: transparent;
+    text-decoration: none;
+    /* (en) maximum constrast for tab focus - change with great care */
+    /* (en) Maximaler Kontrast für Tab Focus - Ändern Sie diese Regel mit Bedacht */
+  }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/base\/_typography\.scss}line{font-family:\00003200}}
+  a:active {
+    outline: none;
+  }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/base\/_typography\.scss}line{font-family:\00003205}}
+  a:focus, a:hover {
+    background-color: #5099cc;
+    color: white;
+    text-decoration: none;
+    outline: 0 none;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/base\/_images\.scss}line{font-family:\000034}}
+  img,
+  figure {
+    margin: 0;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/base\/_images\.scss}line{font-family:\000038}}
+  figure {
+    display: block;
+    width: auto;
+    padding: 0.66667em;
+    margin-top: 1.33333em;
+    background: #fff;
+    border-radius: 0.2em;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/base\/_tables\.scss}line{font-family:\000033}}
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1.2em 0 0 0;
+    color: #111111;
+    border-top: 1px #ccc solid;
+    border-bottom: 1px #ccc solid;
+  }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/base\/_tables\.scss}line{font-family:\0000311}}
+  table caption {
+    font-variant: small-caps;
+  }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/base\/_tables\.scss}line{font-family:\0000316}}
+  table th,
+  table td {
+    line-height: 1.33333;
+    vertical-align: top;
+    padding: 0.63333em 0.5em;
+  }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/base\/_tables\.scss}line{font-family:\0000321}}
+  table th *:first-child,
+  table td *:first-child {
+    margin-top: 0;
+  }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/base\/_tables\.scss}line{font-family:\0000326}}
+  table thead th {
+    text-align: left;
+    color: #000;
+    border-bottom: 2px #000 solid;
+  }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/base\/_tables\.scss}line{font-family:\0000333}}
+  table tbody tr {
+    /* highlight row on mouse over */
+  }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/base\/_tables\.scss}line{font-family:\0000334}}
+  table tbody tr th {
+    text-align: left;
+    border-top: 1px solid #ccc;
+    text-align: left;
+  }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/base\/_tables\.scss}line{font-family:\0000340}}
+  table tbody tr td {
+    text-align: left;
+    border-top: 1px solid #ccc;
+  }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/base\/_tables\.scss}line{font-family:\0000347}}
+  table tbody tr:hover th, table tbody tr:hover td {
+    background: #f8f8f8;
+  }
+}
+@media screen and (min-width: 0px) {
+  /* use border-box for form elements */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/base\/_forms\.scss}line{font-family:\0000310}}
+  input,
+  textarea,
+  select {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/base\/_forms\.scss}line{font-family:\0000314}}
+  label {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+}
+@media screen, projection {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/base\/_screen\.scss}line{font-family:\000033}}
+  html, body, form {
+    padding: 0;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/base\/_screen\.scss}line{font-family:\000037}}
+  html, body {
+    height: 100%;
+    margin: 0;
+  }
+
+  /* force vertical scrollbar */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/base\/_screen\.scss}line{font-family:\0000313}}
+  body {
+    overflow-y: scroll;
+    background: white;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/layout\/_screen\.scss}line{font-family:\000033}}
+  body {
+    background: transparent url('../../img/body_bg.png?1387568888') repeat left top;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/layout\/_screen\.scss}line{font-family:\000037}}
+  .ym-wrapper {
+    width: 960px;
+    margin: 0 auto;
+  }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/layout\/_screen\.scss}line{font-family:\0000311}}
+  .ym-wrapper .ym-wbox {
+    padding: 20px 0;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/layout\/_screen\.scss}line{font-family:\0000316}}
+  #header {
+    margin: 0 0 3em;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/layout\/_screen\.scss}line{font-family:\0000326}}
+  .ym-col1 {
+    float: right;
+    width: 70%;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/layout\/_screen\.scss}line{font-family:\0000331}}
+  .ym-col2 {
+    display: none;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/layout\/_screen\.scss}line{font-family:\0000335}}
+  .ym-col3 {
+    width: auto;
+    margin: 0 70% 0 0;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/layout\/_screen\.scss}line{font-family:\0000340}}
+  .ym-cbox-right {
+    padding: 0 0 0 20px;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/layout\/_screen\.scss}line{font-family:\0000344}}
+  .ym-cbox-left {
+    padding: 0 20px 0 0;
+  }
+}
+/* activate max-width of media elements for browsers that support media queries */
+@media only screen and (min-width: 0px) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/layout\/_responsive\.scss}line{font-family:\0000310}}
+  img,
+  embed,
+  object,
+  video {
+    max-width: 100%;
+  }
+}
+/* Device width */
+@media only screen and (max-device-width: 768px) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/layout\/_responsive\.scss}line{font-family:\0000345}}
+  body {
+    -webkit-text-size-adjust: 100%;
+  }
+}
+/* for devices with retina display */
+@media all {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/_images\.scss}line{font-family:\000033}}
+  .flexible {
+    margin-top: 1.5em;
+    max-width: 100%;
+    height: auto;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/_images\.scss}line{font-family:\000039}}
+  * html .flexible {
+    /* IE6 support */
+    width: 98%;
+    /* 2% space for borders */
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/_images\.scss}line{font-family:\0000313}}
+  .bordered {
+    margin-top: 1.5em;
+    border: 2px #eee solid;
+    border: 2px white solid;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.25);
+  }
+
+  /* table cells with nowrap */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/_tables\.scss}line{font-family:\000035}}
+  th.nowrap,
+  td.nowrap {
+    white-space: nowrap;
+  }
+
+  /* narrow table */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/_tables\.scss}line{font-family:\0000310}}
+  table.narrow {
+    margin: 1.35714em 0 0 0;
+  }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/_tables\.scss}line{font-family:\0000314}}
+  table.narrow th
+  , table.narrow td {
+    padding: 0 0.5em;
+    line-height: 1.42857em;
+  }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/_tables\.scss}line{font-family:\0000321}}
+  .boxshadow table.narrow th
+  , .boxshadow table.narrow td {
+    line-height: 1.33333;
+    border: 0 none;
+    box-shadow: 0 -1px 0 0 #cccccc;
+  }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/_tables\.scss}line{font-family:\0000328}}
+  .boxshadow table.narrow tbody tr:first-child th
+  , .boxshadow table.narrow tbody tr:first-child td {
+    box-shadow: 0 0 0 0 white;
+  }
+
+  /* border table */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/_tables\.scss}line{font-family:\0000335}}
+  table.bordertable {
+    border: 1px #ccc solid;
+  }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/_tables\.scss}line{font-family:\0000338}}
+  table.bordertable thead th {
+    background: #e0e0e0;
+    border-right: 1px #ccc solid;
+    border-bottom: 1px #ccc solid;
+  }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/_tables\.scss}line{font-family:\0000345}}
+  table.bordertable tbody th {
+    border-right: 1px solid #ccc;
+  }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/_tables\.scss}line{font-family:\0000348}}
+  table.bordertable tbody th[scope="row"] {
+    background: #f0f0f0;
+  }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/_tables\.scss}line{font-family:\0000353}}
+  table.bordertable tbody td {
+    border-right: 1px solid #ccc;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/_generic\.scss}line{font-family:\000034}}
+  .hello h3, .hello p {
+    font-family: "PT Serif", Georgia, "Times New Roman", Times, serif;
+  }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/_generic\.scss}line{font-family:\000037}}
+  .hello h3 {
+    margin-left: -0.37931em;
+    text-shadow: 1px 1px 0 white;
+    font-weight: 700;
+    letter-spacing: -.08em;
+    font-size: 386.66667%;
+    line-height: 1.03448;
+  }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/_generic\.scss}line{font-family:\0000316}}
+  .hello p.subheader {
+    font-size: 133.33333%;
+    line-height: 1.4;
+    margin-top: 1em;
+  }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/_generic\.scss}line{font-family:\0000322}}
+  .hello .name {
+    font-weight: 700;
+    letter-spacing: -.03em;
+    font-family: "PT Serif", Georgia, "Times New Roman", Times, serif;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/_generic\.scss}line{font-family:\0000336}}
+  .clearfix,
+  .group {
+    *zoom: 1;
+    /* For IE 6/7 (trigger hasLayout) */
+  }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/nemesis\/addons\/_clearfix\.scss}line{font-family:\0000318}}
+  .clearfix:before, .clearfix:after,
+  .group:before,
+  .group:after {
+    content: "";
+    display: table;
+  }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/nemesis\/addons\/_clearfix\.scss}line{font-family:\0000322}}
+  .clearfix:after,
+  .group:after {
+    clear: both;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/_generic\.scss}line{font-family:\0000340}}
+  .subheader {
+    font-size: 106.66667%;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/_generic\.scss}line{font-family:\0000344}}
+  .indent {
+    margin-left: 2em;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/_generic\.scss}line{font-family:\0000348}}
+  .box {
+    border-radius: 0.3em;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #888;
+    border-color: rgba(0, 0, 0, 0.3);
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2) inset;
+    color: #444;
+    color: rgba(0, 0, 0, 0.8);
+    padding: 1.42857em;
+    margin: 1.5em 0 0 0;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/_generic\.scss}line{font-family:\0000361}}
+  .box > *:first-child {
+    margin-top: 0;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/_generic\.scss}line{font-family:\0000365}}
+  .label {
+    font-family: Verdana, Geneva, sans-serif;
+    padding: 1px 6px 2px;
+    display: inline-block;
+    vertical-align: middle;
+    letter-spacing: normal;
+    white-space: nowrap;
+    border-radius: 3px;
+    background: #06C;
+    color: #fff;
+    font-size: 10px;
+    line-height: 12px;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/_generic\.scss}line{font-family:\0000379}}
+  .info {
+    background: #f4f4f4;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/_generic\.scss}line{font-family:\0000382}}
+  .success {
+    background: #8c8;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/_generic\.scss}line{font-family:\0000385}}
+  .warning {
+    background: #cc8;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/_generic\.scss}line{font-family:\0000388}}
+  .error {
+    background: #c88;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/_generic\.scss}line{font-family:\0000392}}
+  .highlight {
+    color: #c30;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/_generic\.scss}line{font-family:\0000395}}
+  .dimmed {
+    color: #888;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/_generic\.scss}line{font-family:\0000399}}
+  .cartogothic {
+    font-family: 'CartoGothicStd', Arial, Helvetica, sans-serif;
+  }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/_generic\.scss}line{font-family:\00003101}}
+  .cartogothic p, .cartogothic h1, .cartogothic h2, .cartogothic h3, .cartogothic h4, .cartogothic h5, .cartogothic h6 {
+    font-family: 'CartoGothicStd', Arial, Helvetica, sans-serif;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/_generic\.scss}line{font-family:\00003106}}
+  .float-left {
+    float: left;
+    display: inline;
+    margin: 1.5em 1em 0 0;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/_generic\.scss}line{font-family:\00003112}}
+  .float-right {
+    float: right;
+    display: inline;
+    margin: 1.5em 0 0 1em;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/_generic\.scss}line{font-family:\00003118}}
+  .center {
+    display: block;
+    text-align: center;
+    margin: 1.5em auto 0 auto;
+  }
+
+  /* Class for additional email dots */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/_generic\.scss}line{font-family:\00003125}}
+  .crypt {
+    color: white;
+    font-size: 1px;
+  }
+}
+@media screen, projection {
+  /* skip links styling */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/_skiplinks\.scss}line{font-family:\000034}}
+  .ym-skiplinks {
+    height: 24px;
+    background: #222;
+  }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/_skiplinks\.scss}line{font-family:\000039}}
+  .ym-skiplinks a.ym-skip:focus,
+  .ym-skiplinks a.ym-skip:active {
+    color: #fff;
+    background: #333;
+    border-bottom: 1px #000 solid;
+    padding: 10px 0;
+    text-align: center;
+    text-decoration: none;
+  }
+
+  /**
+   * navigation stylesheets
+   *
+   * @author             Michael Schulze
+   * @version            $1.0$
+   * @copyright          Michael Schulze <elsigno.de>, 29 December, 2011
+   * @license            All rights reserved. No usage without written permission.
+   *
+   * @package            yaml,compass,sass
+   * @-yaml-minver       3.3.1
+   * @-sass-minver       2.0
+   * @-compass-minver    0.11.6
+   *
+   * @lastmodified       $Date: 2011-12-31 19:38:29  +0100 (Sat, 31 Dec 2011) $
+   */
+  /* Pretty printing styles. Used with prettify.js. */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/_prettify\.scss}line{font-family:\000032}}
+  div.prettify {
+    overflow-x: scroll;
+    border: 1px solid #888;
+  }
+
+  /* SPAN elements with the classes below are added by prettyprint. */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/_prettify\.scss}line{font-family:\000039}}
+  .pln {
+    color: black;
+  }
+
+  /* plain text */
+  /* Use higher contrast and text-weight for printable form. */
+  /* Put a border around prettyprinted code snippets. */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/_prettify\.scss}line{font-family:\0000341}}
+  pre.prettyprint {
+    padding: 2px;
+  }
+
+  /* Specify class=linenums on a pre to get line numbering */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/_prettify\.scss}line{font-family:\0000344}}
+  ol.linenums {
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 2em;
+  }
+
+  /* IE indents via margin-left */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/_prettify\.scss}line{font-family:\0000352}}
+  li.L0,
+  li.L1,
+  li.L2,
+  li.L3,
+  li.L5,
+  li.L6,
+  li.L7,
+  li.L8 {
+    list-style-type: none;
+  }
+
+  /* Alternate shading for lines */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/_prettify\.scss}line{font-family:\0000358}}
+  li.L1,
+  li.L3,
+  li.L5,
+  li.L7,
+  li.L9 {
+    background: #eeeeee;
+  }
+}
+@media screen, projection {
+  /**
+   * global nav definitions
+   *
+   */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/_nav\.scss}line{font-family:\0000324}}
+  #nav ul li
+  , .nav ul li
+  , nav ul li {
+    list-style-type: none;
+  }
+
+  /**
+   * hlist definition
+   * 
+   */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/_nav\.scss}line{font-family:\0000330}}
+  .hlist {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    line-height: 0;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/_nav\.scss}line{font-family:\0000332}}
+  .hlist ul
+  , .hlist ul li {
+    margin: 0;
+    padding: 0;
+    position: relative;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/_nav\.scss}line{font-family:\0000333}}
+  .hlist ul {
+    display: inline;
+    float: left;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/_nav\.scss}line{font-family:\0000334}}
+  .hlist ul li {
+    display: inline;
+    float: left;
+    font-size: 1em;
+    line-height: 1em;
+    background: none 0;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/_nav\.scss}line{font-family:\0000335}}
+  .hlist ul li a {
+    display: block;
+    position: relative;
+    padding: 0 1em;
+    overflow: hidden;
+    line-height: 2;
+  }
+
+  /**
+   * vlist definition
+   * 
+   */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/_nav\.scss}line{font-family:\0000341}}
+  .vlist {
+    width: 100%;
+    overflow: hidden;
+    margin: 0 0 1.5em 0;
+    list-style-type: none;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/_nav\.scss}line{font-family:\0000343}}
+  .vlist ul
+  , .vlist ul li {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/_nav\.scss}line{font-family:\0000344}}
+  .vlist li {
+    float: left;
+    width: 100%;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/_nav\.scss}line{font-family:\0000347}}
+  .vlist a
+  , .vlist a:visited {
+    color: #333;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/_nav\.scss}line{font-family:\0000351}}
+  .vlist a
+  , .vlist strong
+  , .vlist span {
+    display: block;
+    padding: 0.25em 0.5em;
+    text-decoration: none;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/_nav\.scss}line{font-family:\0000353}}
+  .vlist li span {
+    display: block;
+    font-weight: bold;
+  }
+
+  /* active list element */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/_nav\.scss}line{font-family:\0000356}}
+  .vlist li.active a {
+    color: #fff;
+    background-color: #800;
+  }
+
+  /* Level 1 */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/_nav\.scss}line{font-family:\0000361}}
+  .vlist li a
+  , .vlist li strong
+  , .vlist li span {
+    width: 90%;
+    padding-left: 0.5em;
+  }
+
+  /* LTR */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/_nav\.scss}line{font-family:\0000365}}
+  .vlist li a:focus
+  , .vlist li a:hover
+  , .vlist li a:active {
+    background-color: #a88;
+    color: #fff;
+  }
+
+  /* Level 2 */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/_nav\.scss}line{font-family:\0000370}}
+  .vlist li ul li a
+  , .vlist li ul li strong
+  , .vlist li ul li span {
+    width: 80%;
+    padding-left: 20%;
+  }
+
+  /* LTR */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/_nav\.scss}line{font-family:\0000373}}
+  .vlist li ul li a
+  , .vlist li ul li a:visited {
+    background-color: #f8f8f8;
+    color: #333;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/_nav\.scss}line{font-family:\0000376}}
+  .vlist li ul li a:focus
+  , .vlist li ul li a:hover
+  , .vlist li ul li a:active {
+    background-color: #a88;
+    color: #fff;
+  }
+
+  /* Level 3 */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/_nav\.scss}line{font-family:\0000381}}
+  .vlist li ul li ul li a
+  , .vlist li ul li ul li strong
+  , .vlist li ul li ul li span {
+    width: 70%;
+    padding-left: 30%;
+  }
+
+  /* LTR */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/_nav\.scss}line{font-family:\0000384}}
+  .vlist li ul li ul li a
+  , .vlist li ul li ul li a:visited {
+    background-color: #f0f0f0;
+    color: #222;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/_nav\.scss}line{font-family:\0000387}}
+  .vlist li ul li ul li a:focus
+  , .vlist li ul li ul li a:hover
+  , .vlist li ul li ul li a:active {
+    background-color: #a88;
+    color: #fff;
+  }
+
+  /* Level 4 */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/_nav\.scss}line{font-family:\0000392}}
+  .vlist li ul li ul li ul li a
+  , .vlist li ul li ul li ul li strong
+  , .vlist li ul li ul li ul li span {
+    width: 60%;
+    padding-left: 40%;
+  }
+
+  /* LTR */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/_nav\.scss}line{font-family:\0000395}}
+  .vlist li ul li ul li ul li a
+  , .vlist li ul li ul li ul li a:visited {
+    background-color: #e8e8e8;
+    color: #111;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/_nav\.scss}line{font-family:\0000398}}
+  .vlist li ul li ul li ul li a:focus
+  , .vlist li ul li ul li ul li a:hover
+  , .vlist li ul li ul li ul li a:active {
+    background-color: #a88;
+    color: #fff;
+  }
+
+  /* individual navigation styles here */
+}
+@media screen, projection {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/_download\.scss}line{font-family:\000038}}
+  .download a {
+    width: 60%;
+    /*display: block;
+    float: left;
+    width: 50%;
+    text-align: center;*/
+  }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/_download\.scss}line{font-family:\0000316}}
+  .download a img {
+    display: block;
+    width: 80%;
+    margin: 0 auto;
+  }
+}
+@media screen {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/_prettify\.scss}line{font-family:\0000312}}
+  .str {
+    color: #008800;
+  }
+
+  /* string content */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/_prettify\.scss}line{font-family:\0000313}}
+  .kwd {
+    color: #000088;
+  }
+
+  /* a keyword */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/_prettify\.scss}line{font-family:\0000314}}
+  .com {
+    color: #880000;
+  }
+
+  /* a comment */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/_prettify\.scss}line{font-family:\0000315}}
+  .typ {
+    color: #660066;
+  }
+
+  /* a type name */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/_prettify\.scss}line{font-family:\0000316}}
+  .lit {
+    color: #006666;
+  }
+
+  /* a literal value */
+  /* punctuation, lisp open bracket, lisp close bracket */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/_prettify\.scss}line{font-family:\0000318}}
+  .pun, .opn, .clo {
+    color: #666600;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/_prettify\.scss}line{font-family:\0000319}}
+  .tag {
+    color: #000088;
+  }
+
+  /* a markup tag name */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/_prettify\.scss}line{font-family:\0000320}}
+  .atn {
+    color: #660066;
+  }
+
+  /* a markup attribute name */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/_prettify\.scss}line{font-family:\0000321}}
+  .atv {
+    color: #008800;
+  }
+
+  /* a markup attribute value */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/_prettify\.scss}line{font-family:\0000322}}
+  .dec, .var {
+    color: #660066;
+  }
+
+  /* a declaration; a variable name */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/_prettify\.scss}line{font-family:\0000323}}
+  .fun {
+    color: red;
+  }
+
+  /* a function name */
+}
+@media projection {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/_prettify\.scss}line{font-family:\0000329}}
+  .str {
+    color: #006600;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/_prettify\.scss}line{font-family:\0000330}}
+  .kwd {
+    color: #006;
+    font-weight: bold;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/_prettify\.scss}line{font-family:\0000331}}
+  .com {
+    color: #600;
+    font-style: italic;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/_prettify\.scss}line{font-family:\0000332}}
+  .typ {
+    color: #404;
+    font-weight: bold;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/_prettify\.scss}line{font-family:\0000333}}
+  .lit {
+    color: #004444;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/_prettify\.scss}line{font-family:\0000334}}
+  .pun, .opn, .clo {
+    color: #444400;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/_prettify\.scss}line{font-family:\0000335}}
+  .tag {
+    color: #006;
+    font-weight: bold;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/_prettify\.scss}line{font-family:\0000336}}
+  .atn {
+    color: #440044;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/_prettify\.scss}line{font-family:\0000337}}
+  .atv {
+    color: #006600;
+  }
+}
+@media screen, projection {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/_forms\.scss}line{font-family:\000039}}
+  .ym-form input,
+  .ym-form input,
+  .ym-form textarea,
+  .ym-form select {
+    width: 98%;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/_forms\.scss}line{font-family:\0000316}}
+  .ym-columnar .ym-fbox-select select,
+  .ym-columnar .ym-fbox-text input,
+  .ym-columnar .ym-fbox-text textarea {
+    width: 68%;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/_forms\.scss}line{font-family:\0000322}}
+  .ym-full .ym-fbox-select select,
+  .ym-full .ym-fbox-text input,
+  .ym-full .ym-fbox-text textarea {
+    width: 98%;
+  }
+}
+@media screen and (min-width: 0px) {
+  /**
+  * @section general width settings for formular elements in modern browsers
+  *          switching to CSS3 box modell "border-box" for perfect flexible forms
+  *
+  * Styling for: <labels>, <input>, <textarea> and <select>
+  *
+  */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/_forms\.scss}line{font-family:\0000343}}
+  .ym-form input,
+  .ym-form input,
+  .ym-form textarea,
+  .ym-form select {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 100%;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/_forms\.scss}line{font-family:\0000349}}
+  .ym-columnar label {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/_forms\.scss}line{font-family:\0000355}}
+  .ym-columnar .ym-fbox-select select,
+  .ym-columnar .ym-fbox-text input,
+  .ym-columnar .ym-fbox-text textarea {
+    width: 70%;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/_forms\.scss}line{font-family:\0000361}}
+  .ym-full .ym-fbox-select select,
+  .ym-full .ym-fbox-text input,
+  .ym-full .ym-fbox-text textarea {
+    width: 100%;
+  }
+}
+@media screen, projection {
+  /**
+  * @section general form styling
+  *
+  * Styling for: <form>, <fieldset>, <legend>, <label> and rows (class="ym-fbox-[xxx]")
+  *
+  */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/_forms\.scss}line{font-family:\0000376}}
+  .ym-form {
+    background: #f4f4f4;
+    border: 2px #fff solid;
+    margin: 1.5em 0 0 0;
+    padding: 0;
+    box-shadow: 0 0 4px #dddddd;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/_forms\.scss}line{font-family:\0000384}}
+  .ym-form fieldset {
+    position: static;
+    background: transparent;
+    margin: 0.75em 0 0.75em 0;
+    padding: 0 0.5em;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/_forms\.scss}line{font-family:\0000391}}
+  .ym-form legend {
+    background: transparent;
+    color: #000;
+    font-size: 1.2em;
+    line-height: 1.25em;
+    font-weight: bold;
+    margin: 0.5em 0;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/_forms\.scss}line{font-family:\00003102}}
+  .ym-form label,
+  .ym-label {
+    color: #333;
+    font-weight: bold;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/_forms\.scss}line{font-family:\00003107}}
+  .ym-form label {
+    line-height: 1.5em;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/_forms\.scss}line{font-family:\00003111}}
+  .ym-label {
+    padding-top: 0.25em;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/_forms\.scss}line{font-family:\00003117}}
+  .ym-fbox-check label,
+  .ym-fbox-check .ym-label {
+    font-weight: normal;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/_forms\.scss}line{font-family:\00003122}}
+  .ym-form .ym-form div.ym-fbox-check:focus + label {
+    color: #000;
+  }
+
+  /* styling containing DIV elements | Gestaltung der kapselnden DIV-Elemente */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/_forms\.scss}line{font-family:\00003130}}
+  .ym-form div.ym-fbox-text,
+  .ym-form div.ym-fbox-select,
+  .ym-form div.ym-fbox-check,
+  .ym-form div.ym-fbox-button {
+    padding: 0.3em 0;
+    margin-bottom: 0.5em;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/_forms\.scss}line{font-family:\00003135}}
+  .ym-form div.ym-fbox-button {
+    background: #ececec;
+    border-top: 1px #e0e0e0 solid;
+    padding: 0 1em 1.5em 1em;
+    margin: 0;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/_forms\.scss}line{font-family:\00003142}}
+  .ym-columnar div.ym-fbox-button {
+    padding-left: 30%;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/_forms\.scss}line{font-family:\00003146}}
+  .ym-form .ym-gbox {
+    padding: 0 0.5em;
+    margin-right: 0;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/_forms\.scss}line{font-family:\00003151}}
+  .ym-form h6 {
+    color: #000;
+    margin: 1em 0 0 1em;
+  }
+
+  /**
+  * @section styling form elements
+  *
+  * Styling for: Input, Textarea, Select ...
+  *
+  */
+  /* styling standard form elements with 'almost' equal flexible width */
+  /* Gestaltung der einzelnen Formularelemente mit annähend gleicher Breite */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/_forms\.scss}line{font-family:\00003166}}
+  .ym-form .ym-fbox-text input,
+  .ym-form .ym-fbox-text textarea {
+    line-height: 1em;
+    padding: 0.25em 0.3em;
+    margin-top: -2px;
+    /* fallback */
+  }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/nemesis\/css3\/_placeholder\.scss}line{font-family:\000038}}
+  .ym-form .ym-fbox-text input::-webkit-input-placeholder,
+  .ym-form .ym-fbox-text textarea::-webkit-input-placeholder {
+    line-height: 1em;
+    padding: 0.25em 0;
+  }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/nemesis\/css3\/_placeholder\.scss}line{font-family:\0000314}}
+  .ym-form .ym-fbox-text input:-moz-placeholder,
+  .ym-form .ym-fbox-text textarea:-moz-placeholder {
+    line-height: 1em;
+    padding: 0.25em 0;
+  }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/nemesis\/css3\/_placeholder\.scss}line{font-family:\0000319}}
+  .ym-form .ym-fbox-text input::-moz-placeholder,
+  .ym-form .ym-fbox-text textarea::-moz-placeholder {
+    line-height: 1em;
+    padding: 0.25em 0;
+  }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/nemesis\/css3\/_placeholder\.scss}line{font-family:\0000324}}
+  .ym-form .ym-fbox-text input:-ms-input-placeholder,
+  .ym-form .ym-fbox-text textarea:-ms-input-placeholder {
+    line-height: 1em;
+    padding: 0.25em 0;
+  }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/nemesis\/css3\/_placeholder\.scss}line{font-family:\0000331}}
+  .ym-form .ym-fbox-text input.placeholder,
+  .ym-form .ym-fbox-text textarea.placeholder {
+    line-height: 1em;
+    padding: 0.25em 0;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/_forms\.scss}line{font-family:\00003177}}
+  .ym-form .ym-fbox-select select {
+    line-height: 1em;
+    padding: 0.25em 2px 0.25em 1px;
+    margin-top: -2px;
+  }
+
+  /* proportional fonts for all form elements */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/_forms\.scss}line{font-family:\00003187}}
+  .ym-form input,
+  .ym-form textarea,
+  .ym-form select,
+  .ym-form optgroup {
+    font-family: "Open Sans", "Helvetica Neue", "Lucida Grande", Calibri, Helvetica, Arial, sans-serif;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/_forms\.scss}line{font-family:\00003191}}
+  .ym-form optgroup {
+    font-style: normal;
+    font-weight: bold;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/_forms\.scss}line{font-family:\00003198}}
+  .ym-form .ym-fbox-text input,
+  .ym-form .ym-fbox-text textarea,
+  .ym-form .ym-fbox-select select {
+    border: 1px solid #ddd;
+    border-radius: 0.2em;
+  }
+
+  /* General form styling  | Allgemeine Formatierung des Formulars */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/_forms\.scss}line{font-family:\00003204}}
+  .ym-form .ym-message {
+    color: #666;
+    margin-bottom: 0.5em;
+  }
+
+  /* Highlight mandatory fields | Pflichtfeldkennzeichnung hervorheben */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/_forms\.scss}line{font-family:\00003210}}
+  .ym-form sup {
+    color: #800;
+    font-weight: bold;
+  }
+
+  /* form validation highlight colors */
+  /**
+  * @section error messages
+  *
+  */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/_forms\.scss}line{font-family:\00003231}}
+  .ym-form .ym-error label {
+    color: #800;
+    font-weight: normal;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/_forms\.scss}line{font-family:\00003238}}
+  .ym-form .ym-error input,
+  .ym-form .ym-error select,
+  .ym-form .ym-error textarea {
+    border: 1px #800 solid;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/_forms\.scss}line{font-family:\00003247}}
+  .ym-form .ym-error input:hover,
+  .ym-form .ym-error input:focus,
+  .ym-form .ym-error select:hover,
+  .ym-form .ym-error select:focus,
+  .ym-form .ym-error textarea:hover,
+  .ym-form .ym-error textarea:focus {
+    border: 1px #800 solid !important;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/_forms\.scss}line{font-family:\00003251}}
+  .ym-form .ym-error .ym-message {
+    color: #800;
+  }
+
+  /* :hover and :focus status on form fields | Effekt zur Hervorhebung von Formularfeldern bei :hover oder :focus */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/_forms\.scss}line{font-family:\00003264}}
+  .ym-form div.ym-fbox-text input:focus,
+  .ym-form div select:focus,
+  .ym-form div textarea:focus,
+  .ym-form div.ym-fbox-text input:hover,
+  .ym-form div select:hover,
+  .ym-form div textarea:hover,
+  .ym-form div.ym-fbox-text input:active,
+  .ym-form div select:active,
+  .ym-form div textarea:active {
+    border: 1px #888 solid;
+    background: #fff;
+    outline: 0;
+  }
+}
+/* Font Awesome uses the Unicode Private Use Area (PUA) to ensure screen
+   readers do not read off random characters that represent icons */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/entypo\/_icons\.scss}line{font-family:\000034}}
+.en-add-to-list:before {
+  content: "\E003";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/entypo\/_icons\.scss}line{font-family:\000035}}
+.en-add-user:before {
+  content: "\E700";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/entypo\/_icons\.scss}line{font-family:\000036}}
+.en-address:before {
+  content: "\E723";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/entypo\/_icons\.scss}line{font-family:\000037}}
+.en-adjust:before {
+  content: "\25D1";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/entypo\/_icons\.scss}line{font-family:\000038}}
+.en-air:before {
+  content: "\1F4A8";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/entypo\/_icons\.scss}line{font-family:\000039}}
+.en-airplane:before {
+  content: "\2708";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/entypo\/_icons\.scss}line{font-family:\0000310}}
+.en-archive:before {
+  content: "\E800";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/entypo\/_icons\.scss}line{font-family:\0000311}}
+.en-area-graph:before {
+  content: "\1F53E";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/entypo\/_icons\.scss}line{font-family:\0000312}}
+.en-arrow-combo:before {
+  content: "\E74F";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/entypo\/_icons\.scss}line{font-family:\0000313}}
+.en-attach:before {
+  content: "\1F4CE";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/entypo\/_icons\.scss}line{font-family:\0000314}}
+.en-back-in-time:before {
+  content: "\E771";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/entypo\/_icons\.scss}line{font-family:\0000315}}
+.en-back:before {
+  content: "\1F519";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/entypo\/_icons\.scss}line{font-family:\0000316}}
+.en-bag:before {
+  content: "\1F45C";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/entypo\/_icons\.scss}line{font-family:\0000317}}
+.en-bar-graph:before {
+  content: "\1F4CA";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/entypo\/_icons\.scss}line{font-family:\0000318}}
+.en-battery:before {
+  content: "\1F50B";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/entypo\/_icons\.scss}line{font-family:\0000319}}
+.en-beamed-note:before {
+  content: "\266B";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/entypo\/_icons\.scss}line{font-family:\0000320}}
+.en-bell:before {
+  content: "\1F514";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/entypo\/_icons\.scss}line{font-family:\0000321}}
+.en-block:before {
+  content: "\1F6AB";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/entypo\/_icons\.scss}line{font-family:\0000322}}
+.en-book:before {
+  content: "\1F4D5";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/entypo\/_icons\.scss}line{font-family:\0000323}}
+.en-bookmark:before {
+  content: "\1F516";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/entypo\/_icons\.scss}line{font-family:\0000324}}
+.en-bookmarks:before {
+  content: "\1F4D1";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/entypo\/_icons\.scss}line{font-family:\0000325}}
+.en-box:before {
+  content: "\1F4E6";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/entypo\/_icons\.scss}line{font-family:\0000326}}
+.en-briefcase:before {
+  content: "\1F4BC";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/entypo\/_icons\.scss}line{font-family:\0000327}}
+.en-browser:before {
+  content: "\E74E";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/entypo\/_icons\.scss}line{font-family:\0000328}}
+.en-brush:before {
+  content: "\E79A";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/entypo\/_icons\.scss}line{font-family:\0000329}}
+.en-bucket:before {
+  content: "\1F4FE";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/entypo\/_icons\.scss}line{font-family:\0000330}}
+.en-calendar:before {
+  content: "\1F4C5";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/entypo\/_icons\.scss}line{font-family:\0000331}}
+.en-camera:before {
+  content: "\1F4F7";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/entypo\/_icons\.scss}line{font-family:\0000332}}
+.en-cart:before {
+  content: "\E73D";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/entypo\/_icons\.scss}line{font-family:\0000333}}
+.en-cc-by:before {
+  content: "\1F546";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/entypo\/_icons\.scss}line{font-family:\0000334}}
+.en-cc-nc-eu:before {
+  content: "\1F548";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/entypo\/_icons\.scss}line{font-family:\0000335}}
+.en-cc-nc-jp:before {
+  content: "\1F549";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/entypo\/_icons\.scss}line{font-family:\0000336}}
+.en-cc-nc:before {
+  content: "\1F547";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/entypo\/_icons\.scss}line{font-family:\0000337}}
+.en-cc-nd:before {
+  content: "\1F54B";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/entypo\/_icons\.scss}line{font-family:\0000338}}
+.en-cc-pd:before {
+  content: "\1F54C";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/entypo\/_icons\.scss}line{font-family:\0000339}}
+.en-cc-remix:before {
+  content: "\1F54F";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/entypo\/_icons\.scss}line{font-family:\0000340}}
+.en-cc-sa:before {
+  content: "\1F54A";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/entypo\/_icons\.scss}line{font-family:\0000341}}
+.en-cc-share:before {
+  content: "\1F54E";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/entypo\/_icons\.scss}line{font-family:\0000342}}
+.en-cc-zero:before {
+  content: "\1F54D";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/entypo\/_icons\.scss}line{font-family:\0000343}}
+.en-cc:before {
+  content: "\1F545";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/entypo\/_icons\.scss}line{font-family:\0000344}}
+.en-ccw:before {
+  content: "\27F2";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/entypo\/_icons\.scss}line{font-family:\0000345}}
+.en-cd:before {
+  content: "\1F4BF";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/entypo\/_icons\.scss}line{font-family:\0000346}}
+.en-chat:before {
+  content: "\E720";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/entypo\/_icons\.scss}line{font-family:\0000347}}
+.en-check:before {
+  content: "\2713";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/entypo\/_icons\.scss}line{font-family:\0000348}}
+.en-chevron-down:before {
+  content: "\E75C";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/entypo\/_icons\.scss}line{font-family:\0000349}}
+.en-chevron-left:before {
+  content: "\E75D";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/entypo\/_icons\.scss}line{font-family:\0000350}}
+.en-chevron-right:before {
+  content: "\E75E";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/entypo\/_icons\.scss}line{font-family:\0000351}}
+.en-chevron-small-down:before {
+  content: "\E760";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/entypo\/_icons\.scss}line{font-family:\0000352}}
+.en-chevron-small-left:before {
+  content: "\E761";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/entypo\/_icons\.scss}line{font-family:\0000353}}
+.en-chevron-small-right:before {
+  content: "\E762";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/entypo\/_icons\.scss}line{font-family:\0000354}}
+.en-chevron-small-up:before {
+  content: "\E763";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/entypo\/_icons\.scss}line{font-family:\0000355}}
+.en-chevron-thin-down:before {
+  content: "\E764";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/entypo\/_icons\.scss}line{font-family:\0000356}}
+.en-chevron-thin-left:before {
+  content: "\E765";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/entypo\/_icons\.scss}line{font-family:\0000357}}
+.en-chevron-thin-right:before {
+  content: "\E766";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/entypo\/_icons\.scss}line{font-family:\0000358}}
+.en-chevron-thin-up:before {
+  content: "\E767";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/entypo\/_icons\.scss}line{font-family:\0000359}}
+.en-chevron-up:before {
+  content: "\E75F";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/entypo\/_icons\.scss}line{font-family:\0000360}}
+.en-circled-cross:before {
+  content: "\2716";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/entypo\/_icons\.scss}line{font-family:\0000361}}
+.en-circled-down:before {
+  content: "\E758";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/entypo\/_icons\.scss}line{font-family:\0000362}}
+.en-circled-help:before {
+  content: "\E704";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/entypo\/_icons\.scss}line{font-family:\0000363}}
+.en-circled-info:before {
+  content: "\E705";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/entypo\/_icons\.scss}line{font-family:\0000364}}
+.en-circled-left:before {
+  content: "\E759";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/entypo\/_icons\.scss}line{font-family:\0000365}}
+.en-circled-minus:before {
+  content: "\2296";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/entypo\/_icons\.scss}line{font-family:\0000366}}
+.en-circled-plus:before {
+  content: "\2295";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/entypo\/_icons\.scss}line{font-family:\0000367}}
+.en-circled-right:before {
+  content: "\E75A";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/entypo\/_icons\.scss}line{font-family:\0000368}}
+.en-circled-up:before {
+  content: "\E75B";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/entypo\/_icons\.scss}line{font-family:\0000369}}
+.en-clipboard:before {
+  content: "\1F4CB";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/entypo\/_icons\.scss}line{font-family:\0000370}}
+.en-clock:before {
+  content: "\1F554";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/entypo\/_icons\.scss}line{font-family:\0000371}}
+.en-cloud:before {
+  content: "\2601";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/entypo\/_icons\.scss}line{font-family:\0000372}}
+.en-code:before {
+  content: "\E714";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/entypo\/_icons\.scss}line{font-family:\0000373}}
+.en-cog:before {
+  content: "\2699";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/entypo\/_icons\.scss}line{font-family:\0000374}}
+.en-comment:before {
+  content: "\E718";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/entypo\/_icons\.scss}line{font-family:\0000375}}
+.en-compass:before {
+  content: "\E728";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/entypo\/_icons\.scss}line{font-family:\0000376}}
+.en-credit-card:before {
+  content: "\1F4B3";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/entypo\/_icons\.scss}line{font-family:\0000377}}
+.en-cross:before {
+  content: "\274C";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/entypo\/_icons\.scss}line{font-family:\0000378}}
+.en-cup:before {
+  content: "\2615";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/entypo\/_icons\.scss}line{font-family:\0000379}}
+.en-cw:before {
+  content: "\27F3";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/entypo\/_icons\.scss}line{font-family:\0000380}}
+.en-cycle:before {
+  content: "\1F504";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/entypo\/_icons\.scss}line{font-family:\0000381}}
+.en-database:before {
+  content: "\1F4F8";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/entypo\/_icons\.scss}line{font-family:\0000382}}
+.en-db-logo:before {
+  content: "\1F5F9";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/entypo\/_icons\.scss}line{font-family:\0000383}}
+.en-db-shape:before {
+  content: "\1F5FA";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/entypo\/_icons\.scss}line{font-family:\0000384}}
+.en-direction:before {
+  content: "\27A2";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/entypo\/_icons\.scss}line{font-family:\0000385}}
+.en-doc:before {
+  content: "\E730";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/entypo\/_icons\.scss}line{font-family:\0000386}}
+.en-docs:before {
+  content: "\E736";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/entypo\/_icons\.scss}line{font-family:\0000387}}
+.en-dot:before {
+  content: "\23F4";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/entypo\/_icons\.scss}line{font-family:\0000388}}
+.en-down-bold:before {
+  content: "\E4B0";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/entypo\/_icons\.scss}line{font-family:\0000389}}
+.en-down-thin:before {
+  content: "\2193";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/entypo\/_icons\.scss}line{font-family:\0000390}}
+.en-down:before {
+  content: "\2B07";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/entypo\/_icons\.scss}line{font-family:\0000391}}
+.en-download:before {
+  content: "\1F4E5";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/entypo\/_icons\.scss}line{font-family:\0000392}}
+.en-drive:before {
+  content: "\1F4FD";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/entypo\/_icons\.scss}line{font-family:\0000393}}
+.en-droplet:before {
+  content: "\1F4A7";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/entypo\/_icons\.scss}line{font-family:\0000394}}
+.en-erase:before {
+  content: "\232B";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/entypo\/_icons\.scss}line{font-family:\0000395}}
+.en-export:before {
+  content: "\E715";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/entypo\/_icons\.scss}line{font-family:\0000396}}
+.en-eye:before {
+  content: "\E70A";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/entypo\/_icons\.scss}line{font-family:\0000397}}
+.en-fb:before {
+  content: "\23EA";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/entypo\/_icons\.scss}line{font-family:\0000398}}
+.en-feather:before {
+  content: "\2712";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/entypo\/_icons\.scss}line{font-family:\0000399}}
+.en-ff:before {
+  content: "\23E9";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/entypo\/_icons\.scss}line{font-family:\00003100}}
+.en-flag:before {
+  content: "\2691";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/entypo\/_icons\.scss}line{font-family:\00003101}}
+.en-flash:before {
+  content: "\26A1";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/entypo\/_icons\.scss}line{font-family:\00003102}}
+.en-flashlight:before {
+  content: "\1F526";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/entypo\/_icons\.scss}line{font-family:\00003103}}
+.en-flow-branch:before {
+  content: "\1F569";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/entypo\/_icons\.scss}line{font-family:\00003104}}
+.en-flow-cascade:before {
+  content: "\1F568";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/entypo\/_icons\.scss}line{font-family:\00003105}}
+.en-flow-line:before {
+  content: "\1F56B";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/entypo\/_icons\.scss}line{font-family:\00003106}}
+.en-flow-parallel:before {
+  content: "\1F56C";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/entypo\/_icons\.scss}line{font-family:\00003107}}
+.en-flow-tree:before {
+  content: "\1F56A";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/entypo\/_icons\.scss}line{font-family:\00003108}}
+.en-folder:before {
+  content: "\1F4C1";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/entypo\/_icons\.scss}line{font-family:\00003109}}
+.en-forward:before {
+  content: "\27A6";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/entypo\/_icons\.scss}line{font-family:\00003110}}
+.en-gauge:before {
+  content: "\1F6C7";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/entypo\/_icons\.scss}line{font-family:\00003111}}
+.en-globe:before {
+  content: "\1F30E";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/entypo\/_icons\.scss}line{font-family:\00003112}}
+.en-graduation-cap:before {
+  content: "\1F393";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/entypo\/_icons\.scss}line{font-family:\00003113}}
+.en-hair-cross:before {
+  content: "\1F3AF";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/entypo\/_icons\.scss}line{font-family:\00003114}}
+.en-heart-empty:before {
+  content: "\2661";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/entypo\/_icons\.scss}line{font-family:\00003115}}
+.en-heart:before {
+  content: "\2665";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/entypo\/_icons\.scss}line{font-family:\00003116}}
+.en-help:before {
+  content: "\2753";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/entypo\/_icons\.scss}line{font-family:\00003117}}
+.en-home:before {
+  content: "\2302";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/entypo\/_icons\.scss}line{font-family:\00003118}}
+.en-hourglass:before {
+  content: "\23F3";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/entypo\/_icons\.scss}line{font-family:\00003119}}
+.en-inbox:before {
+  content: "\E777";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/entypo\/_icons\.scss}line{font-family:\00003120}}
+.en-infinity:before {
+  content: "\221E";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/entypo\/_icons\.scss}line{font-family:\00003121}}
+.en-info:before {
+  content: "\2139";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/entypo\/_icons\.scss}line{font-family:\00003122}}
+.en-install:before {
+  content: "\E778";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/entypo\/_icons\.scss}line{font-family:\00003123}}
+.en-key:before {
+  content: "\1F511";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/entypo\/_icons\.scss}line{font-family:\00003124}}
+.en-keyboard:before {
+  content: "\2328";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/entypo\/_icons\.scss}line{font-family:\00003125}}
+.en-landscape-doc:before {
+  content: "\E737";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/entypo\/_icons\.scss}line{font-family:\00003126}}
+.en-language:before {
+  content: "\1F394";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/entypo\/_icons\.scss}line{font-family:\00003127}}
+.en-layout:before {
+  content: "\268F";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/entypo\/_icons\.scss}line{font-family:\00003128}}
+.en-leaf:before {
+  content: "\1F342";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/entypo\/_icons\.scss}line{font-family:\00003129}}
+.en-left-bold:before {
+  content: "\E4AD";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/entypo\/_icons\.scss}line{font-family:\00003130}}
+.en-left-thin:before {
+  content: "\2190";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/entypo\/_icons\.scss}line{font-family:\00003131}}
+.en-left:before {
+  content: "\2B05";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/entypo\/_icons\.scss}line{font-family:\00003132}}
+.en-level-down:before {
+  content: "\21B3";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/entypo\/_icons\.scss}line{font-family:\00003133}}
+.en-level-up:before {
+  content: "\21B0";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/entypo\/_icons\.scss}line{font-family:\00003134}}
+.en-lifebuoy:before {
+  content: "\E788";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/entypo\/_icons\.scss}line{font-family:\00003135}}
+.en-light-bulb:before {
+  content: "\1F4A1";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/entypo\/_icons\.scss}line{font-family:\00003136}}
+.en-light-down:before {
+  content: "\1F505";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/entypo\/_icons\.scss}line{font-family:\00003137}}
+.en-light-up:before {
+  content: "\1F506";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/entypo\/_icons\.scss}line{font-family:\00003138}}
+.en-line-graph:before {
+  content: "\1F4C8";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/entypo\/_icons\.scss}line{font-family:\00003139}}
+.en-link:before {
+  content: "\1F517";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/entypo\/_icons\.scss}line{font-family:\00003140}}
+.en-list:before {
+  content: "\2630";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/entypo\/_icons\.scss}line{font-family:\00003141}}
+.en-location:before {
+  content: "\E724";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/entypo\/_icons\.scss}line{font-family:\00003142}}
+.en-lock-open:before {
+  content: "\1F513";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/entypo\/_icons\.scss}line{font-family:\00003143}}
+.en-lock:before {
+  content: "\1F512";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/entypo\/_icons\.scss}line{font-family:\00003144}}
+.en-login:before {
+  content: "\E740";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/entypo\/_icons\.scss}line{font-family:\00003145}}
+.en-logout:before {
+  content: "\E741";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/entypo\/_icons\.scss}line{font-family:\00003146}}
+.en-loop:before {
+  content: "\1F501";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/entypo\/_icons\.scss}line{font-family:\00003147}}
+.en-magnet:before {
+  content: "\E7A1";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/entypo\/_icons\.scss}line{font-family:\00003148}}
+.en-mail:before {
+  content: "\2709";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/entypo\/_icons\.scss}line{font-family:\00003149}}
+.en-map:before {
+  content: "\E727";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/entypo\/_icons\.scss}line{font-family:\00003150}}
+.en-megaphone:before {
+  content: "\1F4E3";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/entypo\/_icons\.scss}line{font-family:\00003151}}
+.en-mic:before {
+  content: "\1F3A4";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/entypo\/_icons\.scss}line{font-family:\00003152}}
+.en-minus:before {
+  content: "\2796";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/entypo\/_icons\.scss}line{font-family:\00003153}}
+.en-mobile:before {
+  content: "\1F4F1";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/entypo\/_icons\.scss}line{font-family:\00003154}}
+.en-monitor:before {
+  content: "\1F4BB";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/entypo\/_icons\.scss}line{font-family:\00003155}}
+.en-moon:before {
+  content: "\263D";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/entypo\/_icons\.scss}line{font-family:\00003156}}
+.en-mouse:before {
+  content: "\E789";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/entypo\/_icons\.scss}line{font-family:\00003157}}
+.en-music:before {
+  content: "\1F3B5";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/entypo\/_icons\.scss}line{font-family:\00003158}}
+.en-mute:before {
+  content: "\1F507";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/entypo\/_icons\.scss}line{font-family:\00003159}}
+.en-network:before {
+  content: "\E776";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/entypo\/_icons\.scss}line{font-family:\00003160}}
+.en-new:before {
+  content: "\1F4A5";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/entypo\/_icons\.scss}line{font-family:\00003161}}
+.en-newspaper:before {
+  content: "\1F4F0";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/entypo\/_icons\.scss}line{font-family:\00003162}}
+.en-note:before {
+  content: "\266A";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/entypo\/_icons\.scss}line{font-family:\00003163}}
+.en-numbered-list:before {
+  content: "\E005";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/entypo\/_icons\.scss}line{font-family:\00003164}}
+.en-open-book:before {
+  content: "\1F4D6";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/entypo\/_icons\.scss}line{font-family:\00003165}}
+.en-palette:before {
+  content: "\1F3A8";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/entypo\/_icons\.scss}line{font-family:\00003166}}
+.en-paper-plane:before {
+  content: "\1F53F";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/entypo\/_icons\.scss}line{font-family:\00003167}}
+.en-paus:before {
+  content: "\2016";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/entypo\/_icons\.scss}line{font-family:\00003168}}
+.en-pencil:before {
+  content: "\270E";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/entypo\/_icons\.scss}line{font-family:\00003169}}
+.en-phone:before {
+  content: "\1F4DE";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/entypo\/_icons\.scss}line{font-family:\00003170}}
+.en-picture:before {
+  content: "\1F304";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/entypo\/_icons\.scss}line{font-family:\00003171}}
+.en-pie-chart:before {
+  content: "\25F4";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/entypo\/_icons\.scss}line{font-family:\00003172}}
+.en-play:before {
+  content: "\25B6";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/entypo\/_icons\.scss}line{font-family:\00003173}}
+.en-plus:before {
+  content: "\2795";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/entypo\/_icons\.scss}line{font-family:\00003174}}
+.en-popup:before {
+  content: "\E74C";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/entypo\/_icons\.scss}line{font-family:\00003175}}
+.en-print:before {
+  content: "\E716";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/entypo\/_icons\.scss}line{font-family:\00003176}}
+.en-progress-:before {
+  content: "\E768";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/entypo\/_icons\.scss}line{font-family:\00003177}}
+.en-progress-:before {
+  content: "\E769";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/entypo\/_icons\.scss}line{font-family:\00003178}}
+.en-progress-:before {
+  content: "\E76A";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/entypo\/_icons\.scss}line{font-family:\00003179}}
+.en-progress-:before {
+  content: "\E76B";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/entypo\/_icons\.scss}line{font-family:\00003180}}
+.en-publish:before {
+  content: "\E74D";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/entypo\/_icons\.scss}line{font-family:\00003181}}
+.en-quote:before {
+  content: "\275E";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/entypo\/_icons\.scss}line{font-family:\00003182}}
+.en-record:before {
+  content: "\25CF";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/entypo\/_icons\.scss}line{font-family:\00003183}}
+.en-reply-all:before {
+  content: "\E713";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/entypo\/_icons\.scss}line{font-family:\00003184}}
+.en-reply:before {
+  content: "\E712";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/entypo\/_icons\.scss}line{font-family:\00003185}}
+.en-resize-full:before {
+  content: "\E744";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/entypo\/_icons\.scss}line{font-family:\00003186}}
+.en-resize-small:before {
+  content: "\E746";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/entypo\/_icons\.scss}line{font-family:\00003187}}
+.en-retweet:before {
+  content: "\E717";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/entypo\/_icons\.scss}line{font-family:\00003188}}
+.en-right-bold:before {
+  content: "\E4AE";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/entypo\/_icons\.scss}line{font-family:\00003189}}
+.en-right-thin:before {
+  content: "\2192";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/entypo\/_icons\.scss}line{font-family:\00003190}}
+.en-right:before {
+  content: "\27A1";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/entypo\/_icons\.scss}line{font-family:\00003191}}
+.en-rocket:before {
+  content: "\1F680";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/entypo\/_icons\.scss}line{font-family:\00003192}}
+.en-rss:before {
+  content: "\E73A";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/entypo\/_icons\.scss}line{font-family:\00003193}}
+.en-save:before {
+  content: "\1F4BE";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/entypo\/_icons\.scss}line{font-family:\00003194}}
+.en-search:before {
+  content: "\1F50D";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/entypo\/_icons\.scss}line{font-family:\00003195}}
+.en-share:before {
+  content: "\E73C";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/entypo\/_icons\.scss}line{font-family:\00003196}}
+.en-shareable:before {
+  content: "\E73E";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/entypo\/_icons\.scss}line{font-family:\00003197}}
+.en-shuffle:before {
+  content: "\1F500";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/entypo\/_icons\.scss}line{font-family:\00003198}}
+.en-signal:before {
+  content: "\1F4F6";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/entypo\/_icons\.scss}line{font-family:\00003199}}
+.en-sound:before {
+  content: "\1F50A";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/entypo\/_icons\.scss}line{font-family:\00003200}}
+.en-squared-cross:before {
+  content: "\274E";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/entypo\/_icons\.scss}line{font-family:\00003201}}
+.en-squared-minus:before {
+  content: "\229F";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/entypo\/_icons\.scss}line{font-family:\00003202}}
+.en-squared-plus:before {
+  content: "\229E";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/entypo\/_icons\.scss}line{font-family:\00003203}}
+.en-star-empty:before {
+  content: "\2606";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/entypo\/_icons\.scss}line{font-family:\00003204}}
+.en-star:before {
+  content: "\2605";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/entypo\/_icons\.scss}line{font-family:\00003205}}
+.en-stop:before {
+  content: "\25A0";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/entypo\/_icons\.scss}line{font-family:\00003206}}
+.en-suitcase:before {
+  content: "\1F6C6";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/entypo\/_icons\.scss}line{font-family:\00003207}}
+.en-sweden:before {
+  content: "\F601";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/entypo\/_icons\.scss}line{font-family:\00003208}}
+.en-switch:before {
+  content: "\21C6";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/entypo\/_icons\.scss}line{font-family:\00003209}}
+.en-tag:before {
+  content: "\E70C";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/entypo\/_icons\.scss}line{font-family:\00003210}}
+.en-text-doc-inverted:before {
+  content: "\E731";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/entypo\/_icons\.scss}line{font-family:\00003211}}
+.en-text-doc:before {
+  content: "\1F4C4";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/entypo\/_icons\.scss}line{font-family:\00003212}}
+.en-thermometer:before {
+  content: "\1F4FF";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/entypo\/_icons\.scss}line{font-family:\00003213}}
+.en-three-dots:before {
+  content: "\23F6";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/entypo\/_icons\.scss}line{font-family:\00003214}}
+.en-thumbs-down:before {
+  content: "\1F44E";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/entypo\/_icons\.scss}line{font-family:\00003215}}
+.en-thumbs-up:before {
+  content: "\1F44D";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/entypo\/_icons\.scss}line{font-family:\00003216}}
+.en-thunder-cloud:before {
+  content: "\26C8";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/entypo\/_icons\.scss}line{font-family:\00003217}}
+.en-ticket:before {
+  content: "\1F3AB";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/entypo\/_icons\.scss}line{font-family:\00003218}}
+.en-to-end:before {
+  content: "\23ED";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/entypo\/_icons\.scss}line{font-family:\00003219}}
+.en-to-start:before {
+  content: "\23EE";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/entypo\/_icons\.scss}line{font-family:\00003220}}
+.en-tools:before {
+  content: "\2692";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/entypo\/_icons\.scss}line{font-family:\00003221}}
+.en-traffic-cone:before {
+  content: "\1F6C8";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/entypo\/_icons\.scss}line{font-family:\00003222}}
+.en-trash:before {
+  content: "\E729";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/entypo\/_icons\.scss}line{font-family:\00003223}}
+.en-triangle-down:before {
+  content: "\25BE";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/entypo\/_icons\.scss}line{font-family:\00003224}}
+.en-triangle-left:before {
+  content: "\25C2";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/entypo\/_icons\.scss}line{font-family:\00003225}}
+.en-triangle-right:before {
+  content: "\25B8";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/entypo\/_icons\.scss}line{font-family:\00003226}}
+.en-triangle-up:before {
+  content: "\25B4";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/entypo\/_icons\.scss}line{font-family:\00003227}}
+.en-trophy:before {
+  content: "\1F3C6";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/entypo\/_icons\.scss}line{font-family:\00003228}}
+.en-two-dots:before {
+  content: "\23F5";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/entypo\/_icons\.scss}line{font-family:\00003229}}
+.en-up-bold:before {
+  content: "\E4AF";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/entypo\/_icons\.scss}line{font-family:\00003230}}
+.en-up-thin:before {
+  content: "\2191";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/entypo\/_icons\.scss}line{font-family:\00003231}}
+.en-up:before {
+  content: "\2B06";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/entypo\/_icons\.scss}line{font-family:\00003232}}
+.en-upload-cloud:before {
+  content: "\E711";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/entypo\/_icons\.scss}line{font-family:\00003233}}
+.en-upload:before {
+  content: "\1F4E4";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/entypo\/_icons\.scss}line{font-family:\00003234}}
+.en-user:before {
+  content: "\1F464";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/entypo\/_icons\.scss}line{font-family:\00003235}}
+.en-users:before {
+  content: "\1F465";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/entypo\/_icons\.scss}line{font-family:\00003236}}
+.en-vcard:before {
+  content: "\E722";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/entypo\/_icons\.scss}line{font-family:\00003237}}
+.en-video:before {
+  content: "\1F3AC";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/entypo\/_icons\.scss}line{font-family:\00003238}}
+.en-voicemail:before {
+  content: "\2707";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/entypo\/_icons\.scss}line{font-family:\00003239}}
+.en-volume:before {
+  content: "\23F7";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/entypo\/_icons\.scss}line{font-family:\00003240}}
+.en-warning:before {
+  content: "\26A0";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/entypo\/_icons\.scss}line{font-family:\00003241}}
+.en-water:before {
+  content: "\1F4A6";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/entypo\/_icons\.scss}line{font-family:\00003244}}
+.en-s-behance:before {
+  content: "\F34E";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/entypo\/_icons\.scss}line{font-family:\00003245}}
+.en-s-c-dribbble:before {
+  content: "\F31C";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/entypo\/_icons\.scss}line{font-family:\00003246}}
+.en-s-c-facebook:before {
+  content: "\F30D";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/entypo\/_icons\.scss}line{font-family:\00003247}}
+.en-s-c-flickr:before {
+  content: "\F304";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/entypo\/_icons\.scss}line{font-family:\00003248}}
+.en-s-c-github:before {
+  content: "\F301";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/entypo\/_icons\.scss}line{font-family:\00003249}}
+.en-s-c-google:before {
+  content: "\F310";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/entypo\/_icons\.scss}line{font-family:\00003250}}
+.en-s-c-lastfm:before {
+  content: "\F322";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/entypo\/_icons\.scss}line{font-family:\00003251}}
+.en-s-c-linkedin:before {
+  content: "\F319";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/entypo\/_icons\.scss}line{font-family:\00003252}}
+.en-s-c-pinterest:before {
+  content: "\F313";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/entypo\/_icons\.scss}line{font-family:\00003253}}
+.en-s-c-rdio:before {
+  content: "\F325";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/entypo\/_icons\.scss}line{font-family:\00003254}}
+.en-s-c-skype:before {
+  content: "\F33A";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/entypo\/_icons\.scss}line{font-family:\00003255}}
+.en-s-c-spotify:before {
+  content: "\F328";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/entypo\/_icons\.scss}line{font-family:\00003256}}
+.en-s-c-stumbleupon:before {
+  content: "\F31F";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/entypo\/_icons\.scss}line{font-family:\00003257}}
+.en-s-c-tumblr:before {
+  content: "\F316";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/entypo\/_icons\.scss}line{font-family:\00003258}}
+.en-s-c-twitter:before {
+  content: "\F30A";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/entypo\/_icons\.scss}line{font-family:\00003259}}
+.en-s-c-vimeo:before {
+  content: "\F307";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/entypo\/_icons\.scss}line{font-family:\00003260}}
+.en-s-dribbble:before {
+  content: "\F31B";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/entypo\/_icons\.scss}line{font-family:\00003261}}
+.en-s-dropbox:before {
+  content: "\F330";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/entypo\/_icons\.scss}line{font-family:\00003262}}
+.en-s-evernote:before {
+  content: "\F333";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/entypo\/_icons\.scss}line{font-family:\00003263}}
+.en-s-facebook:before {
+  content: "\F30C";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/entypo\/_icons\.scss}line{font-family:\00003264}}
+.en-s-flattr:before {
+  content: "\F336";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/entypo\/_icons\.scss}line{font-family:\00003265}}
+.en-s-flickr:before {
+  content: "\F303";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/entypo\/_icons\.scss}line{font-family:\00003266}}
+.en-s-github:before {
+  content: "\F300";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/entypo\/_icons\.scss}line{font-family:\00003267}}
+.en-s-google-circles:before {
+  content: "\F351";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/entypo\/_icons\.scss}line{font-family:\00003268}}
+.en-s-google:before {
+  content: "\F30F";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/entypo\/_icons\.scss}line{font-family:\00003269}}
+.en-s-instagram:before {
+  content: "\F32D";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/entypo\/_icons\.scss}line{font-family:\00003270}}
+.en-s-lastfm:before {
+  content: "\F321";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/entypo\/_icons\.scss}line{font-family:\00003271}}
+.en-s-linkedin:before {
+  content: "\F318";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/entypo\/_icons\.scss}line{font-family:\00003272}}
+.en-s-mixi:before {
+  content: "\F34B";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/entypo\/_icons\.scss}line{font-family:\00003273}}
+.en-s-paypal:before {
+  content: "\F342";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/entypo\/_icons\.scss}line{font-family:\00003274}}
+.en-s-picasa:before {
+  content: "\F345";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/entypo\/_icons\.scss}line{font-family:\00003275}}
+.en-s-pinterest:before {
+  content: "\F312";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/entypo\/_icons\.scss}line{font-family:\00003276}}
+.en-s-qq:before {
+  content: "\F32A";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/entypo\/_icons\.scss}line{font-family:\00003277}}
+.en-s-rdio:before {
+  content: "\F324";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/entypo\/_icons\.scss}line{font-family:\00003278}}
+.en-s-renren:before {
+  content: "\F33C";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/entypo\/_icons\.scss}line{font-family:\00003279}}
+.en-s-s-facebook:before {
+  content: "\F30E";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/entypo\/_icons\.scss}line{font-family:\00003280}}
+.en-s-sina-weibo:before {
+  content: "\F33F";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/entypo\/_icons\.scss}line{font-family:\00003281}}
+.en-s-skype:before {
+  content: "\F339";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/entypo\/_icons\.scss}line{font-family:\00003282}}
+.en-s-smashing:before {
+  content: "\F357";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/entypo\/_icons\.scss}line{font-family:\00003283}}
+.en-s-soundcloud:before {
+  content: "\F348";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/entypo\/_icons\.scss}line{font-family:\00003284}}
+.en-s-spotify:before {
+  content: "\F327";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/entypo\/_icons\.scss}line{font-family:\00003285}}
+.en-s-stumbleupon:before {
+  content: "\F31E";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/entypo\/_icons\.scss}line{font-family:\00003286}}
+.en-s-tumblr:before {
+  content: "\F315";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/entypo\/_icons\.scss}line{font-family:\00003287}}
+.en-s-twitter:before {
+  content: "\F309";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/entypo\/_icons\.scss}line{font-family:\00003288}}
+.en-s-vimeo:before {
+  content: "\F306";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/entypo\/_icons\.scss}line{font-family:\00003289}}
+.en-s-vk:before {
+  content: "\F354";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/_iconfont\.scss}line{font-family:\0000346}}
+.icon {
+  font-family: "Entypo";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+  vertical-align: baseline;
+  display: inline-block;
+  vertical-align: baseline;
+  float: none;
+  /* IE7 bugfix */
+  zoom: 1;
+  *display: inline;
+  *vertical-align: auto;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
+  /* opacity: .8; */
+  /* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;
+  text-transform: none;
+  /* fix buttons height, for twitter bootstrap */
+  line-height: 1;
+  /* Animation center compensation - margins should be symmetric */
+  /* remove if not needed */
+  margin-left: .2em;
+  /* you can be more comfortable with increased icons size */
+  /* font-size: 120%; */
+  /* Uncomment for 3D effect */
+  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+  /* Font Awesome */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/_iconfont\.scss}line{font-family:\0000351}}
+[class^="en-"]:before,
+[class*=" en-"]:before {
+  font-family: "Entypo";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+  vertical-align: baseline;
+  display: inline-block;
+  vertical-align: baseline;
+  float: none;
+  /* IE7 bugfix */
+  zoom: 1;
+  *display: inline;
+  *vertical-align: auto;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
+  /* opacity: .8; */
+  /* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;
+  text-transform: none;
+  /* fix buttons height, for twitter bootstrap */
+  line-height: 1;
+  /* Animation center compensation - margins should be symmetric */
+  /* remove if not needed */
+  margin-left: .2em;
+  /* you can be more comfortable with increased icons size */
+  /* font-size: 120%; */
+  /* Uncomment for 3D effect */
+  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+  /* Font Awesome */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/_iconfont\.scss}line{font-family:\0000355}}
+[data-icon]:before {
+  font-family: "Entypo";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+  vertical-align: baseline;
+  display: inline-block;
+  vertical-align: baseline;
+  float: none;
+  /* IE7 bugfix */
+  zoom: 1;
+  *display: inline;
+  *vertical-align: auto;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
+  /* opacity: .8; */
+  /* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;
+  text-transform: none;
+  /* fix buttons height, for twitter bootstrap */
+  line-height: 1;
+  /* Animation center compensation - margins should be symmetric */
+  /* remove if not needed */
+  margin-left: .2em;
+  /* you can be more comfortable with increased icons size */
+  /* font-size: 120%; */
+  /* Uncomment for 3D effect */
+  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+  /* Font Awesome */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  content: attr(data-icon);
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/_iconfont\.scss}line{font-family:\0000361}}
+[class^="en-s-"]:before,
+[class*=" en-s-"]:before {
+  font-family: 'Entypo Social';
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/_iconfont\.scss}line{font-family:\0000365}}
+.screen-reader-text {
+  font: 0/0 a;
+  text-shadow: none;
+  color: transparent;
+  border: 0;
+  background-color: transparent;
+}
+
+/**
+ * Different button layouts
+ *
+ * @author             Michael Schulze
+ * @version            $1.0$
+ * @copyright          Michael Schulze, 7 January, 2012
+ * @license            All rights reserved. No usage without written permission.
+ *
+ * @package            yaml,compass,sass
+ * @-yaml-minver       3.3.1
+ * @-sass-minver       2.0
+ * @-compass-minver    0.11.6
+ *
+ * @lastmodified       $Date: 2012-01-07 19:57:33 +0100 (Sat, 07 Jan 2012) $
+ */
+@media screen, projection {
+  /**
+   * Red-Team Designblog - Just some other awesome CSS3 buttons
+   * http://www.red-team-design.com/just-another-awesome-css3-buttons
+   *
+   */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/_button\.scss}line{font-family:\0000325}}
+  .button,
+  .btn {
+    display: inline-block;
+    vertical-align: baseline;
+    float: none;
+    /* IE7 bugfix */
+    zoom: 1;
+    *display: inline;
+    *vertical-align: auto;
+    white-space: nowrap;
+    background-color: #5099cc;
+    padding: 0 1.5em;
+    margin-top: 1.33333em;
+    font: normal 1em/2em "Open Sans", "Helvetica Neue", "Lucida Grande", Calibri, Helvetica, Arial, sans-serif;
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+    border: none 0;
+    border-radius: 0.2em;
+    -webkit-transition: background 0.2s ease-in-out;
+    -moz-transition: background 0.2s ease-in-out;
+    transition: background 0.2s ease-in-out;
+  }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/_button\.scss}line{font-family:\0000344}}
+  .button:hover,
+  .btn:hover {
+    background-color: #3580b4;
+  }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/_button\.scss}line{font-family:\0000348}}
+  .button:active,
+  .btn:active {
+    -moz-box-shadow: 0 0 4px 2px rgba(0, 0, 0, 0.3) inset;
+    -webkit-box-shadow: 0 0 4px 2px rgba(0, 0, 0, 0.3) inset;
+    box-shadow: 0 0 4px 2px rgba(0, 0, 0, 0.3) inset;
+    position: relative;
+    top: 1px;
+  }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/_button\.scss}line{font-family:\0000356}}
+  .button:focus,
+  .btn:focus {
+    outline: 0;
+    background-color: #3580b4;
+  }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/_button\.scss}line{font-family:\0000361}}
+  .button:before,
+  .btn:before {
+    background: #ccc;
+    background: rgba(0, 0, 0, 0.1);
+    float: left;
+    width: 1em;
+    text-align: center;
+    font-size: 1.5em;
+    margin: 0 1em 0 -1em;
+    padding: 0 .2em;
+    border-radius: .15em 0 0 .15em;
+    pointer-events: none;
+    line-height: inherit;
+  }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/_button\.scss}line{font-family:\0000383}}
+  .button.icon:before, .button[data-icon]:before, .button[class^="en-"]:before, .button[class*=" en-"]:before, .button[class^="fa-"]:before, .button[class*=" fa-"]:before, .button[class^="icon-"]:before, .button[class*=" icon-"]:before,
+  .btn.icon:before,
+  .btn[data-icon]:before,
+  .btn[class^="en-"]:before,
+  .btn[class*=" en-"]:before,
+  .btn[class^="fa-"]:before,
+  .btn[class*=" fa-"]:before,
+  .btn[class^="icon-"]:before,
+  .btn[class*=" icon-"]:before {
+    font-size: 2.5em;
+    padding: 0 .1em;
+    margin: 0 .4em 0 -.6em;
+    background: transparent;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
+  }
+
+  /* Hexadecimal entities for the icons */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/_button\.scss}line{font-family:\00003101}}
+  a.add:before, button.add:before, input.add:before {
+    content: "\271A";
+  }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/_button\.scss}line{font-family:\00003102}}
+  a.edit:before, button.edit:before, input.edit:before {
+    content: "\270E";
+  }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/_button\.scss}line{font-family:\00003103}}
+  a.delete:before, button.delete:before, input.delete:before {
+    content: "\2718";
+  }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/_button\.scss}line{font-family:\00003104}}
+  a.save:before, button.save:before, input.save:before {
+    content: "\2714";
+  }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/_button\.scss}line{font-family:\00003105}}
+  a.email:before, button.email:before, input.email:before {
+    content: "\2709";
+  }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/_button\.scss}line{font-family:\00003106}}
+  a.like:before, button.like:before, input.like:before {
+    content: "\2764";
+  }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/_button\.scss}line{font-family:\00003107}}
+  a.next:before, button.next:before, input.next:before {
+    content: "\279C";
+  }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/_button\.scss}line{font-family:\00003108}}
+  a.star:before, button.star:before, input.star:before {
+    content: "\2605";
+  }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/_button\.scss}line{font-family:\00003109}}
+  a.spark:before, button.spark:before, input.spark:before {
+    content: "\2737";
+  }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/_button\.scss}line{font-family:\00003110}}
+  a.play:before, button.play:before, input.play:before {
+    content: "\25B6";
+  }
+}
+@media print {
+  /* (en) change font size unit to [pt] - avoids problems with [px] in Gecko based browsers    */
+  /* (de) Wechsel der der Schriftgrößen-Maßheinheit zu [pt] - Probleme mit [px] in Gecko-Browsern vermeiden */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/layout\/_print\.scss}line{font-family:\0000311}}
+  body {
+    font-size: 10pt;
+    color: #333;
+  }
+
+  /* (en) Hide unneeded container of the screenlayout in print layout */
+  /* (de) Für den Druck nicht benötigte Container des Layouts abschalten */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/layout\/_print\.scss}line{font-family:\0000320}}
+  nav,
+  .ym-searchform {
+    display: none;
+  }
+
+  /*------------------------------------------------------------------------------------------------------*/
+  /* (en) Avoid page breaks right after headings */
+  /* (de) Vermeidung von Seitenumbrüchen direkt nach einer Überschrift */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/layout\/_print\.scss}line{font-family:\0000328}}
+  h1, h2, h3, h4, h5, h6 {
+    page-break-after: avoid;
+  }
+
+  /*------------------------------------------------------------------------------------------------------*/
+  /* (en) optional output of acronyms and abbreviations*/
+  /* (de) optionale Ausgabe von Auszeichnung von Abkürzungen */
+  /*
+  abbr[title]:after,
+  acronym[title]:after {
+    content:'(' attr(title) ')';
+  }
+  */
+  /*------------------------------------------------------------------------------------------------------*/
+  /* (en) optional URL output of hyperlinks in print layout */
+  /* (de) optionale Ausgabe der URLs von Hyperlinks */
+  /*
+  a[href]:after {
+    content:" <URL:"attr(href)">";
+    color:#444;
+    background:inherit;
+    font-style:italic;
+  }
+  */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/layout\/_print\.scss}line{font-family:\0000358}}
+  .crypt {
+    display: none;
+  }
+}
+@page {
+  margin: 1cm 1cm 1cm 2cm;
+}

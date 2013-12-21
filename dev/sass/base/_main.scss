@@ -1,0 +1,34 @@
+// stylesheets for main elements
+
+/*
+* @section global typography settings
+*
+* vertical rhythm settings (based on em-unit)
+* -------------------------------------------
+* basefont-size: 14px (87.5%)
+* line-height  : 21px (factor: 1.5)
+*/
+
+/* (en) reset font size for all elements to standard (16 Pixel) */
+/* (de) Alle Schriftgrößen auf Standardgröße (16 Pixel) zurücksetzen */
+html * {
+  font-size:100%;
+}
+html,
+body {
+  min-height: 100%;
+  position: relative;
+}
+
+/* (en) base layout gets standard font size 14px */
+/* (de) Basis-Layout erhält Standardschriftgröße von 14 Pixeln */
+body {
+  font-family: $ym-font-sans;
+  font-size: $font-size-body;
+  color: $ym-text-color;
+
+  /* (en) Prevent auto-scaling of text in mobile webkit browsers */
+  /* (en) Automatische Schriftvergrößerung in mobilen Webkit-Browsern vermeiden */
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}

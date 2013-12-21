@@ -1,0 +1,76 @@
+
+$icon-font          : 'Entypo' !default;
+$icon-class         : 'icon' !default;
+$icon-data          : 'icon' !default;
+$icon-css-prefix    : 'en' !default;
+
+@import "entypo/variables",
+        "entypo/icons";
+
+@mixin icon( $font-family: $icon-font ) {
+  font-family: $font-family;
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+  vertical-align: baseline;
+
+  @include inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
+  /* opacity: .8; */
+
+  /* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;
+  text-transform: none;
+
+  /* fix buttons height, for twitter bootstrap */
+  line-height: 1;
+
+  /* Animation center compensation - margins should be symmetric */
+  /* remove if not needed */
+  margin-left: .2em;
+
+  /* you can be more comfortable with increased icons size */
+  /* font-size: 120%; */
+
+  /* Uncomment for 3D effect */
+  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+
+  /* Font Awesome */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.#{$icon-class} {
+  @include icon();
+}
+
+[class^="#{$icon-css-prefix}-"]:before,
+[class*=" #{$icon-css-prefix}-"]:before {
+  @include icon();
+}
+
+[data-#{$icon-data}]:before {
+  @include icon();
+  content: attr(data-icon);
+}
+
+[class^="en-s-"]:before,
+[class*=" en-s-"]:before {
+  font-family: 'Entypo Social';
+}
+
+.screen-reader-text {
+  // image replacement by Nicolas Gallagher (2011)
+  // http://nicolasgallagher.com/another-css-image-replacement-technique/
+  font: 0/0 a;
+  text-shadow: none;
+  color: transparent;
+
+  // reset the border and background-color
+  // see http://css-tricks.com/examples/ImageReplacement/ -> 2012 H5BP Image Replacement
+  border: 0;
+  background-color: transparent;
+}

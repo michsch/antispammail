@@ -1,0 +1,112 @@
+/**
+ * Different button layouts
+ *
+ * @author             Michael Schulze
+ * @version            $1.0$
+ * @copyright          Michael Schulze, 7 January, 2012
+ * @license            All rights reserved. No usage without written permission.
+ *
+ * @package            yaml,compass,sass
+ * @-yaml-minver       3.3.1
+ * @-sass-minver       2.0
+ * @-compass-minver    0.11.6
+ *
+ * @lastmodified       $Date: 2012-01-07 19:57:33 +0100 (Sat, 07 Jan 2012) $
+ */
+
+@media screen, projection {
+
+  /**
+   * Red-Team Designblog - Just some other awesome CSS3 buttons
+   * http://www.red-team-design.com/just-another-awesome-css3-buttons
+   *
+   */
+  .button,
+  .btn {
+    @include inline-block();
+
+    white-space: nowrap;
+    background-color: $ym-link-text-color;
+    //border: 1px solid #777;
+    padding: 0 1.5em;
+    //margin: 0.5em;
+    margin-top: $std-margin;
+    font: normal 1em/2em $ym-font-sans;
+    text-decoration: none;
+    color: $c-white;
+    cursor: pointer;
+    border: none 0;
+
+    @include border-radius(.2em);
+    @include transition(background .2s ease-in-out);
+
+
+    &:hover {
+      background-color: darken($ym-link-text-color, 10);
+    }
+
+    &:active {
+      -moz-box-shadow: 0 0 4px 2px rgba(0,0,0,.3) inset;
+      -webkit-box-shadow: 0 0 4px 2px rgba(0,0,0,.3) inset;
+      box-shadow: 0 0 4px 2px rgba(0,0,0,.3) inset;
+      position: relative;
+      top: 1px;
+    }
+
+    &:focus {
+      outline: 0;
+      background-color: darken($ym-link-text-color, 10);
+    }
+
+    &:before {
+      background: #ccc;
+      background: rgba(0,0,0,.1);
+      float: left;
+      width: 1em;
+      text-align: center;
+      font-size: 1.5em;
+      margin: 0 1em 0 -1em;
+      padding: 0 .2em;
+      border-radius: .15em 0 0 .15em;
+      pointer-events: none;
+      line-height: inherit;
+    }
+
+    &.icon,
+    &[data-icon],
+    &[class^="en-"],
+    &[class*=" en-"],
+    &[class^="fa-"],
+    &[class*=" fa-"],
+    &[class^="icon-"],
+    &[class*=" icon-"] {
+      &:before {
+        //font-size: 2em;
+        //padding: 0 .15em;
+        //margin: 0 .75em 0 -.75em;
+
+        font-size: 2.5em;
+        padding: 0 .1em;
+        margin: 0 .4em 0 -.6em;
+
+        background: transparent;
+
+        text-shadow: 0 1px 1px rgba(0,0,0,0.3);
+      }
+    }
+  }
+
+  /* Hexadecimal entities for the icons */
+  a, button, input {
+    &.add:before { content: "\271A"; }
+    &.edit:before { content: "\270E"; }
+    &.delete:before { content: "\2718"; }
+    &.save:before { content: "\2714"; }
+    &.email:before { content: "\2709"; }
+    &.like:before { content: "\2764"; }
+    &.next:before { content: "\279C"; }
+    &.star:before { content: "\2605"; }
+    &.spark:before { content: "\2737"; }
+    &.play:before { content: "\25B6"; }
+  }
+}

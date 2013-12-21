@@ -1,0 +1,16 @@
+// Prints the line-height as stylesheet-attribute in em like
+// line-height: 1.5em;
+//
+// @param integer font size in pixel
+// @param integer line-height in pixel
+// @return string line height
+@mixin line-height($pxval, $base: $em-base) {
+  @if not unitless($pxval) {
+      $pxval: strip-units($pxval);
+  }
+  @if not unitless($base) {
+      $base: strip-units($base);
+  }
+
+  line-height: ($pxval / $base);
+}

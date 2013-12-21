@@ -1,0 +1,13 @@
+// cross browser display inline-block
+// http://blog.mozilla.org/webdev/2009/02/20/cross-browser-inline-block/
+// http://foohack.com/2007/11/cross-browser-support-for-inline-block-styling/
+@mixin inline-block() {
+  display: inline-block;
+  vertical-align: baseline;
+  float: none;
+
+  /* IE7 bugfix */
+  zoom: 1;
+  *display: inline;
+  *vertical-align: auto;
+}

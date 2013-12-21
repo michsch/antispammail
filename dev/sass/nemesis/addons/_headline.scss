@@ -1,0 +1,13 @@
+@mixin headline($font-size: $font-size-body-px, $line-height: $ym-base-line-height, $margin-top: $base-margin) {
+  @include font-size($font-size);
+  @include line-height($line-height,$font-size);
+  margin-top: em($margin-top,$font-size);
+}
+
+@mixin ym-headline($font-size: $ym-h1-font-size, $ym-base-font-size: $ym-base-font-size, $line-height: $line-height){
+  $font-scale : $font-size / $ym-base-font-size;
+
+  font-size: $font-scale * 100%;
+  line-height: 2 * $line-height / $font-scale;
+  margin: $line-height / $font-scale * 1em 0 0;
+}

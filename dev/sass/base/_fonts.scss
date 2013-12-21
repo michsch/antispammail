@@ -1,0 +1,20 @@
+// web font integration
+
+$font-path: "../../fonts/" !default;
+
+@include font-face("Open Sans", $font-path + "Open-Sans/OpenSans-Regular-webfont", normal);
+@include font-face("Open Sans", $font-path + "Open-Sans/OpenSans-Bold-webfont", bold);
+@include font-face("Open Sans", $font-path + "Open-Sans/OpenSans-Italic-webfont", normal, italic);
+@include font-face("Open Sans", $font-path + "Open-Sans/OpenSans-BoldItalic-webfont", bold, italic);
+
+@include font-face("Entypo", $font-path + "Entypo/entypo", normal);
+@include font-face("Entypo Social", $font-path + "Entypo-Social/entypo-social", normal);
+
+
+/* Google Webfonts - Salsa */
+@font-face {
+  font-family: 'Salsa';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Salsa-Regular'), url('http://themes.googleusercontent.com/static/fonts/salsa/v2/eK4_lJSug9bPTBAtqaZ4GKCWcynf_cDxXwCLxiixG1c.woff') format('woff');
+}

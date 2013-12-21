@@ -1,0 +1,15 @@
+// base images stylesheets
+
+img,
+figure {
+  margin: 0;
+}
+
+figure {
+  display: block;
+  width: auto;
+  padding: $std-margin / 2;
+  margin-top: $std-margin;
+  background: #fff;
+  @include border-radius(.2em);
+}

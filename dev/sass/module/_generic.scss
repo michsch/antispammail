@@ -1,0 +1,129 @@
+// Generic Content Classes
+
+.hello {
+  h3, p {
+    font-family: $ym-font-serif;
+  }
+  h3 {
+    margin-left: em( -22, 58 );
+    text-shadow: 1px 1px 0 rgba( 255,255,255,1);
+    font-weight: 700;
+    letter-spacing: -.08em;
+    @include font-size( 58 );
+    @include line-height( 60, 58 );
+  }
+
+  p.subheader {
+    @include font-size( 20 );
+    @include line-height( 28, 20 );
+    margin-top: em( $base-margin, 20 );
+  }
+
+  .name {
+    //font-style: italic;
+    font-weight: 700;
+    letter-spacing: -.03em;
+    font-family: $ym-font-serif;
+  }
+}
+
+.what {
+  //@include font-size( 20 );
+  //@include line-height( 28, 20 );
+}
+
+.clearfix,
+.group {
+  @include clearfix();
+}
+
+.subheader {
+  @include font-size( $ym-text-big-font-size );
+}
+
+.indent {
+  margin-left: 2em;
+}
+
+.box {
+  border-radius: 0.3em;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #888;
+  border-color: rgba(0,0,0,.3);
+  @include box-shadow(1px 1px 3px rgba(0, 0, 0, 0.2) inset);
+  color: #444;
+  color: rgba(0,0,0,.8);
+  padding: em(20,14);
+  margin: em(21,14) 0 0 0;
+}
+
+.box > *:first-child {
+  margin-top: 0;
+}
+
+.label {
+  font-family: Verdana, Geneva, sans-serif;
+  padding: 1px 6px 2px;
+  display: inline-block;
+  vertical-align:middle;
+  letter-spacing: normal;
+  white-space:nowrap;
+  @include border-radius(3px);
+  background: #06C;
+  color: #fff;
+  font-size: 10px;
+  line-height: 12px;
+}
+
+.info {
+  background:#f4f4f4;
+}
+.success {
+  background:#8c8;
+}
+.warning {
+  background:#cc8;
+}
+.error {
+  background:#c88;
+}
+
+.highlight {
+  color:#c30;
+}
+.dimmed {
+  color:#888;
+}
+
+.cartogothic {
+  font-family: 'CartoGothicStd', Arial, Helvetica, sans-serif;
+  p, h1, h2, h3, h4, h5, h6 {
+    font-family: 'CartoGothicStd', Arial, Helvetica, sans-serif;
+  }
+}
+
+.float-left {
+  float:left;
+  display:inline;
+  margin: 1.5em 1em 0 0;
+}
+
+.float-right {
+  float:right;
+  display:inline;
+  margin: 1.5em 0 0 1em;
+}
+
+.center {
+  display:block;
+  text-align:center;
+  margin: 1.5em auto 0 auto;
+}
+
+/* Class for additional email dots */
+.crypt {
+  color: $c-crypt;
+  font-size: 1px;
+}
+

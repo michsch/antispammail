@@ -1,0 +1,316 @@
+// YAML Columns mixins
+//
+// Documentation:
+// http://www.yaml.de/docs/index.html#yaml-columns
+
+$ym-col1-width      : 25% !default;
+$ym-col2-width      : 50% !default;
+$ym-col3-width      : 25% !default;
+
+$ym-column-layout   : 'table' !default;
+
+@mixin ym-column($layout: $ym-column-layout) {
+  @if $layout == 'block' {
+    display: block;
+    overflow: hidden;
+    width: auto;
+  } @else if $layout == 'clearfix' {
+    display: block;
+    width: auto;
+
+    /* micro clearfix from Nicolas Gallagher
+     * http://css-tricks.com/snippets/css/clear-fix/
+     */
+    zoom: 1; /* For IE 6/7 (trigger hasLayout) */
+    &:before,
+    &:after {
+      content: "";
+      display: table;
+    }
+    &:after {
+      clear: both;
+    }
+  } @else { /* default */
+    display: table;
+    width: 100%;
+  }
+}
+
+@mixin ym-col-13($col1-width: $ym-col1-width) {
+/*
+ * |-------------------------------------------------------|
+ * | content           | content                           |
+ * | col 1 |           | col 3 |                           |
+ * |                   |                                   |
+ * |-------------------------------------------------------|
+ */
+  .ym-column {
+    @include ym-column();
+  }
+  .ym-col1 {
+    float: left;
+    width: $col1-width; /* column width */
+    margin: 0;
+  }
+  .ym-col2 {
+    display: none;
+  }
+  .ym-col3 {
+    display: block;
+    float: none;
+    width: auto;
+    margin-left: $col1-width; /* column col1 width */
+    margin-right: 0;
+  }
+}
+
+@mixin ym-col-132($col1-width: $ym-col1-width, $col2-width: $ym-col2-width) {
+/*
+ * |-------------------------------------------------------|
+ * | content    | content                     | content    |
+ * | col 1      | col 3                       | col 2      |
+ * |            |                             |            |
+ * |-------------------------------------------------------|
+ */
+  .ym-column {
+    @include ym-column();
+  }
+  .ym-col1 {
+    float: left;
+    width: $col1-width; /* column width */
+    margin: 0;
+  }
+  .ym-col2 {
+    display: block;
+    float: right;
+    width: $col2-width; /* column width */
+    margin: 0;
+  }
+  .ym-col3 {
+    display: block;
+    float: none;
+    width: auto;
+    margin-left: $col1-width; /* column col1 width */
+    margin-right: $col2-width; /* column col2 width */
+  }
+}
+
+@mixin ym-col-231($col1-width: $ym-col1-width, $col2-width: $ym-col2-width) {
+/*
+ * |-------------------------------------------------------|
+ * | content    | content                     | content    |
+ * | col 2      | col 3                       | col 1      |
+ * |            |                             |            |
+ * |-------------------------------------------------------|
+ */
+  .ym-column {
+    @include ym-column();
+  }
+  .ym-col1 {
+    float: right;
+    width: $col1-width; /* column width */
+    margin: 0;
+  }
+  .ym-col2 {
+    display: block;
+    float: left;
+    width: $col2-width; /* column width */
+    margin: 0;
+  }
+  .ym-col3 {
+    display: block;
+    float: none;
+    width: auto;
+    margin-left: $col2-width; /* column col2 width */
+    margin-right: $col1-width; /* column col1 width */
+  }
+}
+
+@mixin ym-col-123($col1-width: $ym-col1-width, $col2-width: $ym-col2-width) {
+/*
+ * |-------------------------------------------------------|
+ * | content    | content                     | content    |
+ * | col 1      | col 2                       | col 3      |
+ * |            |                             |            |
+ * |-------------------------------------------------------|
+ */
+  .ym-column {
+    @include ym-column();
+  }
+  .ym-col1 {
+    float: left;
+    width: $col1-width; /* column width */
+    margin: 0;
+  }
+  .ym-col2 {
+    display: block;
+    float: left;
+    width: $col2-width; /* column width */
+    margin: 0;
+  }
+  .ym-col3 {
+    display: block;
+    float: none;
+    width: auto;
+    margin-left: $col1-width + $col2-width; /* columns col1 + col2 width */
+    margin-right: 0;
+  }
+}
+
+@mixin ym-col-321($col1-width: $ym-col1-width, $col2-width: $ym-col2-width) {
+/*
+ * |-------------------------------------------------------|
+ * | content    | content                     | content    |
+ * | col 3      | col 2                       | col 1      |
+ * |            |                             |            |
+ * |-------------------------------------------------------|
+ */
+  .ym-column {
+    @include ym-column();
+  }
+  .ym-col1 {
+    float: right;
+    width: $col1-width; /* column width */
+    margin: 0;
+  }
+  .ym-col2 {
+    display: block;
+    float: right;
+    width: $col2-width; /* column width */
+    margin: 0;
+  }
+  .ym-col3 {
+    display: block;
+    float: none;
+    width: auto;
+    margin-left: 0;
+    margin-right: $col1-width + $col2-width; /* columns col1 + col2 width */
+  }
+}
+
+@mixin ym-col-213($col1-width: $ym-col1-width, $col2-width: $ym-col2-width, $col3-width: $ym-col3-width) {
+/*
+ * |-------------------------------------------------------|
+ * | content    | content                     | content    |
+ * | col 2      | col 1                       | col 3      |
+ * |            |                             |            |
+ * |-------------------------------------------------------|
+ */
+  .ym-column {
+    @include ym-column();
+  }
+  .ym-col1 {
+    float: left;
+    width: $col1-width; /* column width */
+    margin-left: $col2-width; /* column col2 width */
+    margin-right: 0;
+  }
+  .ym-col2 {
+    display: block;
+    float: right;
+    width: $col2-width; /* column width */
+    margin-left: ($col1-width + $col2-width) * -1; /* columns col1 + col2 * -1 width */
+    margin-right: 0;
+  }
+  .ym-col3 {
+    display: block;
+    float: right;
+    width: $col3-width; /* column width */
+    margin: 0 0 0 -5px;
+  }
+}
+
+@mixin ym-col-312($col1-width: $ym-col1-width, $col2-width: $ym-col2-width, $col3-width: $ym-col3-width) {
+/*
+ * |-------------------------------------------------------|
+ * | content    | content                     | content    |
+ * | col 3      | col 1                       | col 2      |
+ * |            |                             |            |
+ * |-------------------------------------------------------|
+ */
+  .ym-column {
+    @include ym-column();
+  }
+  .ym-col1 {
+    float: right;
+    width: $col1-width;
+    margin-left: ($col1-width + $col3-width) * -1; /* columns col1 + col3 * -1 width */
+    margin-right: $col2-width; /* column width */
+  }
+  .ym-col2 {
+    display: block;
+    float: right;
+    width: $col2-width; /* column width */
+    margin: 0;
+  }
+  .ym-col3 {
+    display: block;
+    float: left;
+    width: $col3-width; /* column width */
+    margin: 0 -5px 0 0;
+  }
+}
+
+@mixin ym-col-fixed31($col3-width: $ym-col3-width) {
+/*
+ * |-------------------------------------------------------|
+ * | sidebar         |    content                          |
+ * | col 3 | fixed   |    col 1 | flexible                 |
+ * |                 |                                     |
+ * |-------------------------------------------------------|
+ */
+  .ym-column {
+    @include ym-column(block);
+    padding-left: $col3-width; /* column width */
+  }
+  .ym-col1 { /* content */
+    position: relative;
+    float: left;
+    width: 100%;
+  }
+  .ym-col3 { /* sidebar */
+    position: relative;
+    float: left;
+    width: $col3-width; /* column width */
+    right: $col3-width; /* column width */
+    _right: 0px; /* fix for ie6 */
+    margin: 0 0 0 -100%;
+  }
+}
+
+@mixin ym-col-1fixed3($col3-width: $ym-col3-width) {
+/*
+ * |-------------------------------------------------------|
+ * | content                             | sidebar         |
+ * | col 1 | flexible                    | col 3 | fixed   |
+ * |                                     |                 |
+ * |-------------------------------------------------------|
+ */
+  .ym-column {
+    @include ym-column(block);
+    padding-right: $col3-width; /* column width */
+  }
+  .ym-col1 {  /* content */
+    position: relative;
+    float: left;
+    width: 100%;
+  }
+  .ym-col3 { /* sidebar */
+    position: relative;
+    float: left;
+    width: $col3-width; /* column width */
+    margin: 0 -$col3-width 0 0;
+  }
+}
+
+@mixin ym-cbox($col: col1, $position: left) {
+  .ym-#{$col} .ym-cbox {
+    @if $position == 'left' {
+      padding: 0 $ym-cbox-padding 0 0;
+    } @else if $position == 'middle' {
+      padding: 0 $ym-cbox-padding;
+    } @else if $position == 'right' {
+      padding: 0 0 0 $ym-cbox-padding;
+    }
+  }
+}

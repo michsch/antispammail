@@ -1,185 +1,194 @@
 <!DOCTYPE HTML>
-<html class="no-js" lang="de">
+<html class="no-js" lang="en">
 <head>
   <meta charset="UTF-8">
-	<!--[if IE]>
-	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-	<![endif]-->
 
   <title>cryptmail.js - encrypt email links for spam protection</title>
-	
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta name="apple-mobile-web-app-capable" content="no">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black">
-	
-	<link rel="shortcut icon" href="../images/favicon.ico">
-	<link rel="apple-touch-icon" href="../images/apple-touch-icon.png">
-	
-	<!-- <link rel="apple-touch-icon-precomposed" href="styles/images/apple-touch-icon-precomposed.png"> -->
-	
-	<meta name="description" content="JavaScript snippet to encrypt email links (mailto) and protect them from spam bots.">
-	<meta name="keywords" content="cryptmail.js, email encryption, encrypt email, crypt email, spam protection">
-	<meta name="author" content="Michael Schulze">
-	<meta name="robots" content="index,follow">
 
-	<!--[if ! lte IE 6]><!-->
-	<link rel="stylesheet" href="assets/css/style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="apple-mobile-web-app-capable" content="no">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+  <link rel="shortcut icon" href="../images/favicon.ico">
+  <link rel="apple-touch-icon" href="../images/apple-touch-icon.png">
+
+  <meta name="description" content="JavaScript snippet to encrypt email links (mailto) and protect them from spam bots.">
+  <meta name="keywords" content="cryptmail.js, email encryption, encrypt email, crypt email, spam protection">
+  <meta name="author" content="Michael Schulze">
+  <meta name="robots" content="index,follow">
+
+  <link rel="stylesheet" href="css/dev/fonts.css">
+
+  <!--[if ! lte IE 6]><!-->
+  <link rel="stylesheet" href="css/dev/main.css">
   <!--<![endif]-->
-	
-	<!--[if lte IE 8]>
-	<link href="assets/css/patches/patch_lte_ie8.css" rel="stylesheet" type="text/css" />
-	<![endif]-->
+
+  <!--[if lte IE 8]>
+  <link href="css/dev/patch_lte_ie8.css" rel="stylesheet" type="text/css">
+  <![endif]-->
   <!--[if lte IE 7]>
-  <link href="assets/css/patches/patch_ie.css" rel="stylesheet" type="text/css" />
+  <link href="css/dev/patch_ie.css" rel="stylesheet" type="text/css">
   <![endif]-->
   <!--[if lte IE 6]>
-  <link rel="stylesheet" href="http://universal-ie6-css.googlecode.com/files/ie6.1.1b.css" media="screen, projection">
+  <link rel="stylesheet" href="http://universal-ie6-css.googlecode.com/files/ie6.1.b.css" media="screen, projection">
   <![endif]-->
-  <!--[if IEMobile]>
-  <link href="assets/css/patches/patch_mobile_ie.css" rel="stylesheet" type="text/css" />
-  <![endif]-->
-  
-  <script type="text/javascript">
-    WebFontConfig = {
-      google: { families: [ 'Salsa' ] }
-    };
-    (function() {
-      var wf = document.createElement('script');
-      wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
-        '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
-      wf.type = 'text/javascript';
-      wf.async = 'true';
-      var s = document.getElementsByTagName('script')[0];
-      s.parentNode.insertBefore(wf, s);
-    })();
-  </script>
-  
-  <script type="text/javascript" src="assets/js/libs/modernizr.js"></script>
-  <!-- <script type="text/javascript" src="assets/js/libs/live.js"></script> -->
+
+  <!-- <script type="text/javascript" src="js/dev/vendor/modernizr-2.7.1.js"></script> -->
 </head>
-<body onload="prettyPrint()">
-  <div class="page_margins">
-    <div class="page">
+<body class="l-2col">
+  <div class="ym-wrapper">
+    <div class="ym-wbox">
+
       <header id="header" role="banner">
-        <ul id="skiplinks" role="navigation">
-          <li><a class="skip" href="#navigation">Skip to navigation (Press Enter).</a></li>
-          <li><a class="skip" href="#content">Skip to main content (Press Enter).</a></li>
-          <li><a class="skip" href="#contentinfo">Skip to footer (Press Enter).</a></li>
+        <ul class="ym-skiplinks" role="navigation">
+          <li><a class="ym-skip" href="#navigation">Skip to navigation (Press Enter).</a></li>
+          <li><a class="ym-skip" href="#content">Skip to main content (Press Enter).</a></li>
+          <li><a class="ym-skip" href="#contentinfo">Skip to footer (Press Enter).</a></li>
         </ul>
-        <div id="logo">
-          <!-- <img src="../images/logo.png" alt="Logo" /> -->
-        </div>
-        <h1>cryptmail.js</h1>
+        <h1 class="logo">antispammail.js</h1>
       </header>
+
       <div id="main">
         <a id="content"></a>
-        <section id="col1" role="main">
-          <div id="col1_content" class="clearfix">
-            <h2>Encrypt it baby ...</h2>
-            <form id="cryptmail" name="cryptmail" action="post" class="yform full" onsubmit="return false;">
-              <fieldset class="columnar">
-                <legend>Give me some input!</legend>
-                <div class="type-text">
-                  <label for="cryptmail_email">email address:</label>
-                  <input id="cryptmail_email" type="email" name="cryptmail_email" required />
+        <section class="ym-col1" role="main">
+          <div class="ym-cbox-right ym-clearfix">
+            <h2>Fight SPAM!</h2>
+
+            <form id="cryptmail" name="cryptmail" action="post" class="ym-form" onsubmit="return false;">
+              <fieldset class="ym-columnar">
+                <legend>Convert an email address in a SPAM free link.</legend>
+                <div class="ym-fbox-text ym-fbox">
+                  <label for="cryptmail_email">Email</label>
+                  <input id="cryptmail_email" type="email" name="cryptmail_email" required placeholder="Email"/>
                 </div>
-                <div class="type-mcheck">
-                  <span>email display option:</span>
-                  <div class="type-check">
-                    <input id="cryptmail_radio_1" type="radio" value="0" name="cryptmail_radio" maxlength="100" checked />
-                    <label for="cryptmail_radio_1">Use [at] instead of @ and [dot] instead of .</label>
-                  </div>
-                  <div class="type-check">
-                    <input id="cryptmail_radio_2" type="radio" value="1" name="cryptmail_radio" />
-                    <label for="cryptmail_radio_2">Use span Tags with the class <em>crypt</em> and invisible dot as wrap for @ and .</label>
+                <div class="ym-fbox">
+                  <span class="ym-label">Display option</span>
+                  <div class="ym-fbox-wrap">
+                    <div class="ym-fbox-check">
+                      <input id="cryptmail_radio_1" type="radio" value="0" name="cryptmail_radio" maxlength="100" checked />
+                      <label for="cryptmail_radio_1">Use [at] instead of @ and [dot] instead of .</label>
+                    </div>
+                    <div class="ym-fbox-check">
+                      <input id="cryptmail_radio_2" type="radio" value="1" name="cryptmail_radio" />
+                      <label for="cryptmail_radio_2">Use span Tags with the class <em>crypt</em> and invisible dot as wrap for @ and .</label>
+                    </div>
                   </div>
                 </div>
-                
+                <div class="ym-fbox-button ym-fbox">
+                  <button class="button en-lock" onclick="antiSpamMail.encryptForm()" />encrypt email</button>
+                </div>
               </fieldset>
-              <div class="type-button">
-                <button class="button save" onclick="CryptMailto()" />encrypt email</button>
-              </div>
               <fieldset>
                 <legend>Result</legend>
-                <div class="columnar">
-                  <div class="type-text">
+                <div class="ym-columnar">
+                  <div class="ym-fbox-text ym-fbox">
                     <label for="cryptmail_cryptedmail">encrypted email:</label>
                     <input id="cryptmail_cryptedmail" type="text" name="cryptmail_cryptedmail" readonly />
                   </div>
                 </div>
-                <div class="type-text">
+                <div class="ym-fbox-check ym-fbox">
                   <label for="cryptmail_html">full HTML:</label>
                   <textarea name="cryptmail_html" id="cryptmail_html" cols="30" rows="10" readonly></textarea>
                 </div>
               </fieldset>
 
             </form>
-            
+
             <h2>How it works</h2>
-            <p>Just include the <strong>cryptmail.js</strong> file in your documents header or just before the closing body tag. If you use the span Tags with classname <em>crypt</em> than you should load the stylesheet too.</p>
+            <p>Just include the <strong>antispammail.js</strong> file in your documents header or just before the closing body tag. If you use the span Tags with classname <em>crypt</em> than you should load the stylesheet too.</p>
             <div class="prettify">
-              <pre class="prettyprint linenums"><code>(function(window) {
+              <pre class="prettyprint linenums"><code>;(function(window, document, undefined){
+  'use strict';
+
+  var AntiSpamMail, AntiSpamMailProto, antiSpamMail;
+  AntiSpamMail = function() {};
+  AntiSpamMailProto = {
+    _version: '0.0.1',
+    encryptFn: 'antiSpamMail.linkDecrypt'
+  };
+  AntiSpamMail.prototype = AntiSpamMailProto;
+  window.antiSpamMail = antiSpamMail = new AntiSpamMail();
+
+
   /**
    * Crypt given mail
    *
    * @param string email address
    * @param boolean true
   */
-  var UnCryptMailto;
-  window.CryptMailto = function() {
-    var cryptform, e, formname, i, n, r, radioObj, radioValue, s;
-    formname = 'cryptmail';
-    cryptform = document.forms[formname];
+
+  antiSpamMail.encrypt = function(email) {
+    var encryptedMail, i, mailtoEmail, n;
     n = 0;
-    r = "";
-    s = "mailto:" + cryptform.cryptmail_email.value;
-    e = cryptform.cryptmail_email.value;
+    encryptedMail = '';
+    mailtoEmail = 'mailto:' + email;
+    i = 0;
+    while (i < mailtoEmail.length) {
+      n = mailtoEmail.charCodeAt(i);
+      if (n >= 8364) {
+        n = 128;
+      }
+      encryptedMail += String.fromCharCode(n + 1);
+      i++;
+    }
+    return encryptedMail;
+  };
+  antiSpamMail.encryptForm = function(formName, fieldName) {
+    var cryptform, email, emailHtml, encryptedMail, fieldShowEncryptedHtml, fieldShowEncryptedMail, i, radioObj, radioValue;
+    formName = formName || 'cryptmail';
+    fieldName = fieldName || 'cryptmail_email';
+    fieldShowEncryptedMail = 'cryptmail_cryptedmail';
+    fieldShowEncryptedHtml = 'cryptmail_html';
+    cryptform = document.forms[formName];
+    email = cryptform[fieldName].value;
+    if (cryptform.cryptmail_email.value.length < 4) {
+      return false;
+    }
     radioObj = cryptform.cryptmail_radio;
     if (radioObj.length > 0) {
       i = 0;
       while (i < radioObj.length) {
-        radioValue = parseInt(radioObj[i].checked ? radioObj[i].value : void 0);
+        radioValue = parseInt(radioObj[i].checked ? radioObj[i].value : void 0, 10);
         i++;
       }
     } else {
       radioValue = 0;
     }
     if (radioValue === 1) {
-      e = e.replace(/@/, '&lt;span class="crypt"&gt;.&lt;/span&gt;@&lt;/span class="crypt"&gt;.&lt;/span&gt;');
-      e = e.replace(/\./g, '&lt;span class="crypt"&gt;.&lt;/span&gt;.&lt;/span class="crypt"&gt;.&lt;/span&gt;');
+      emailHtml = email.replace(/\./g, '<span class="crypt">.</span>.</span class="crypt">.</span>');
+      emailHtml = email.replace(/@/, '<span class="crypt">.</span>@</span class="crypt">.</span>');
     } else {
-      e = e.replace(/@/, ' [at] ');
-      e = e.replace(/\./g, ' [dot] ');
+      emailHtml = email.replace(/\./g, ' [dot] ');
+      emailHtml = email.replace(/@/, ' [at] ');
     }
-    i = 0;
-    while (i < s.length) {
-      n = s.charCodeAt(i);
-      if (n >= 8364) n = 128;
-      r += String.fromCharCode(n + 1);
-      i++;
-    }
-    cryptform.cryptmail_cryptedmail.value = r;
-    cryptform.cryptmail_html.value = '&lt;a href="javascript:linkTo_UnCryptMailto(\'' + r + '\');"&gt;' + "\n\t" + e + "\n" + '&lt;/a&gt;';
+    encryptedMail = this.encrypt(email);
+    cryptform[fieldShowEncryptedMail].value = encryptedMail;
+    cryptform[fieldShowEncryptedHtml].value = '<a href="javascript:' + this.encryptFn + '(\'' + encryptedMail + '\');">' + emailHtml + '</a>';
     return true;
   };
+
+
   /**
    * Uncrypt the email address and returns the valid href
    *
    * @param string the crypted string
    * @return string valid href
   */
-  UnCryptMailto = function(s) {
-    var i, n, r;
+
+  antiSpamMail.decrypt = function(encryptedMail) {
+    var email, i, n;
     n = 0;
-    r = "";
+    email = '';
     i = 0;
-    while (i < s.length) {
-      n = s.charCodeAt(i);
-      if (n >= 8364) n = 128;
-      r += String.fromCharCode(n - 1);
+    while (i < encryptedMail.length) {
+      n = encryptedMail.charCodeAt(i);
+      if (n >= 8364) {
+        n = 128;
+      }
+      email += String.fromCharCode(n - 1);
       i++;
     }
-    return r;
+    return email;
   };
   /**
    * Public function for A tags
@@ -187,45 +196,59 @@
    * @param string the crypted string
    * @return boolean true
   */
-  window.linkTo_UnCryptMailto = function(s) {
-    location.href = UnCryptMailto(s);
+
+  antiSpamMail.linkDecrypt = function(encryptedMail) {
+    location.href = this.decrypt(encryptedMail);
     return true;
   };
-  return true;
-})(window);</code></pre>
+
+
+  if (typeof define === 'function' && define.amd) {
+    define('antiSpamMail', [], function() { return antiSpamMail; });
+  }
+})(this, document);</code></pre>
             </div>
           </div>
         </section>
-        <aside id="col3" role="complementary">
-          <div id="col3_content" class="clearfix">
+        <aside class="ym-col3" role="complementary">
+          <div class="ym-cbox-left ym-clearfix">
             <h2>Download</h2>
-            <div class="floatbox download">
-              <a href="http://github.com/michsch/cryptmail/zipball/master">
-                <img src="assets/images/icon_zip.png" alt="Download cryptmail.js as ZIP archive." />
+            <section class="download">
+              <a class="button zip en-download" href="http://github.com/michsch/antispammail/zipball/master">
+                ZIP Download
               </a>
-              <a href="http://github.com/michsch/cryptmail/tarball/master">
-                <img src="assets/images/icon_tar.png" alt="Download cryptmail.js as TAR archive." />
+              <a class="button tar en-download" href="http://github.com/michsch/antispammail/tarball/master">
+                TAR Download
               </a>
-            </div>
-            <p><a href="https://github.com/michsch/cryptmail">github.com/michsch/cryptmail</a></p>
-            
+              <a class="button tar en-s-github" href="http://github.com/michsch/antispammail/" title="github.com/michsch/antispammail">
+                Github
+              </a>
+            </section>
+            <h3>Or use Bower</h3>
+            <code class="prettyprint bash">
+              bower install antispammail
+            </code>
+
           </div>
           <div id="ie_clearing"> &#160; </div>
         </aside>
       </div>
+
       <footer id="footer" role="contentinfo">
         <a id="contentinfo"></a>
-        <p class="copy">&copy; 2011 <a href="javascript:linkTo_UnCryptMailto('nbjmup;jogpAnjdibfm77/ef');">Michael Schulze</a></p>
+        <p class="copy">&copy; 2011 <a href="javascript:antiSpamMail.linkDecrypt('nbjmup;nt,dpejohAnjditdi/ef');">Michael Schulze</a></p>
       </footer>
+
     </div>
   </div>
-  
-  <a href="http://github.com/michsch/cryptmail"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://a248.e.akamai.net/assets.github.com/img/e6bef7a091f5f3138b8cd40bc3e114258dd68ddf/687474703a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f7265645f6161303030302e706e67" alt="Fork me on GitHub"></a>
 
-  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-	<script type="text/javascript">!window.jQuery && document.write(unescape('%3Cscript type="text/javascript" src="assets/js/libs/jquery-1.7.1.min.js"%3E%3C/script%3E'))</script>
-	<script type="text/javascript" src="assets/js/libs/prettify.js"></script>
-	<script type="text/javascript" src="assets/js/plugins.js"></script>
-	<script type="text/javascript" src="assets/js/script.js"></script>
+  <a href="https://github.com/michsch/antispammail">
+    <img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub">
+  </a>
+
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="js/dev/vendor/jquery-1.10.2.min.js"><\/script>');</script>
+  <script data-main="js/dev/main" src="js/dev/vendor/require.js"></script>
+
 </body>
 </html>

@@ -1,0 +1,21 @@
+// Creates the font size in %
+//
+// @param integer font size in px
+// @param integer font-size of parent element in px (if empty than it's the global font size)
+// @return string css font-size with calculated % value
+@mixin font-size($pxval, $base: $pc-base, $unit: 'pc') {
+  @if not unitless($pxval) {
+      $pxval: strip-units($pxval);
+  }
+  @if not unitless($base) {
+      $base: strip-units($base);
+  }
+
+  $font-size: pc($pxval, $base);
+
+  @if $unit == 'em' {
+    $font-size: em($pxval, $base);
+  }
+
+  font-size: $font-size;
+}

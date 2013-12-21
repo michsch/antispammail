@@ -1,0 +1,52 @@
+// base table stylesheets
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: em($base-margin - 2) 0 0 0;
+  color: $ym-text-color;
+  border-top: 1px #ccc solid;
+  border-bottom: 1px #ccc solid;
+
+  caption {
+    font-variant:small-caps;
+  }
+
+  th,
+  td {
+    line-height: $line-height;
+    vertical-align: top;
+    padding: em(($base-margin - 1) / 2) 0.5em;
+
+    *:first-child {
+      margin-top: 0;
+    }
+  }
+
+  thead th {
+    text-align: left;
+    color: #000;
+    border-bottom: 2px #000 solid;
+  }
+
+  tbody {
+    tr {
+      th {
+        text-align: left;
+        border-top: 1px solid #ccc;
+        text-align: left;
+      }
+
+      td {
+        text-align: left;
+        border-top: 1px solid #ccc;
+      }
+
+      /* highlight row on mouse over */
+      &:hover th,
+      &:hover td {
+        background: #f8f8f8;
+      }
+    }
+  }
+}

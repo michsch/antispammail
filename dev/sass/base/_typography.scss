@@ -1,0 +1,211 @@
+// base typography stylesheets
+
+/**
+* (en) reset monospaced elements to font size 16px in all browsers
+* (de) Schriftgröße von monospaced Elemente in allen Browsern auf 16 Pixel setzen
+*
+* @see: http://webkit.org/blog/67/strange-medium/
+*/
+
+textarea,
+pre,
+code,
+kbd,
+samp,
+var,
+tt {
+  font-family: $ym-font-monospace;
+}
+
+/*--- Headings | Überschriften ------------------------------------------------------------------------*/
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $ym-font-serif;
+  font-weight: 400;
+  color: $ym-headings-color;
+  margin: 0;
+}
+
+h1,
+h2,
+h3 {
+  font-family: $ym-font-salsa;
+}
+
+h1 {
+  //@include headline(49,42);
+  @include ym-headline($ym-h1-font-size);
+}
+h2 {
+  @include ym-headline($ym-h2-font-size);
+}
+h3 {
+  @include ym-headline($ym-h3-font-size);
+}
+h4 {
+  @include ym-headline($ym-h4-font-size);
+}
+h5 {
+  @include ym-headline($ym-h5-font-size);
+}
+h6 {
+  @include ym-headline($ym-h6-font-size);
+  font-weight: 700;
+}
+
+/* --- Lists | Listen  -------------------------------------------------------------------------------- */
+
+ul,
+ol,
+dl {
+  font-size: $ym-text-font-scale * 100%;
+  line-height: $line-height;
+  margin: $std-margin 0 0 1em;
+}
+
+ul {
+  list-style-type: disc;
+}
+
+ol {
+  list-style-type: decimal;
+}
+
+ul ul {
+  list-style-type: circle;
+  margin-top: 0;
+}
+
+ol ol {
+  list-style-type: lower-latin;
+  margin-top: 0;
+}
+
+ol ul {
+  list-style-type: circle;
+  margin-top: 0;
+}
+
+li {
+  font-size: $ym-text-font-scale * 100%;
+  line-height: $line-height;
+  margin: $std-margin 0 0 0.8em;
+}
+
+dt { font-weight: bold; }
+
+dd { margin: 0 0 $line-height * 1em 0.8em; }
+
+/* --- general text formatting | Allgemeine Textauszeichnung ------------------------------------------ */
+
+p {
+  font-size: $ym-text-font-scale * 100%;
+  line-height: $line-height;
+  margin: $std-margin 0 0 0;
+}
+
+blockquote, cite, q {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-style: italic;
+}
+
+blockquote {
+  margin: $std-margin 0 0 $std-margin;
+  color: $ym-blockquote-text-color;
+  background: $ym-blockquote-bg-color;
+}
+
+strong, b { font-weight: bold; }
+
+em, i { font-style: italic; }
+
+big {
+  @include font-size(16);
+}
+
+small {
+  @include font-size(12);
+}
+
+pre,
+code,
+kbd,
+tt,
+samp,
+var {
+  font-size: $ym-text-font-scale * 100%;
+}
+
+pre {
+  font-size: $ym-text-font-scale * 100%;
+  line-height: $line-height;
+  margin: $std-margin 0 0 0;
+  white-space: pre;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+pre, code { color: $ym-pre-text-color; }
+
+kbd, samp, var, tt {
+  color: $ym-kbd-text-color;
+  font-weight: bold;
+}
+
+var, dfn { font-style: italic; }
+
+acronym, abbr {
+  border-bottom: 1px #aaa dotted;
+  font-variant: small-caps;
+  letter-spacing: .07em;
+  cursor: help;
+}
+
+sub,
+sup {
+  @include font-size(11);
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sup { top: -0.5em; }
+sub { bottom: -0.25em; }
+
+mark {
+  background: $ym-mark-bg-color;
+  color: $ym-mark-text-color;
+}
+
+hr {
+  color: #fff;
+  background: transparent;
+  margin: 0 0 ($std-margin / 2) 0;
+  padding: 0 0 ($std-margin / 2) 0;
+  border: 0;
+  border-bottom: 1px #eee solid;
+}
+
+/*--- Links ----------------------------------------------------------------------------------------- */
+
+a {
+  color: $ym-link-text-color;
+  background: $ym-link-bg-color;
+  text-decoration: none;
+
+  &:active { outline: none; }
+
+  /* (en) maximum constrast for tab focus - change with great care */
+  /* (en) Maximaler Kontrast für Tab Focus - Ändern Sie diese Regel mit Bedacht */
+  &:focus,
+  &:hover {
+    background-color: $ym-link-focus-bg-color;
+    color: $ym-link-focus-text-color;
+    text-decoration: none;
+    outline: 0 none;
+  }
+}

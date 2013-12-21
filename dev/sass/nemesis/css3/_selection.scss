@@ -1,0 +1,8 @@
+@mixin selection () {
+  &::selection {
+    @content; /* Safari */
+  }
+  &::-moz-selection {
+    @content; /* Firefox */
+  }
+}

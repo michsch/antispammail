@@ -1,0 +1,8 @@
+@mixin last-child ( $fallbackClass: last-child ) {
+  &:last-child {
+    @content;
+  }
+  .#{fallbackClass} {
+    @content;
+  }
+}
