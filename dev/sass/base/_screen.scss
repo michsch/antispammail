@@ -14,5 +14,12 @@ body {
   //padding: 0;
   //margin: 0;
   overflow-y: scroll;
-  background: $c-bodybg;
+
+  background-color: $c-bodybg;
+
+  //background: inline-image("body_bg.png") repeat left top;
+  //*background: image-url("body_bg.png") repeat left top;
+
+  background: inline-image("fabric_of_squares_gray.png") repeat left top;
+  *background: image-url("fabric_of_squares_gray.png") $c-bodybg;
 }

@@ -5,8 +5,8 @@
 
   .download {
 
-    a {
-      width: 60%;
+    a.button {
+      width: 80%;
 
       /*display: block;
       float: left;
@@ -21,4 +21,11 @@
     }
   }
 
+}
+
+@media only screen and (min-width: 0px) {
+  .download a.button {
+    @include box-sizing(border-box);
+    width: 100%;
+  }
 }

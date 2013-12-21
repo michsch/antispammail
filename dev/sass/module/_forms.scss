@@ -88,6 +88,7 @@ and (min-width: 0px)
     padding: 0 em(10);
 
     background: #efefef;
+    background: rgba(0,0,0,0.03);
     border: 1px solid #ddd;
     @include border-radius(.2em);
 
@@ -226,6 +227,7 @@ and (min-width: 0px)
   .ym-form .ym-fbox-text textarea[disabled],
   .ym-form .ym-fbox-text textarea[readonly] {
     background: #FDFDFD;
+    background: rgba(255,255,255,0.3);
     cursor: default;
   }
 
@@ -302,12 +304,14 @@ and (min-width: 0px)
   .ym-form .ym-fbox-text textarea[readonly] {
     &:focus,
     &:hover {
-      border-color: #ddd;
+      border-color: #ccc;
       background: #FDFDFD;
+      background: rgba(255,255,255,0.3);
     }
 
     &:focus {
-      border-color: #888;
+      border-color: #999;
+      background: rgba(255,255,255,0.4);
     }
   }
 

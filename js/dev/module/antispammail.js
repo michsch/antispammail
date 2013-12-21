@@ -80,11 +80,11 @@
       radioValue = 0;
     }
     if (radioValue === 1) {
-      emailHtml = email.replace(/\./g, '<span class="crypt">.</span>.</span class="crypt">.</span>');
-      emailHtml = email.replace(/@/, '<span class="crypt">.</span>@</span class="crypt">.</span>');
+      emailHtml = email.replace(/\./g, '<span class="crypt">.</span>.<span class="crypt" aria-hidden="true">.</span>');
+      emailHtml = emailHtml.replace(/@/, '<span class="crypt">.</span>@<span class="crypt" aria-hidden="true">.</span>');
     } else {
       emailHtml = email.replace(/\./g, ' [dot] ');
-      emailHtml = email.replace(/@/, ' [at] ');
+      emailHtml = emailHtml.replace(/@/, ' [at] ');
     }
     encryptedMail = this.encrypt(email);
     cryptform[fieldShowEncryptedMail].value = encryptedMail;

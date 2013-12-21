@@ -44,7 +44,8 @@ pre.prettyprint {
 }
 
 // solarized theme
-pre.prettyprint {
+pre.prettyprint.dark,
+pre.prettyprint.solarized {
   //color: #839496;
   color: #425E5D; // line numbers color
   background-color: #002b36;

@@ -84,7 +84,7 @@
                 </fieldset>
                 <fieldset class="transparent ym-columnar">
                   <div class="ym-fbox-button ym-fbox">
-                    <button class="button en-lock" onclick="antiSpamMail.encryptForm()" />encrypt email</button>
+                    <button class="button en-lock" onclick="antiSpamMail.encryptForm()" />Encrypt Email</button>
                   </div>
                 </fieldset>
                 <fieldset>
@@ -115,7 +115,7 @@
                   TAR Download
                 </a>
                 <a class="button tar en-s-github" href="http://github.com/michsch/antispammail/" title="github.com/michsch/antispammail">
-                  Github
+                  Fork me on GitHub
                 </a>
               </section>
               <h3>Or use Bower</h3>
@@ -131,8 +131,85 @@
         <h2>How to use</h2>
         <p>Just include the <strong>antispammail.js</strong> file in your documents header or just before the closing body tag. If you use the span Tags with classname <code>crypt</code> than you should load the CSS file too or copy the styles inside your stylesheet.</p>
         <p>If you only want to use the script for decrypting you don't have to load the complete version. Just use <strong>antispammail-decrypt.js</strong> instead.</p>
-        <div class="prettify">
-          <pre class="prettyprint linenums"><code>;(function(window, document, undefined){
+
+        <h3>Examples</h3>
+
+        <h4>HTML with normal mailto link</h4>
+        <div class="ym-grid">
+          <div class="ym-g75 ym-gl">
+            <div class="ym-gbox-left">
+              <pre class="prettyprint html light"><code>&lt;a href="mailto:my@email.com"&gt;
+  my@email.com
+&lt;/a&gt;</code></pre>
+            </div>
+          </div>
+          <div class="ym-g25 ym-gr">
+            <div class="ym-gbox-right">
+              <p><a href="mailto:my@email.com">my@email.com</a></p>
+            </div>
+          </div>
+        </div>
+
+        <h4>HTML with easy encryption (no CSS needed)</h4>
+        <div class="ym-grid">
+          <div class="ym-g75 ym-gl">
+            <div class="ym-gbox-left">
+              <pre class="prettyprint html light"><code>&lt;a href="javascript:antiSpamMail.linkDecrypt('nbjmup;nzAfnbjm/dpn');"&gt;
+  my [at] email [dot] com
+&lt;/a&gt;</code></pre>
+            </div>
+          </div>
+          <div class="ym-g25 ym-gr">
+            <div class="ym-gbox-right">
+              <p><a href="javascript:antiSpamMail.linkDecrypt('nbjmup;nzAfnbjm/dpn');">my [at] email [dot] com</a></p>
+            </div>
+          </div>
+        </div>
+
+        <div class="ym-grid">
+          <div class="ym-g75 ym-gl">
+            <div class="ym-gbox-left">
+              <pre class="prettyprint html light"><code>&lt;a href="javascript:antiSpamMail.linkDecrypt('nbjmup;nzAfnbjm/dpn');"&gt;
+  Write me an email!
+&lt;/a&gt;</code></pre>
+            </div>
+          </div>
+          <div class="ym-g25 ym-gr">
+            <div class="ym-gbox-right">
+              <p><a href="javascript:antiSpamMail.linkDecrypt('nbjmup;nzAfnbjm/dpn');">Write me an email!</a></p>
+            </div>
+          </div>
+        </div>
+
+        <h4>HTML with advanced encryption (CSS needed to hide dots)</h4>
+        <div class="ym-grid">
+          <div class="ym-g75 ym-gl">
+            <div class="ym-gbox-left">
+              <pre class="prettyprint html light"><code>&lt;a href="javascript:antiSpamMail.linkDecrypt('nbjmup;nzAfnbjm/dpn');"&gt;
+  my&lt;span class="crypt" aria-hidden="true"&gt;.&lt;/span&gt;@&lt;span class="crypt" aria-hidden="true"&gt;.&lt;/span&gt;email&lt;span class="crypt" aria-hidden="true"&gt;.&lt;/span&gt;.&lt;span class="crypt" aria-hidden="true"&gt;.&lt;/span&gt;com
+&lt;/a&gt;</code></pre>
+            </div>
+          </div>
+          <div class="ym-g25 ym-gr">
+            <div class="ym-gbox-right">
+              <p><a href="javascript:antiSpamMail.linkDecrypt('nbjmup;nzAfnbjm/dpn');">my<span class="crypt" aria-hidden="true">.</span>@<span class="crypt" aria-hidden="true">.</span>email<span class="crypt" aria-hidden="true">.</span>.<span class="crypt" aria-hidden="true">.</span>com</a></p>
+            </div>
+          </div>
+        </div>
+
+        <h3>CSS for advanced encryption</h3>
+        <p>I use the <a href="http://nicolasgallagher.com/another-css-image-replacement-technique/" title="Website of Nicolas Gallagher">image replacement method by Nicolas Gallagher</a>:
+</p>
+        <pre class="prettyprint light css"><code>.crypt {
+  font: 0/0 a;
+  text-shadow: none;
+  color: transparent;
+  border: 0;
+  background-color: transparent;
+}</code></pre>
+
+        <h2>JavaScript source code</h2>
+        <pre class="prettyprint linenums dark"><code>;(function(window, document, undefined){
   'use strict';
 
   var AntiSpamMail, AntiSpamMailProto, antiSpamMail;
@@ -190,11 +267,11 @@
       radioValue = 0;
     }
     if (radioValue === 1) {
-      emailHtml = email.replace(/\./g, '<span class="crypt">.</span>.</span class="crypt">.</span>');
-      emailHtml = email.replace(/@/, '<span class="crypt">.</span>@</span class="crypt">.</span>');
+      emailHtml = email.replace(/\./g, '&lt;span class="crypt"&gt;.&lt;/span&gt;.&lt;span class="crypt" aria-hidden="true"&gt;.&lt;/span&gt;');
+      emailHtml = emailHtml.replace(/@/, '&lt;span class="crypt"&gt;.&lt;/span&gt;@&lt;span class="crypt" aria-hidden="true"&gt;.&lt;/span&gt;');
     } else {
       emailHtml = email.replace(/\./g, ' [dot] ');
-      emailHtml = email.replace(/@/, ' [at] ');
+      emailHtml = emailHtml.replace(/@/, ' [at] ');
     }
     encryptedMail = this.encrypt(email);
     cryptform[fieldShowEncryptedMail].value = encryptedMail;
@@ -242,18 +319,19 @@
     define('antiSpamMail', [], function() { return antiSpamMail; });
   }
 })(this, document);</code></pre>
-        </div>
-
 
       </div>
-
-      <footer id="footer" role="contentinfo">
-        <a id="contentinfo"></a>
-        <p class="copy">&copy; 2011 <a href="javascript:antiSpamMail.linkDecrypt('nbjmup;nt,dpejohAnjditdi/ef');">Michael Schulze</a></p>
-      </footer>
-
     </div>
   </div>
+
+  <footer id="footer" role="contentinfo">
+    <a id="contentinfo"></a>
+    <div class="ym-wrapper">
+      <div class="ym-wbox">
+        <p class="copy">&copy; 2011 <a href="javascript:antiSpamMail.linkDecrypt('nbjmup;nt,dpejohAnjditdi/ef');">Michael Schulze</a></p>
+      </div>
+    </div>
+  </footer>
 
   <a href="https://github.com/michsch/antispammail">
     <img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub">
