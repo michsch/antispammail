@@ -1,7 +1,7 @@
 {
   "name": "antiSpamMail",
   "description": "antiSpamMail JS",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "homepage": "",
   "author": {
     "name": "Michael Schulze",
@@ -27,16 +27,16 @@
   },
   "devDependencies": {
     "grunt": "~0.4.0",
-    "grunt-contrib-clean": "~0.4.0",
+    "grunt-contrib-clean": "~0.5.0",
     "grunt-contrib-coffee": "~0.7.0",
     "grunt-contrib-concat": "latest",
     "grunt-contrib-connect": "0.5.0",
     "grunt-contrib-copy": "latest",
-    "grunt-contrib-cssmin"  : "~0.5.0",
+    "grunt-contrib-cssmin": "~0.7.0",
     "grunt-contrib-jshint": "latest",
     "grunt-contrib-requirejs": "latest",
     "grunt-contrib-uglify": "~0.2.0",
-    "grunt-contrib-watch": "~0.1.4",
+    "grunt-contrib-watch": "~0.5.3",
     "grunt-string-replace": "~0.2.3",
     "connect": "latest",
     "jQuery": ">=1.7.4"
