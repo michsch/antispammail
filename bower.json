@@ -1,0 +1,21 @@
+{
+  "name": "antispam-mail",
+  "version": "0.1.0",
+  "main": "./dist/antispammail.js",
+  "ignore": [
+    "coffee",
+    "dev",
+    "libs",
+    "src",
+    "test",
+    ".editorconfig",
+    ".gitignore",
+    ".jshintrc",
+    ".travis.yml",
+    "config-all.json",
+    "Gruntfile.js",
+    "package.json"
+  ],
+  "dependencies": {
+  }
+}
