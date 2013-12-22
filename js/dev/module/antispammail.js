@@ -1,5 +1,5 @@
 /*!
- * antiSpamMail - v0.0.1 - 2013-09-18
+ * antiSpamMail - v0.1.1 - 2013-12-22
  * Copyright (c) 2013 Michael Schulze
  * MIT license */
 
@@ -28,7 +28,7 @@
   var AntiSpamMail, AntiSpamMailProto, antiSpamMail;
   AntiSpamMail = function() {};
   AntiSpamMailProto = {
-    _version: '0.0.1',
+    _version: '0.1.1',
     encryptFn: 'antiSpamMail.linkDecrypt'
   };
   AntiSpamMail.prototype = AntiSpamMailProto;
@@ -60,7 +60,7 @@
   };
   antiSpamMail.encryptForm = function(formName, fieldName) {
     var cryptform, email, emailHtml, encryptedMail, fieldShowEncryptedHtml, fieldShowEncryptedMail, i, radioObj, radioValue;
-    formName = formName || 'cryptmail';
+    formName = formName || 'antiSpamMail';
     fieldName = fieldName || 'cryptmail_email';
     fieldShowEncryptedMail = 'cryptmail_cryptedmail';
     fieldShowEncryptedHtml = 'cryptmail_html';
@@ -80,8 +80,8 @@
       radioValue = 0;
     }
     if (radioValue === 1) {
-      emailHtml = email.replace(/\./g, '<span class="crypt">.</span>.<span class="crypt" aria-hidden="true">.</span>');
-      emailHtml = emailHtml.replace(/@/, '<span class="crypt">.</span>@<span class="crypt" aria-hidden="true">.</span>');
+      emailHtml = email.replace(/\./g, '<span class="crypt" aria-hidden="true">.</span>.<span class="crypt" aria-hidden="true">.</span>');
+      emailHtml = emailHtml.replace(/@/, '<span class="crypt" aria-hidden="true">.</span>@<span class="crypt" aria-hidden="true">.</span>');
     } else {
       emailHtml = email.replace(/\./g, ' [dot] ');
       emailHtml = emailHtml.replace(/@/, ' [at] ');
