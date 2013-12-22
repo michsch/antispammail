@@ -232,8 +232,13 @@ module.exports = function(grunt) {
     });
   });
 
+  grunt.registerTask( 'version', [
+    'string-replace:version'
+  ]);
+
   grunt.registerTask( 'build', [
     'clean:coffee',
+    'version',
     'coffee',
     'jshint',
     'requirejs:compile',
@@ -243,11 +248,13 @@ module.exports = function(grunt) {
     'uglify'
   ]);
 
-  grunt.registerTask( 'version', [ 'string-replace:version' ] );
-  grunt.registerTask( 'default', [ 'watch:build' ]);
+  grunt.registerTask( 'default', [
+    'watch:build'
+  ]);
 
   grunt.registerTask( 'travis', [
     'jshint',
     'uglify'
   ]);
+
 };
