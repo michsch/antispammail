@@ -1,5 +1,17 @@
 // screen stylesheet with box layout
 
+.page-wrapper {
+  position: relative;
+
+  height: auto !important; /* real browsers */
+  height: 100%; /* IE6: treaded as min-height*/
+  min-height: 100%; /* real browsers */
+
+  > .ym-wrapper > .ym-wbox {
+    //padding-bottom: 200px;
+  }
+}
+
 .ym-wrapper {
   width: 880px;
   margin: 0 auto;
@@ -19,9 +31,24 @@
 
 #topnav {  }
 
-#main {  }
+#main {
+  padding-bottom: $std-margin;
+}
 
-#footer {  }
+#footer {
+  //position: absolute;
+  width: 100%;
+  //left: 0;
+  //bottom: 0;
+  //height: 200px;
+  background: inline-image("tweed.png") repeat left top;
+  *background: image-url("tweed.png") repeat left top;
+
+  .ym-wbox {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+}
 
 .ym-columns {
   margin-top: 2em;

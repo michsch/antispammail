@@ -101,3 +101,23 @@
   font-size: 1px;
 }
 
+#footer {
+  &,
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: $ym-font-serif;
+    color: #efefef;
+    text-shadow: 0 1px 0 rgba(0,0,0,0.6);
+  }
+
+  pre {
+    text-shadow: none !important;
+
+    &.dark {
+      border-color: rgba(0,0,0,0.8);
+      background-color: rgba(0,43,54,0.7);
+    }
+  }
+}

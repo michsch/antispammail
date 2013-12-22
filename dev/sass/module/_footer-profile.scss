@@ -1,0 +1,86 @@
+// footer profile
+
+@media screen, projection
+{
+
+  .profile {
+    text-align: center;
+  }
+
+  .github-profile {
+    display: table;
+    width: em(120);
+    height: em(120);
+    margin: 0 auto;
+
+    &,
+    img {
+      @include border-radius(50%);
+    }
+  }
+
+  .no-js .github-profile,
+  .github-profile.error {
+    display: none;
+  }
+
+  .profile .copyright {
+    @include inline-block();
+    @include line-height(37);
+    margin-top: $std-margin;
+    margin-right: em($base-margin / 2);
+    vertical-align: baseline;
+  }
+
+  .profile h3 {
+    @include inline-block();
+    @include line-height(37, $ym-h3-font-size);
+    vertical-align: baseline;
+    margin-right: em($base-margin, $ym-h3-font-size);
+
+    a {
+      color: #efefef;
+    }
+  }
+
+  .profile ul.social {
+    position: relative;
+    @include inline-block();
+    top: 5px;
+    margin: em(0) 0 0 0;
+    list-style-type: none;
+    vertical-align: baseline;
+
+    li {
+      @include inline-block();
+      margin: 0;
+      float: none;
+      line-height: 1;
+
+      a {
+        color: #efefef;
+        text-decoration: none;
+      }
+
+      [data-#{$icon-data}]:before {
+        @include font-size(60);
+        font-family: "Entypo Social";
+        width: auto;
+        margin: 0;
+        line-height: 0.6;
+        text-shadow: 0 1px 0 rgba(0,0,0,0.6);
+        @include transition(all .2s ease-in-out);
+      }
+
+      a:focus,
+      a:hover {
+        [data-#{$icon-data}]:before {
+          color: #000;
+          text-shadow: 0;
+          //text-shadow: 0 1px 1px rgba(255,255,255,0.6);
+        }
+      }
+    }
+  }
+
+}
