@@ -1,5 +1,5 @@
 /*!
- * antiSpamMail - v0.0.1 - 2013-09-18
+ * antiSpamMail - v0.0.1 - 2013-12-22
  * Copyright (c) 2013 Michael Schulze
  * MIT license */
  
@@ -80,11 +80,11 @@
       radioValue = 0;
     }
     if (radioValue === 1) {
-      emailHtml = email.replace(/\./g, '<span class="crypt">.</span>.</span class="crypt">.</span>');
-      emailHtml = email.replace(/@/, '<span class="crypt">.</span>@</span class="crypt">.</span>');
+      emailHtml = email.replace(/\./g, '<span class="crypt" aria-hidden="true">.</span>.<span class="crypt" aria-hidden="true">.</span>');
+      emailHtml = emailHtml.replace(/@/, '<span class="crypt" aria-hidden="true">.</span>@<span class="crypt" aria-hidden="true">.</span>');
     } else {
       emailHtml = email.replace(/\./g, ' [dot] ');
-      emailHtml = email.replace(/@/, ' [at] ');
+      emailHtml = emailHtml.replace(/@/, ' [at] ');
     }
     encryptedMail = this.encrypt(email);
     cryptform[fieldShowEncryptedMail].value = encryptedMail;
