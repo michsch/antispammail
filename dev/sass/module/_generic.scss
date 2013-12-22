@@ -100,6 +100,18 @@
   @include image-replace();
 }
 
+.version {
+  span {
+    margin-right: em(10);
+  }
+
+  a {
+    @include inline-block();
+    vertical-align: bottom;
+    margin-bottom: -3px;
+  }
+}
+
 #footer {
   &,
   h1,

@@ -1507,7 +1507,24 @@
     background-color: transparent;
   }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/_generic\.scss}line{font-family:\00003104}}
+  .version span {
+    margin-right: 0.66667em;
+  }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/_generic\.scss}line{font-family:\00003108}}
+  .version a {
+    display: inline-block;
+    vertical-align: baseline;
+    float: none;
+    /* IE7 bugfix */
+    zoom: 1;
+    *display: inline;
+    *vertical-align: auto;
+    vertical-align: bottom;
+    margin-bottom: -3px;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/_generic\.scss}line{font-family:\00003120}}
   #footer,
   #footer h1,
   #footer h2,
@@ -1517,11 +1534,11 @@
     color: #efefef;
     text-shadow: 0 1px 0 rgba(0, 0, 0, 0.6);
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/_generic\.scss}line{font-family:\00003114}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/_generic\.scss}line{font-family:\00003126}}
   #footer pre {
     text-shadow: none !important;
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/_generic\.scss}line{font-family:\00003117}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/_generic\.scss}line{font-family:\00003129}}
   #footer pre.dark {
     border-color: rgba(0, 0, 0, 0.8);
     background-color: rgba(0, 43, 54, 0.7);
@@ -4125,6 +4142,7 @@ h2[class*=" en-"]:before {
   }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/_footer-profile\.scss}line{font-family:\0000321}}
   .github-profile a img {
+    -webkit-transform: translateZ(0);
     -webkit-filter: grayscale(100%);
     -moz-filter: grayscale(100%);
     -ms-filter: grayscale(100%);
@@ -4134,7 +4152,7 @@ h2[class*=" en-"]:before {
     -ms-transition: -ms-filter .2s ease-in-out;
     -o-transition: -o-filter .2s ease-in-out;
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/_footer-profile\.scss}line{font-family:\0000332}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/_footer-profile\.scss}line{font-family:\0000333}}
   .github-profile a:focus img,
   .github-profile a:hover img {
     -webkit-filter: grayscale(0%);
@@ -4143,13 +4161,13 @@ h2[class*=" en-"]:before {
     filter: grayscale(0%);
   }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/_footer-profile\.scss}line{font-family:\0000338}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/_footer-profile\.scss}line{font-family:\0000339}}
   .no-js .github-profile,
   .github-profile.error {
     display: none;
   }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/_footer-profile\.scss}line{font-family:\0000342}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/_footer-profile\.scss}line{font-family:\0000343}}
   .profile .copyright {
     display: inline-block;
     vertical-align: baseline;
@@ -4164,7 +4182,7 @@ h2[class*=" en-"]:before {
     vertical-align: baseline;
   }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/_footer-profile\.scss}line{font-family:\0000350}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/_footer-profile\.scss}line{font-family:\0000351}}
   .profile h3 {
     display: inline-block;
     vertical-align: baseline;
@@ -4177,12 +4195,12 @@ h2[class*=" en-"]:before {
     vertical-align: baseline;
     margin-right: 0.83333em;
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/_footer-profile\.scss}line{font-family:\0000356}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/_footer-profile\.scss}line{font-family:\0000357}}
   .profile h3 a {
     color: #efefef;
   }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/_footer-profile\.scss}line{font-family:\0000361}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/_footer-profile\.scss}line{font-family:\0000362}}
   .profile ul.social {
     position: relative;
     display: inline-block;
@@ -4197,7 +4215,7 @@ h2[class*=" en-"]:before {
     list-style-type: none;
     vertical-align: baseline;
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/_footer-profile\.scss}line{font-family:\0000369}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/_footer-profile\.scss}line{font-family:\0000370}}
   .profile ul.social li {
     display: inline-block;
     vertical-align: baseline;
@@ -4210,12 +4228,12 @@ h2[class*=" en-"]:before {
     float: none;
     line-height: 1;
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/_footer-profile\.scss}line{font-family:\0000375}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/_footer-profile\.scss}line{font-family:\0000376}}
   .profile ul.social li a {
     color: #efefef;
     text-decoration: none;
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/_footer-profile\.scss}line{font-family:\0000380}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/_footer-profile\.scss}line{font-family:\0000381}}
   .profile ul.social li [data-icon]:before {
     font-size: 400%;
     font-family: "Entypo Social";
@@ -4227,7 +4245,7 @@ h2[class*=" en-"]:before {
     -moz-transition: all 0.2s ease-in-out;
     transition: all 0.2s ease-in-out;
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/_footer-profile\.scss}line{font-family:\0000392}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mschulze\/htdocs\/dev\/antispammail\/dev\/sass\/module\/_footer-profile\.scss}line{font-family:\0000393}}
   .profile ul.social li a:focus [data-icon]:before,
   .profile ul.social li a:hover [data-icon]:before {
     color: #000;
