@@ -112,20 +112,14 @@ module.exports = function(grunt) {
       },
       main : [
         'src/**/*.js'
-      ],
-      test : {
-        //options: {
-        //  jshintrc: appDir + 'js/test/.jshintrc'
-        //},
-        src : [ 'test/**/*.js' ]
-      }
+      ]
     },
     requirejs: {
       compile: {
         options: {
           dir: 'build',
-          appDir: '.',
-          baseUrl: 'src',
+          appDir: 'src',
+          baseUrl: '.',
           optimize: "none",
           optimizeCss: "none",
           useStrict: true,
@@ -159,9 +153,9 @@ module.exports = function(grunt) {
     copy: {
       build: {
         files: {
-          'dist/antispammail.js': 'build/src/antispammail.js',
-          'dist/antispammail-decrypt.js': 'build/src/antispammail-decrypt.js',
-          'dist/antispammail-encrypt.js': 'build/src/antispammail-encrypt.js'
+          'dist/antispammail.js': 'build/antispammail.js',
+          'dist/antispammail-decrypt.js': 'build/antispammail-decrypt.js',
+          'dist/antispammail-encrypt.js': 'build/antispammail-encrypt.js'
         }
       }
     },
@@ -169,9 +163,6 @@ module.exports = function(grunt) {
       build: [
         'dist/**/*.js'
       ]
-    },
-    qunit: {
-      all: [ 'test/**/*.html' ]
     },
     uglify: {
       prod: {
@@ -210,44 +201,6 @@ module.exports = function(grunt) {
         }
       }
     },
-    compress: {
-      css: {
-        options: {
-          mode: 'gzip'
-        },
-        files: [
-          {
-            expand: true,
-            cwd: 'dist',
-            src: [ '*min.js' ],
-            dest: 'dist/',
-            rename: function( destPath, srcPath ) {
-              var dest;
-              dest = destPath + srcPath.replace(/\.css$/,".css.gz");
-              return dest;
-            }
-          }
-        ]
-      },
-      js: {
-        options: {
-          mode: 'gzip'
-        },
-        files: [
-          {
-            expand: true,
-            cwd: 'dist',
-            src: [ '*.min.css' ],
-            dest: 'dist/',
-            rename: function( destPath, srcPath ) {
-              var dest;
-              dest = destPath + srcPath.replace(/\.js$/,".js.gz");
-              return dest;
-            }
-          }
-        ]
-      },
-    },
     watch: {
       build: {
         files: [
@@ -262,7 +215,6 @@ module.exports = function(grunt) {
     // Load grunt-compass plugin
   grunt.loadNpmTasks('grunt-contrib-clean');
   grunt.loadNpmTasks('grunt-contrib-coffee');
-  grunt.loadNpmTasks('grunt-contrib-compress');
   grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-contrib-cssmin');
   grunt.loadNpmTasks('grunt-contrib-jshint');
@@ -274,18 +226,28 @@ module.exports = function(grunt) {
   // Strip define fn
   grunt.registerMultiTask('stripdefine', "Strip define call from dist file", function() {
     this.filesSrc.forEach(function(filepath) {
-      // Remove `define("modernizr-init" ...)` and `define("modernizr-build" ...)`
+      // Remove `define("antispammail..." ...)`
       var mod = grunt.file.read(filepath).replace(/define\("antispammail(-decrypt|-encrypt)?"\, function\(\)\{\}\);/g, '');
-
-      // Hack the prefix into place. Anything is way too big for something so small.
-      /*if ( modConfig && modConfig.classPrefix ) {
-        mod = mod.replace("classPrefix : '',", "classPrefix : '" + modConfig.classPrefix.replace(/"/g, '\\"') + "',");
-      }*/
       grunt.file.write(filepath, mod);
     });
   });
 
-  grunt.registerTask( 'build', [ 'clean:coffee', 'coffee', 'jshint', 'requirejs', 'copy', 'stripdefine', 'clean:build', 'uglify' ] );
+  grunt.registerTask( 'build', [
+    'clean:coffee',
+    'coffee',
+    'jshint',
+    'requirejs:compile',
+    'copy:build',
+    'stripdefine',
+    'clean:build',
+    'uglify'
+  ]);
+
   grunt.registerTask( 'version', [ 'string-replace:version' ] );
   grunt.registerTask( 'default', [ 'watch:build' ]);
+
+  grunt.registerTask( 'travis', [
+    'jshint',
+    'uglify'
+  ]);
 };
