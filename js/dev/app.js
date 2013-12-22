@@ -67,7 +67,6 @@ define(['jquery', 'module/accessifyhtml5', 'module/yaml-focusfix', 'antispammail
 
     DomReady.prototype.buildGithubAvatar = function(data) {
       var $img, $link, avatarUrl;
-      console.log(data);
       if (typeof data === 'object' && data.avatar_url) {
         avatarUrl = data.avatar_url + '&s=440';
         $img = $('<img src="' + avatarUrl + '" alt="' + 'Github profile picture of ' + data.login + '">');

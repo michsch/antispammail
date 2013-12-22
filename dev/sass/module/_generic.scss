@@ -97,8 +97,7 @@
 
 /* Class for additional email dots */
 .crypt {
-  color: $c-crypt;
-  font-size: 1px;
+  @include image-replace();
 }
 
 #footer {

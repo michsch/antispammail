@@ -65,8 +65,6 @@ define [
       true
 
     buildGithubAvatar : (data) ->
-      console.log data
-
       if typeof data is 'object' and data.avatar_url
         avatarUrl = data.avatar_url + '&s=440'
 
