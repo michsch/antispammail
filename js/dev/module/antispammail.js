@@ -1,8 +1,8 @@
 /*!
- * antiSpamMail - v0.1.1 - 2013-12-22
- * Copyright (c) 2013 Michael Schulze
+ * antiSpamMail - v0.1.2 - 2014-01-05
+ * Copyright (c) 2014 Michael Schulze
  * MIT license */
-
+ 
 /*
  * Permission is hereby granted, free of charge, to any person obtaining a
  * copy of this software and associated documentation files (the "Software"),
@@ -28,7 +28,7 @@
   var AntiSpamMail, AntiSpamMailProto, antiSpamMail;
   AntiSpamMail = function() {};
   AntiSpamMailProto = {
-    _version: '0.1.1',
+    _version: '0.1.2',
     encryptFn: 'antiSpamMail.linkDecrypt'
   };
   AntiSpamMail.prototype = AntiSpamMailProto;
