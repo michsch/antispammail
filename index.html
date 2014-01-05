@@ -53,22 +53,23 @@
       <div id="main">
         <a id="content"></a>
 
-        <dl>
-          <dt>Version</dt>
-          <dd>0.1.1</dd>
-        </dl>
+        <p class="version">
+          <strong>Version</strong> <span>0.1.1</span>
+          <a href="http://travis-ci.org/michsch/antispammail"><img src="https://api.travis-ci.org/michsch/antispammail.png?branch=master" alt="Build Status" style="max-width:100%;"></a>
+          <a href="https://david-dm.org/michsch/antispammail#info=devDependencies"><img src="https://david-dm.org/michsch/antispammail/dev-status.png" alt="devDependency Status" style="max-width:100%;"></a>
+          <a href="http://gruntjs.com/"><img src="https://cdn.gruntjs.com/builtwith.png" alt="Built with Grunt" style="max-width:100%;"></a>
+        </p>
 
         <p class="large">Vanilla JS, so no framework/library (jQuery etc.) needed!<br />
           <strong>Only 1.4kb for full version</strong> including encrypting (like on this page) and <strong>less than 1kb</strong> for decryption only.
         </p>
-
 
         <div class="ym-columns">
           <section class="ym-col1" role="main">
             <div class="ym-cbox-right ym-clearfix">
               <h2 class="en-light-bulb">Fight SPAM!</h2>
 
-              <form id="cryptmail" name="cryptmail" action="post" class="ym-form" onsubmit="return false;">
+              <form id="antiSpamMail" name="cryptmail" action="post" class="ym-form" onsubmit="return false;">
                 <fieldset class="ym-columnar">
                   <legend>Convert an email address in a SPAM free link.</legend>
                   <div class="ym-fbox-text ym-fbox">
