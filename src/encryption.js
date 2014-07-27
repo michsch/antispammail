@@ -1,11 +1,11 @@
 define(['antispammail'], function(antiSpamMail) {
+
   /**
    * Crypt given mail
    *
    * @param string email address
    * @param boolean true
-  */
-
+   */
   antiSpamMail.encrypt = function(email) {
     var encryptedMail, i, mailtoEmail, n;
     n = 0;

@@ -1,5 +1,6 @@
 /*!
- * antiSpamMail - v0.1.2 - 2014-01-05
+ * antiSpamMail - v0.1.3 - 2014-07-27
+ * http://michsch.github.io/antispammail/
  * Copyright (c) 2014 Michael Schulze
  * MIT license */
  
@@ -24,15 +25,15 @@
  */
 ;(function(window, document, undefined){
   'use strict';
-
   var AntiSpamMail, AntiSpamMailProto, antiSpamMail;
   AntiSpamMail = function() {};
   AntiSpamMailProto = {
-    _version: '0.1.2',
+    _version: '0.1.3',
     encryptFn: 'antiSpamMail.linkDecrypt'
   };
   AntiSpamMail.prototype = AntiSpamMailProto;
   window.antiSpamMail = antiSpamMail = new AntiSpamMail();
+
 
 
   /**
@@ -40,8 +41,7 @@
    *
    * @param string email address
    * @param boolean true
-  */
-
+   */
   antiSpamMail.encrypt = function(email) {
     var encryptedMail, i, mailtoEmail, n;
     n = 0;
@@ -91,6 +91,7 @@
     cryptform[fieldShowEncryptedHtml].value = '<a href="javascript:' + this.encryptFn + '(\'' + encryptedMail + '\');">' + emailHtml + '</a>';
     return true;
   };
+
 
 
   if (typeof define === 'function' && define.amd) {

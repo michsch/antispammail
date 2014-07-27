@@ -1,8 +1,14 @@
 # antiSpamMail
 
-[![Build Status](https://api.travis-ci.org/michsch/antispammail.png?branch=master)](http://travis-ci.org/michsch/antispammail)
-[![devDependency Status](https://david-dm.org/michsch/antispammail/dev-status.png)](https://david-dm.org/michsch/antispammail#info=devDependencies)
-[![Built with Grunt](https://cdn.gruntjs.com/builtwith.png)](http://gruntjs.com/)
+[![Release](http://img.shields.io/github/release/michsch/antispammail.svg?style=flat)](https://github.com/michsch/antispammail/releases)
+[![Issues](http://img.shields.io/github/issues/michsch/antispammail.svg?style=flat)](https://github.com/michsch/antispammail/issues)
+
+---
+
+[![Build Status](http://img.shields.io/travis/michsch/antispammail/master.svg?style=flat)](https://travis-ci.org/michsch/antispammail)
+[![Code Climate](http://img.shields.io/codeclimate/github/michsch/antispammail.svg?style=flat)](https://codeclimate.com/github/michsch/antispammail)
+[![devDependency Status](http://img.shields.io/david/dev/michsch/antispammail.svg?style=flat)](https://david-dm.org/michsch/antispammail#info=devDependencies)
+[![Built with Grunt](http://img.shields.io/badge/built_with-grunt-yellow.svg?style=flat)](http://gruntjs.com/)
 
 ## How to use
 
@@ -62,4 +68,4 @@ I use the [image replacement method by Nicolas Gallagher](http://nicolasgallaghe
 
 Please be aware of the licenses of each component we use in this project. Everything else that has been developed by the contributions to this project is under [MIT License](https://github.com/michsch/antispammail/blob/master/LICENSE.md).
 
-[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/michsch/antispammail/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+[![Made with love in cologne](http://img.shields.io/badge/made_with_love_in-cologne-red.svg?style=flat)](http://en.wikipedia.org/wiki/Cologne)

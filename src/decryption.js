@@ -1,11 +1,11 @@
 define(['antispammail'], function(antiSpamMail) {
+
   /**
    * Uncrypt the email address and returns the valid href
    *
    * @param string the crypted string
    * @return string valid href
-  */
-
+   */
   antiSpamMail.decrypt = function(encryptedMail) {
     var email, i, n;
     n = 0;
@@ -21,13 +21,13 @@ define(['antispammail'], function(antiSpamMail) {
     }
     return email;
   };
+
   /**
    * Public function for A tags
    *
    * @param string the crypted string
    * @return boolean true
-  */
-
+   */
   antiSpamMail.linkDecrypt = function(encryptedMail) {
     location.href = this.decrypt(encryptedMail);
     return true;
