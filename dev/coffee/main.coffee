@@ -4,12 +4,12 @@
 
 require.config({
   #"urlArgs": "bust=" + ( new Date() ).getTime(),
-  "urlArgs": "v=0.0.1",
+  "urlArgs": "v=0.1.3",
   "paths": {
     "domReady": "module/requirejs-domready",
     "jquery": [
-      "https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min",
-      "vendor/jquery-1.10.2"
+      "https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min",
+      "vendor/jquery-1.11.1"
     ],
     "jquery-migrate": "vendor/jquery-migrate-1.1.1",
     "antispammail": "module/antispammail",

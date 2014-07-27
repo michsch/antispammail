@@ -148,56 +148,29 @@ module.exports = function(grunt) {
           dir: 'js/prod',
           mainConfigFile: 'js/dev/main.js',
           useStrict: true,
-          //optimize: 'uglify2',
-          optimize: 'none',
+          optimize: 'uglify2',
           //generateSourceMaps: true,
           //preserveLicenseComments: false,
           //useSourceUrl: true,
           preserveLicenseComments: false,
           fileExclusionRegExp: /(^\.)|(^coffee)|(^old)|(^_nu)|(^main\.js)|(\.map$)|(inline)|(module\/Hyphenator.*)/,
           removeCombined: true,
-          wrap: {
-            start: '<%= banner.normal %>' + "\n;(function(window, document, undefined){\n  'use strict';",
-            end: "})((typeof window === 'object' && window) || this, document);\n"
-          },
-          onBuildWrite: function (id, path, contents) {
-            if ((/define\((\[|').*?\{/).test(contents)) {
-              //Remove AMD ceremony for use without require.js or almond.js
-              contents = contents.replace(/define\(.*?\{/, '');
-              contents = contents.replace(/\}\);\s*?$/, '');
-
-              if ((/return (DomReady|Form);/).test(contents)) {
-                contents = contents.replace(/(\}\)\(\));\s(  return (DomReady|Form);)/, '})();');
-              }
-            } else if ((/require((\.config\(\{)|([^\{]*?\{))/).test(contents)) {
-              contents = contents.replace(/require\.config\(\{(\s  .*)*\s\}\);/, '');
-
-              contents = contents.replace(/require\([^\{]+\{/, '');
-              contents = contents.replace(/\}\);\s*?$/, '');
-            }
-
-            if ((/("|')use strict("|');/).test(contents)) {
-              contents = contents.replace(/("|')use strict("|');/ig, '');
-            }
-
-            return contents;
-          },
-
           paths : {
             // additional paths for build script
             "almond" : "vendor/almond",
             "configuration" : "main",
             "jquery.nc" : "main",
             "requireLib" : "vendor/require",
-            "plugins" : "main",
 
             // main paths from main.js
-            "jquery": "vendor/jquery-1.10.2",
+            "domReady": "module/requirejs-domready",
+            "jquery": "vendor/jquery-1.11.1",
             "jquery-migrate": "vendor/jquery-migrate-1.1.1",
-            "jquery-ui": "plugin/jquery-ui-1.10.3.custom",
-            "jquery.powermailTabs" : "plugin/jquery.powermailTabs",
-            "jquery.validationEngine": "plugin/jquery.validationEngine",
-            "jquery.validationEngine-en": "plugin/jquery.validationEngine-en"
+            "antispammail": "module/antispammail",
+            "hyphenator": "module/hyphenator",
+            "matchmedia": "module/matchmedia",
+            "picturefill": "module/picturefill",
+            "prettify": "module/prettify"
           },
           modules: [
             {
@@ -205,16 +178,7 @@ module.exports = function(grunt) {
               exclude: [
                 "jquery"
               ],
-              //include: [ 'almond' ],
-              override: {
-                optimize: "none"
-              }
-            },
-            {
-              name: "powermail",
-              exclude: [
-                "jquery"
-              ],
+              include: [ 'almond' ],
               override: {
                 optimize: "none"
               }
@@ -252,6 +216,14 @@ module.exports = function(grunt) {
           'js/prod/plugins.js' : [ appDir + 'js/dev/plugins.js' ],
           'js/prod/modules.js' : [ appDir + 'js/dev/modules.js' ],
           'js/prod/main-<%= pkg.version %>.min.js' : [ appDir + 'js/prod/main-<%= pkg.version %>.js' ]
+        }
+      },
+      requirejs: {
+        options : {
+          banner: '<%= meta.banner %>'
+        },
+        files: {
+          'js/prod/main-<%= pkg.version %>.min.js' : [ appDir + 'js/prod/main.js' ]
         }
       }
     },
@@ -365,8 +337,7 @@ module.exports = function(grunt) {
     'coffee',
     'jshint',
     'requirejs:project',
-    'uglify',
-    'compress'
+    'uglify:requirejs'
   ]);
 
   grunt.registerTask( 'default', 'watch:dev' );

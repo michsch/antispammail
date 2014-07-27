@@ -1,15 +1,15 @@
-/* jshint -W064*/
+
+/* jshint -W064 */
 
 /** global
-*/
-
+ */
 var jqueryModuleName;
 
 require.config({
-  "urlArgs": "v=0.0.1",
+  "urlArgs": "v=0.1.3",
   "paths": {
     "domReady": "module/requirejs-domready",
-    "jquery": ["https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min", "vendor/jquery-1.10.2"],
+    "jquery": ["https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min", "vendor/jquery-1.11.1"],
     "jquery-migrate": "vendor/jquery-migrate-1.1.1",
     "antispammail": "module/antispammail",
     "hyphenator": "module/hyphenator",
@@ -52,6 +52,4 @@ require(['app'], function(App) {
   return app.init();
 });
 
-/*
-//@ sourceMappingURL=main.js.map
-*/
+//# sourceMappingURL=main.js.map

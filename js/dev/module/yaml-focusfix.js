@@ -1,11 +1,12 @@
-/* jshint devel:true*/
+
+/* jshint devel:true */
 
 /* globals
   define,
   require,
   module,
   exports
-*/
+ */
 
 /**
 * "Yet Another Multicolumn Layout" - YAML CSS Framework
@@ -25,8 +26,7 @@
 * @version         4.0+
 * @revision        $Revision: 617 $
 * @lastmodified    $Date: 2012-01-05 23:56:54 +0100 (Do, 05 Jan 2012) $
-*/
-
+ */
 (function(root, factory, sr) {
   "use strict";
   if (typeof exports === 'object') {
@@ -123,6 +123,4 @@
   return YAML_focusFix;
 }, 'YAML_focusFix');
 
-/*
-//@ sourceMappingURL=yaml-focusfix.js.map
-*/
+//# sourceMappingURL=yaml-focusfix.js.map

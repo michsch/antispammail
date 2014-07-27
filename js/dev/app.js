@@ -1,11 +1,11 @@
-/* jshint devel:true*/
+
+/* jshint devel:true */
 
 /* global
   define,
   exports,
   module
-*/
-
+ */
 define(['jquery', 'module/accessifyhtml5', 'module/yaml-focusfix', 'antispammail', 'prettify'], function($, accessifyHTML5, YAML_focusFix, antiSpamMail, prettyPrint) {
   var App, DomReady;
   DomReady = (function() {
@@ -48,18 +48,21 @@ define(['jquery', 'module/accessifyhtml5', 'module/yaml-focusfix', 'antispammail
     };
 
     DomReady.prototype.loadGithubProfile = function() {
-      var _this = this;
       this.$githubProfile = $('.github-profile');
       if (this.$githubProfile) {
         $.ajax({
           url: 'https://api.github.com/users/michsch',
           dataType: 'json',
-          success: function(data) {
-            return _this.buildGithubAvatar(data);
-          },
-          error: function(data) {
-            return _this.$githubProfile.addClass('error');
-          }
+          success: (function(_this) {
+            return function(data) {
+              return _this.buildGithubAvatar(data);
+            };
+          })(this),
+          error: (function(_this) {
+            return function(data) {
+              return _this.$githubProfile.addClass('error');
+            };
+          })(this)
         });
       }
       return true;
@@ -97,6 +100,4 @@ define(['jquery', 'module/accessifyhtml5', 'module/yaml-focusfix', 'antispammail
   return App;
 });
 
-/*
-//@ sourceMappingURL=app.js.map
-*/
+//# sourceMappingURL=app.js.map
