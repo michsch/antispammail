@@ -8,10 +8,10 @@ require.config({
   "paths": {
     "domReady": "module/requirejs-domready",
     "jquery": [
-      "https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min",
-      "vendor/jquery-1.11.1"
+      "https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min",
+      "vendor/jquery-1.11.2"
     ],
-    "jquery-migrate": "vendor/jquery-migrate-1.1.1",
+    "jquery-migrate": "vendor/jquery-migrate-1.2.1",
     "antispammail": "module/antispammail",
     "hyphenator": "module/hyphenator",
     "matchmedia": "module/matchmedia",

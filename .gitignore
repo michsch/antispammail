@@ -21,5 +21,5 @@
 
 *.map
 
-dev/libs
+dev/bower_components
 dev/workfiles/works-assets

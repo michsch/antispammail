@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
 
-  <title>antispammail.js - encrypt email links for spam protection - v0.1.2</title>
+  <title>antispammail.js - encrypt email links for spam protection - v0.1.4</title>
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="apple-mobile-web-app-capable" content="no">
@@ -28,11 +28,8 @@
   <!--[if lte IE 7]>
   <link href="css/dev/patch_ie.css" rel="stylesheet" type="text/css">
   <![endif]-->
-  <!--[if lte IE 6]>
-  <link rel="stylesheet" href="http://universal-ie6-css.googlecode.com/files/ie6.1.b.css" media="screen, projection">
-  <![endif]-->
 
-  <!-- <script type="text/javascript" src="js/dev/vendor/modernizr-2.7.1.js"></script> -->
+  <!-- <script type="text/javascript" src="js/dev/vendor/modernizr-2.8.3.js"></script> -->
 </head>
 <body class="l-2col">
 
@@ -53,15 +50,15 @@
         <a id="content"></a>
 
         <p class="version">
-          <a href="https://github.com/michsch/antispammail/releases"><img src="http://img.shields.io/github/release/michsch/antispammail.svg?style=flat" alt="Release"></a>
-          <a href="https://github.com/michsch/antispammail/issues"><img src="http://img.shields.io/github/issues/michsch/antispammail.svg?style=flat" alt="Issues"></a>
+          <a href="https://github.com/michsch/antispammail/releases"><img src="//img.shields.io/github/release/michsch/antispammail.svg?style=flat" alt="Release"></a>
+          <a href="https://github.com/michsch/antispammail/issues"><img src="//img.shields.io/github/issues/michsch/antispammail.svg?style=flat" alt="Issues"></a>
         </p>
         <hr>
         <p class="version">
-          <a href="http://travis-ci.org/michsch/antispammail"><img src="http://img.shields.io/travis/michsch/antispammail/master.svg?style=flat" alt="Build Status" style="max-width:100%;"></a>
-          <a href="https://codeclimate.com/github/michsch/antispammail"><img src="http://img.shields.io/codeclimate/github/michsch/antispammail.svg?style=flat" alt="Code Climate" style="max-width:100%;"></a>
-          <a href="https://david-dm.org/michsch/antispammail#info=devDependencies"><img src="http://img.shields.io/david/dev/michsch/antispammail.svg?style=flat" alt="devDependency Status" style="max-width:100%;"></a>
-          <a href="http://gruntjs.com/"><img src="http://img.shields.io/badge/built_with-grunt-yellow.svg?style=flat" alt="Built with Grunt" style="max-width:100%;"></a>
+          <a href="http://travis-ci.org/michsch/antispammail"><img src="//img.shields.io/travis/michsch/antispammail/master.svg?style=flat" alt="Build Status" style="max-width:100%;"></a>
+          <a href="https://codeclimate.com/github/michsch/antispammail"><img src="//img.shields.io/codeclimate/github/michsch/antispammail.svg?style=flat" alt="Code Climate" style="max-width:100%;"></a>
+          <a href="https://david-dm.org/michsch/antispammail#info=devDependencies"><img src="//img.shields.io/david/dev/michsch/antispammail.svg?style=flat" alt="devDependency Status" style="max-width:100%;"></a>
+          <a href="http://gruntjs.com/"><img src="//img.shields.io/badge/built_with-grunt-yellow.svg?style=flat" alt="Built with Grunt" style="max-width:100%;"></a>
         </p>
 
         <p class="large">Vanilla JS, so no framework/library (jQuery etc.) needed!<br />
@@ -224,24 +221,21 @@
         <h2>JavaScript source code</h2>
         <pre class="prettyprint linenums dark"><code>;(function(window, document, undefined){
   'use strict';
-
   var AntiSpamMail, AntiSpamMailProto, antiSpamMail;
   AntiSpamMail = function() {};
   AntiSpamMailProto = {
-    _version: '0.1.3',
+    _version: '0.1.4',
     encryptFn: 'antiSpamMail.linkDecrypt'
   };
   AntiSpamMail.prototype = AntiSpamMailProto;
   window.antiSpamMail = antiSpamMail = new AntiSpamMail();
-
 
   /**
    * Crypt given mail
    *
    * @param string email address
    * @param boolean true
-  */
-
+   */
   antiSpamMail.encrypt = function(email) {
     var encryptedMail, i, mailtoEmail, n;
     n = 0;
@@ -260,7 +254,7 @@
   };
   antiSpamMail.encryptForm = function(formName, fieldName) {
     var cryptform, email, emailHtml, encryptedMail, fieldShowEncryptedHtml, fieldShowEncryptedMail, i, radioObj, radioValue;
-    formName = formName || 'cryptmail';
+    formName = formName || 'antiSpamMail';
     fieldName = fieldName || 'cryptmail_email';
     fieldShowEncryptedMail = 'cryptmail_cryptedmail';
     fieldShowEncryptedHtml = 'cryptmail_html';
@@ -288,18 +282,16 @@
     }
     encryptedMail = this.encrypt(email);
     cryptform[fieldShowEncryptedMail].value = encryptedMail;
-    cryptform[fieldShowEncryptedHtml].value = '<a href="javascript:' + this.encryptFn + '(\'' + encryptedMail + '\');">' + emailHtml + '</a>';
+    cryptform[fieldShowEncryptedHtml].value = '&lt;a href="javascript:' + this.encryptFn + '(\'' + encryptedMail + '\');"&gt;' + emailHtml + '&lt;/a&gt;';
     return true;
   };
-
 
   /**
    * Uncrypt the email address and returns the valid href
    *
    * @param string the crypted string
    * @return string valid href
-  */
-
+   */
   antiSpamMail.decrypt = function(encryptedMail) {
     var email, i, n;
     n = 0;
@@ -315,23 +307,23 @@
     }
     return email;
   };
+
   /**
    * Public function for A tags
    *
    * @param string the crypted string
    * @return boolean true
-  */
-
+   */
   antiSpamMail.linkDecrypt = function(encryptedMail) {
     location.href = this.decrypt(encryptedMail);
     return true;
   };
 
-
   if (typeof define === 'function' && define.amd) {
     define('antiSpamMail', [], function() { return antiSpamMail; });
   }
-})(this, document);</code></pre>
+})(this, document);
+        </code></pre>
 
       </div>
     </div>
@@ -341,7 +333,7 @@
     <a id="contentinfo"></a>
     <div class="ym-wrapper">
       <div class="ym-wbox">
-        <section class="profile" itemscope itemtype="http://schema.org/Person">
+        <section class="profile" itemscope itemtype="https://schema.org/Person">
           <span class="github-profile"></span>
           <span class="copyright">&copy; 2013</span>
           <h3 itemprop="name">
@@ -385,7 +377,7 @@ The above copyright notice and this permission notice shall be included in all c
 
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</code></pre>
       <p class="align-center">
-        <a href="http://en.wikipedia.org/wiki/Cologne"><img src="http://img.shields.io/badge/made_with_love_in-cologne-red.svg?style=flat" alt="Made with love in Cologne"></a>
+        <a href="http://en.wikipedia.org/wiki/Cologne"><img src="//img.shields.io/badge/made_with_love_in-cologne-red.svg?style=flat" alt="Made with love in Cologne"></a>
       </p>
       </div>
     </div>
@@ -396,9 +388,9 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
     <img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub">
   </a>
 
-  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-  <script>window.jQuery || document.write('<script src="js/dev/vendor/jquery-1.11.1.min.js"><\/script>');</script>
-  <script src="js/prod/main-0.1.3.min.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="js/dev/vendor/jquery-1.11.2.min.js"><\/script>');</script>
+  <script src="js/prod/main-0.1.4.min.js"></script>
 
 </body>
 </html>

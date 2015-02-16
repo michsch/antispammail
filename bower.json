@@ -1,21 +1,21 @@
 {
   "name": "antispammail-page",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "dependencies": {
-    "accessifyhtml5-amd": "2.0.x",
+    "accessifyhtml5-amd": "~2.0.2",
     "adaptive-images" : "latest",
-    "almond": "0.2.x",
+    "almond": "~0.3.0",
     "box-sizing-polyfill": "latest",
-    "domready-collection": "0.2.x",
-    "jquery": "~1.11.1",
+    "domready-collection": "~0.2.1",
+    "jquery": "~1.11.2",
     "jquery-hoverIntent" : "latest",
     "jquery-mousewheel": "3.1.3",
-    "jquery.transit": "0.9.x",
-    "qunit": "1.11.x",
-    "requirejs": "2.0.x",
-    "requirejs-domready": "2.0.x",
+    "jquery.transit": "~0.9.12",
+    "qunit": "~1.17.1",
+    "requirejs": "~2.1.16",
+    "requirejs-domready": "~2.0.1",
     "sisyphus": "latest",
-    "underscore": "~1.6.0",
-    "underscore.deepExtend" : "~0.1.4"
+    "underscore": "~1.7.0",
+    "underscore.deepExtend" : "~0.1.5"
   }
 }

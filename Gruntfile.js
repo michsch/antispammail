@@ -164,8 +164,8 @@ module.exports = function(grunt) {
 
             // main paths from main.js
             "domReady": "module/requirejs-domready",
-            "jquery": "vendor/jquery-1.11.1",
-            "jquery-migrate": "vendor/jquery-migrate-1.1.1",
+            "jquery": "vendor/jquery-1.11.2",
+            "jquery-migrate": "vendor/jquery-migrate-1.2.1",
             "antispammail": "module/antispammail",
             "hyphenator": "module/hyphenator",
             "matchmedia": "module/matchmedia",
@@ -323,15 +323,20 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-requirejs');
   grunt.loadNpmTasks('grunt-string-replace');
 
-  grunt.registerTask( 'img', [ 'clean:img', 'imagemin', 'copy:img' ] );
+  grunt.registerTask('img', [
+    'clean:img',
+    'imagemin',
+    'copy:img'
+  ]);
 
-  grunt.registerTask( 'dev', [
+  grunt.registerTask('dev', [
     'clean:dev',
     'compass:dev',
     'coffee',
     'jshint'
   ]);
-  grunt.registerTask( 'prod', [
+
+  grunt.registerTask('build', [
     'clean:prod',
     'compass:prod',
     'coffee',
@@ -340,5 +345,5 @@ module.exports = function(grunt) {
     'uglify:requirejs'
   ]);
 
-  grunt.registerTask( 'default', 'watch:dev' );
+  grunt.registerTask('default', 'build');
 };

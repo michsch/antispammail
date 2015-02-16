@@ -1,4 +1,4 @@
-/* Modernizr 2.7.1 (Custom Build) | MIT & BSD
+/* Modernizr 2.8.3 (Custom Build) | MIT & BSD
  * Build: http://modernizr.com/download/#-fontface-backgroundsize-borderimage-borderradius-flexbox-flexboxlegacy-multiplebgs-opacity-rgba-textshadow-cssanimations-csscolumns-generatedcontent-cssgradients-csstransforms-csstransitions-canvas-canvastext-hashchange-history-audio-video-inlinesvg-svg-svgclippaths-touch-printshiv-mq-cssclasses-addtest-prefixed-teststyles-testprop-testallprops-hasevent-prefixes-domprefixes-css_backgroundposition_shorthand-css_backgroundsizecover-css_boxsizing-css_displaytable-css_filters-css_lastchild-css_mediaqueries-css_pointerevents-css_regions-load
  */
 ;
@@ -7,7 +7,7 @@
 
 window.Modernizr = (function( window, document, undefined ) {
 
-    var version = '2.7.1',
+    var version = '2.8.3',
 
     Modernizr = {},
 
@@ -45,7 +45,7 @@ window.Modernizr = (function( window, document, undefined ) {
 
     slice = classes.slice,
 
-    featureName, 
+    featureName,
 
 
     injectElementWithStyles = function( rule, callback, nodes, testnames ) {
@@ -91,7 +91,7 @@ window.Modernizr = (function( window, document, undefined ) {
 
       var matchMedia = window.matchMedia || window.msMatchMedia;
       if ( matchMedia ) {
-        return matchMedia(mq).matches;
+        return matchMedia(mq) && matchMedia(mq).matches || false;
       }
 
       var bool;
@@ -105,7 +105,7 @@ window.Modernizr = (function( window, document, undefined ) {
       return bool;
 
      },
- 
+
 
     isEventSupported = (function() {
 
@@ -152,7 +152,7 @@ window.Modernizr = (function( window, document, undefined ) {
       };
     }
     else {
-      hasOwnProp = function (object, property) { 
+      hasOwnProp = function (object, property) {
         return ((property in object) && is(object.constructor.prototype[property], 'undefined'));
       };
     }
@@ -468,7 +468,7 @@ window.Modernizr = (function( window, document, undefined ) {
 
        }
 
-       return Modernizr; 
+       return Modernizr;
      };
 
 
@@ -1038,7 +1038,7 @@ Modernizr.testStyles( '#modernizr{background-size:cover}', function( elem ) {
   var style = window.getComputedStyle ?
     window.getComputedStyle( elem, null )
     : elem.currentStyle;
-    
+
   Modernizr.addTest( 'bgsizecover', style.backgroundSize == 'cover' );
 });
 // developer.mozilla.org/en/CSS/box-sizing
@@ -1056,24 +1056,24 @@ Modernizr.addTest("boxsizing",function(){
 // more testing neccessary perhaps.
 
 Modernizr.addTest( "display-table",function(){
-  
+
   var doc   = window.document,
-      docElem = doc.documentElement,   
+      docElem = doc.documentElement,
       parent  = doc.createElement( "div" ),
       child = doc.createElement( "div" ),
       childb  = doc.createElement( "div" ),
       ret;
-  
+
   parent.style.cssText = "display: table";
-  child.style.cssText = childb.style.cssText = "display: table-cell; padding: 10px";    
-          
+  child.style.cssText = childb.style.cssText = "display: table-cell; padding: 10px";
+
   parent.appendChild( child );
   parent.appendChild( childb );
   docElem.insertBefore( parent, docElem.firstChild );
-  
+
   ret = child.offsetLeft < childb.offsetLeft;
   docElem.removeChild(parent);
-  return ret; 
+  return ret;
 });
 
 // https://github.com/Modernizr/Modernizr/issues/615
