@@ -1,5 +1,5 @@
 /*!
- * antiSpamMail - v0.1.4 - 2015-02-16
+ * antiSpamMail - v0.1.5 - 2015-02-16
  * http://michsch.github.io/antispammail/
  * Copyright (c) 2015 Michael Schulze
  * MIT license */
@@ -23,41 +23,73 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-;(function(window, document, undefined){
+;(function (root, factory, name) {
   'use strict';
-  var AntiSpamMail, AntiSpamMailProto, antiSpamMail;
+  root[name] = factory();
+  if (typeof define === 'function' && define.amd) {
+    define(function() { return root[name]; });
+  } else if (typeof exports === 'object') {
+    module.exports = root[name];
+  }
+})((typeof window === 'object' && window) || this, function () {
+  'use strict';
+
+  var AntiSpamMail, antiSpamMail;
   AntiSpamMail = function() {};
-  AntiSpamMailProto = {
-    _version: '0.1.4',
-    encryptFn: 'antiSpamMail.linkDecrypt'
+  AntiSpamMail.fn = AntiSpamMail.prototype = {
+    _version: '0.1.5',
+    encryptFn: 'antiSpamMail.linkDecrypt',
+
+    /**
+     * Encrypt or decrypt a string
+     *
+     * @method encryptDecrypt
+     * @param {String} originalString      string to encrypt or decrypt
+     * @param {Number} [nFromCharCode=-1]  encrypt if +1, decrypt if -1
+     * @returns {String} encrypted or decrypted string
+     */
+    encryptDecrypt: function(originalString, nFromCharCode) {
+      var i, n, newString;
+      if (nFromCharCode == null) {
+        nFromCharCode = -1;
+      }
+      i = 0;
+      n = 0;
+      newString = '';
+      while (i < originalString.length) {
+        n = originalString.charCodeAt(i);
+        if (n >= 8364) {
+          n = 128;
+        }
+        newString += String.fromCharCode(n + nFromCharCode);
+        i++;
+      }
+      return newString;
+    }
   };
-  AntiSpamMail.prototype = AntiSpamMailProto;
-  window.antiSpamMail = antiSpamMail = new AntiSpamMail();
+  antiSpamMail = new AntiSpamMail();
 
 
 
   /**
    * Crypt given mail
    *
-   * @param string email address
-   * @param boolean true
+   * @method encrypt
+   * @param {String} emailToEncrypt  email address to encrypt
+   * @returns {String} encrypted email address
    */
-  antiSpamMail.encrypt = function(email) {
-    var encryptedMail, i, mailtoEmail, n;
-    n = 0;
-    encryptedMail = '';
-    mailtoEmail = 'mailto:' + email;
-    i = 0;
-    while (i < mailtoEmail.length) {
-      n = mailtoEmail.charCodeAt(i);
-      if (n >= 8364) {
-        n = 128;
-      }
-      encryptedMail += String.fromCharCode(n + 1);
-      i++;
-    }
-    return encryptedMail;
+  antiSpamMail.encrypt = function(emailToEncrypt) {
+    return this.encryptDecrypt('mailto:' + emailToEncrypt, 1);
   };
+
+  /**
+   * Initiate the form to encrypt
+   *
+   * @method encryptForm
+   * @param {String} formName    the name of the form
+   * @param {String} fieldName   name of email field
+   * @returns void
+   */
   antiSpamMail.encryptForm = function(formName, fieldName) {
     var cryptform, email, emailHtml, encryptedMail, fieldShowEncryptedHtml, fieldShowEncryptedMail, i, radioObj, radioValue;
     formName = formName || 'antiSpamMail';
@@ -89,12 +121,9 @@
     encryptedMail = this.encrypt(email);
     cryptform[fieldShowEncryptedMail].value = encryptedMail;
     cryptform[fieldShowEncryptedHtml].value = '<a href="javascript:' + this.encryptFn + '(\'' + encryptedMail + '\');">' + emailHtml + '</a>';
-    return true;
   };
 
 
 
-  if (typeof define === 'function' && define.amd) {
-    define('antiSpamMail', [], function() { return antiSpamMail; });
-  }
-})(this, document);
+  return antiSpamMail;
+}, 'antiSpamMail');

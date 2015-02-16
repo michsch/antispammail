@@ -1,23 +1,22 @@
 define ['antispammail'], (antiSpamMail) ->
   ###*
-   * Crypt given mail
-   *
-   * @param string email address
-   * @param boolean true
+  # Crypt given mail
+  #
+  # @method encrypt
+  # @param {String} emailToEncrypt  email address to encrypt
+  # @returns {String} encrypted email address
   ###
-  antiSpamMail.encrypt = (email) ->
-    n = 0
-    encryptedMail = ''
-    mailtoEmail = 'mailto:' + email
+  antiSpamMail.encrypt = (emailToEncrypt) ->
+    @encryptDecrypt 'mailto:' + emailToEncrypt, 1
 
-    i = 0
-    while i < mailtoEmail.length
-      n = mailtoEmail.charCodeAt(i)
-      n = 128  if n >= 8364
-      encryptedMail += String.fromCharCode(n + 1)
-      i++
-    encryptedMail
-
+  ###*
+  # Initiate the form to encrypt
+  #
+  # @method encryptForm
+  # @param {String} formName    the name of the form
+  # @param {String} fieldName   name of email field
+  # @returns void
+  ###
   antiSpamMail.encryptForm = (formName, fieldName) ->
     formName = formName or 'antiSpamMail'
     fieldName = fieldName or 'cryptmail_email'
@@ -62,6 +61,6 @@ define ['antispammail'], (antiSpamMail) ->
       emailHtml +
       '</a>'
 
-    true
+    return
 
   return

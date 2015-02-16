@@ -1,30 +1,23 @@
 define ['antispammail'], (antiSpamMail) ->
   ###*
-   * Uncrypt the email address and returns the valid href
-   *
-   * @param string the crypted string
-   * @return string valid href
+  # Uncrypt the email address and returns the valid href
+  #
+  # @method decrypt
+  # @param {String} encryptedMail   the crypted string
+  # @returns {String} valid href
   ###
   antiSpamMail.decrypt = (encryptedMail) ->
-    n = 0
-    email = ''
-    i = 0
-
-    while i < encryptedMail.length
-      n = encryptedMail.charCodeAt i
-      n = 128  if n >= 8364
-      email += String.fromCharCode n - 1
-      i++
-    email
+    @encryptDecrypt(encryptedMail)
 
   ###*
-   * Public function for A tags
-   *
-   * @param string the crypted string
-   * @return boolean true
+  # Public function for A tags
+  #
+  # @method linkDecrypt
+  # @param {String} encryptedMail   the crypted string
+  # @returns void
   ###
   antiSpamMail.linkDecrypt = (encryptedMail) ->
     location.href = @decrypt encryptedMail
-    true
+    return
 
   return

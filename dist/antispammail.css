@@ -5,7 +5,7 @@
   /* use image replacement solution
    * by Nicolas Gallagher (2011)
    * http://nicolasgallagher.com/another-css-image-replacement-technique/ */
-  span.crypt {
+  .crypt {
     font: 0/0 a;
     text-shadow: none;
     color: transparent;
@@ -19,7 +19,7 @@
 {
 
   /* force to hide on printed pages */
-  span.crypt {
+  .crypt {
     display: none;
   }
 

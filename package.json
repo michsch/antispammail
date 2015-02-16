@@ -1,7 +1,7 @@
 {
   "name": "antiSpamMail",
   "description": "antiSpamMail JS",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "homepage": "http://michsch.github.io/antispammail/",
   "author": {
     "name": "Michael Schulze",

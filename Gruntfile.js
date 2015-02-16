@@ -129,11 +129,18 @@ module.exports = function(grunt) {
           modules : config.modules,
           fileExclusionRegExp: /^(.git|.gitignore|node_modules|coffee|media|test|old|.*\.map|.*\.sublime-.*)$/,
           wrap: {
-            start: '<%= banner.full %>' + "\n;(function(window, document, undefined){\n  'use strict';",
-            end: "  if (typeof define === 'function' && define.amd) {\n" +
-              "    define('antiSpamMail', [], function() { return antiSpamMail; });\n" +
+            start: '<%= banner.full %>' + "\n" +
+              ";(function (root, factory, name) {\n  'use strict';\n" +
+              "  root[name] = factory();\n" +
+              "  if (typeof define === 'function' && define.amd) {\n" +
+              "    define(function() { return root[name]; });\n" +
+              "  } else if (typeof exports === 'object') {\n" +
+              "    module.exports = root[name];\n" +
               "  }\n" +
-              "})(this, document);\n"
+              "})((typeof window === 'object' && window) || this, function () {\n" +
+              "  'use strict';\n",
+            end: "  return antiSpamMail;\n" +
+            "}, '<%= pkg.name %>');"
           },
           onBuildWrite: function (id, path, contents) {
             if ((/define\(.*?\{/).test(contents)) {
