@@ -1,6 +1,6 @@
 {
   "name": "antispammail-page",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "dependencies": {
     "accessifyhtml5-amd": "~2.0.2",
     "adaptive-images" : "latest",
