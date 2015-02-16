@@ -1,7 +1,7 @@
 /*!
- * antiSpamMail - v0.1.3 - 2014-07-27
+ * antiSpamMail - v0.1.4 - 2015-02-16
  * http://michsch.github.io/antispammail/
- * Copyright (c) 2014 Michael Schulze
+ * Copyright (c) 2015 Michael Schulze
  * MIT license */
  
 /*
@@ -28,7 +28,7 @@
   var AntiSpamMail, AntiSpamMailProto, antiSpamMail;
   AntiSpamMail = function() {};
   AntiSpamMailProto = {
-    _version: '0.1.3',
+    _version: '0.1.4',
     encryptFn: 'antiSpamMail.linkDecrypt'
   };
   AntiSpamMail.prototype = AntiSpamMailProto;
