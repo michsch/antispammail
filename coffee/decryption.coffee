@@ -1,11 +1,11 @@
-define [ 'antispammail' ], ( antiSpamMail ) ->
+define ['antispammail'], (antiSpamMail) ->
   ###*
    * Uncrypt the email address and returns the valid href
    *
    * @param string the crypted string
    * @return string valid href
   ###
-  antiSpamMail.decrypt = ( encryptedMail ) ->
+  antiSpamMail.decrypt = (encryptedMail) ->
     n = 0
     email = ''
     i = 0
@@ -23,7 +23,7 @@ define [ 'antispammail' ], ( antiSpamMail ) ->
    * @param string the crypted string
    * @return boolean true
   ###
-  antiSpamMail.linkDecrypt = ( encryptedMail ) ->
+  antiSpamMail.linkDecrypt = (encryptedMail) ->
     location.href = @decrypt encryptedMail
     true
 
